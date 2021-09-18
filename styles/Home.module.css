@@ -69,7 +69,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
   max-width: 800px;
   margin-top: 3rem;
 }
@@ -138,4 +137,16 @@
 
 .headerTextContainer {
     padding: 10rem 0;
+}
+
+.subHeaderTextContainer {
+    padding: 4rem 0;
+    width: 300px;
+    height: 200px;
+}
+
+.subHeaderText {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 19px;
 }

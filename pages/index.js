@@ -13,44 +13,40 @@ export default function Home() {
 
       {/* <main className={styles.main}> */}
       <div className={styles.headerWrapper}>
-      <div className={styles.headerTextContainer}>
-        <h1 className={styles.title}>
-          C.M. Miller
-        </h1>
+        <div className={styles.headerTextContainer}>
+            <h1 className={styles.title}>
+            C.M. Miller
+            </h1>
 
-        <p className={styles.description}>
-          Content Writer
-        </p>
+            <p className={styles.description}>
+            Content Writer
+            </p>
+        </div>
       </div>
+
+      <div className={styles.subHeaderTextContainer}>
+        <div className={styles.subHeaderText}>
+          With plenty of elbow grease and a sharp eye on story, audience, style and substance, I write killer content for a range of mediums. I’m delighted to roll up my sleeves and help you out with:
+        </div>
       </div>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
+            <h2>Marketing and Advertising</h2>
+            <p>Lorem ipsum dolor sit</p>
           </a>
 
           <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
+            <h2>Entertainment</h2>
+            <p>Lorem ipsum dolor sit</p>
           </a>
 
           <a
             href="https://github.com/vercel/next.js/tree/master/examples"
             className={styles.card}
           >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
+            <h2>Publishing and Literary</h2>
+            <p>Lorem ipsum dolor sit</p>
           </a>
         </div>
       {/* </main> */}
