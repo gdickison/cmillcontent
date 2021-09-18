@@ -53,7 +53,7 @@ export default function Home() {
 
       <footer className={styles.footer}>
         <div>
-            <Image className={styles.grayscale} src="/images/curtis_miller_logo.png" alt="Curtis Miller Logo" width={50} height={50} />
+            <Image className={styles.grayscale} src="/images/logo_light.png" alt="Curtis Miller Logo" width={50} height={50} />
         </div>
         <div>C.M. Miller</div>
         <div className={styles.footerText}>
