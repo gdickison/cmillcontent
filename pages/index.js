@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import navstyles from '../styles/Navbar.module.css'
 
 export default function Home() {
   return (
@@ -51,6 +52,9 @@ export default function Home() {
 						</li>
 					</ul>
 				</div>
+				<div className={styles.navBoxLinkContainer}>
+					<a className={styles.navBoxLink} href="#">Go here</a>
+				</div>
 			</div>
 			<div className={styles.midPageNavBox}>
 				<div className={styles.navBoxIcon}>
@@ -73,6 +77,9 @@ export default function Home() {
 						</li>
 					</ul>
 				</div>
+				<div className={styles.navBoxLinkContainer}>
+					<a className={styles.navBoxLink} href="#">Go here</a>
+				</div>
 			</div>
 			<div className={styles.midPageNavBox}>
 				<div className={styles.navBoxIcon}>
@@ -91,6 +98,9 @@ export default function Home() {
 							Copy and line editing
 						</li>
 					</ul>
+				</div>
+				<div className={styles.navBoxLinkContainer}>
+					<a className={styles.navBoxLink} href="#">Go here</a>
 				</div>
 			</div>
 		</div>
