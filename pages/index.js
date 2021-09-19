@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -52,7 +53,9 @@ export default function Home() {
 					</ul>
 				</div>
 				<div className={styles.navBoxLinkContainer}>
-					<a className={styles.navBoxLink} href="/portfolio">Visit Portfolio</a>
+					<Link href="/portfolio" passHref>
+						<span className={styles.navBoxLink}>Visit Portfolio</span>
+					</Link>
 				</div>
 			</div>
 			<div className={styles.midPageNavBox}>
@@ -77,7 +80,9 @@ export default function Home() {
 					</ul>
 				</div>
 				<div className={styles.navBoxLinkContainer}>
-					<a className={styles.navBoxLink} href="/creative">Visit Creative</a>
+					<Link href="/creative" passHref>
+						<span className={styles.navBoxLink}>Visit Creative</span>
+					</Link>
 				</div>
 			</div>
 			<div className={styles.midPageNavBox}>
@@ -99,7 +104,9 @@ export default function Home() {
 					</ul>
 				</div>
 				<div className={styles.navBoxLinkContainer}>
-					<a className={styles.navBoxLink} href="/crocodiles">Visit Blog</a>
+					<Link href="/crocodiles" passHref>
+						<span className={styles.navBoxLink}>Visit Blog</span>
+					</Link>
 				</div>
 			</div>
 		</div>

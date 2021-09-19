@@ -185,7 +185,7 @@
     padding-right: 2.3rem;
 }
 
-.navContentList ul{
+.navContentList ul {
     padding-inline-start: 30px;
     font-family: 'Poppins', sans-serif;
     font-size: 17px;
@@ -201,7 +201,7 @@
     bottom: 32px;
 }
 
-.navBoxLink{
+.navBoxLink {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -209,4 +209,8 @@
     height: 40px;
     background-color: #FF5555;
     color: #FFFFFF;
+}
+
+.navBoxLink:hover {
+    cursor: pointer;
 }
