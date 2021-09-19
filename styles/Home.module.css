@@ -152,13 +152,13 @@
 }
 
 .midPageNavSection {
-    height: 400px;
+    height: 500px;
     width: 100vw;
     background: #F1F1F1;
 }
 
 .midPageNavContainer {
-    padding: 0 5rem;
+    padding: 0 10rem;
     margin-top: -2rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -166,14 +166,28 @@
 }
 
 .midPageNavBox {
-    text-align: center;
     background: #FFFFFF;
-    height: 400px;
+    height: 470px;
     width: auto;
     box-shadow: 2px 4px 10px 6px rgba(30, 52, 65, 0.07);
     border-radius: 3px;
 }
 
 .navBoxIcon {
+    text-align: center;
     padding: 15px 0;
+}
+
+.navContentList {
+    padding-left: 1.75rem;
+    padding-right: 2.3rem;
+}
+
+.navContentList ul{
+    padding-inline-start: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 200;
+    color: #444444;
+    line-height: 1.54rem;
 }

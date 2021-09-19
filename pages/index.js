@@ -40,15 +40,57 @@ export default function Home() {
 				<div className={styles.navBoxIcon}>
 					<Image src="/images/icon_megaphone.png" alt="megaphone" width={70} height={70} />
 				</div>
+				<h2>Marketing and Advertising</h2>
+				<div className={styles.navContentList}>
+					<ul>
+						<li>
+							Content writing and editing, ghostwriting, blogging, script writing, ad copy, site copy, SEO, social media
+						</li>
+						<li>
+							Revising, editing, concept brainstorming, outlining, formatting, proofreading
+						</li>
+					</ul>
+				</div>
 			</div>
 			<div className={styles.midPageNavBox}>
 				<div className={styles.navBoxIcon}>
 					<Image src="/images/icon_monitor.png" alt="megaphone" width={70} height={70} />
 				</div>
+				<h2>Entertainment</h2>
+				<div className={styles.navContentList}>
+					<ul>
+						<li>
+							Film, web, T.V, stage
+						</li>
+						<li>
+							Script and content writing, revising, polishing, editing, formatting, and proofreading
+						</li>
+						<li>
+							Story and concept development
+						</li>
+						<li>
+							Submission reading
+						</li>
+					</ul>
+				</div>
 			</div>
 			<div className={styles.midPageNavBox}>
 				<div className={styles.navBoxIcon}>
 					<Image src="/images/icon_book.png" alt="megaphone" width={70} height={70} />
+				</div>
+				<h2>Publishing and Literary</h2>
+				<div className={styles.navContentList}>
+					<ul>
+						<li>
+							Writing and ghostwriting (fiction, memoir, creative nonfiction), story development
+						</li>
+						<li>
+							Submission reading and proofreading
+						</li>
+						<li>
+							Copy and line editing
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
