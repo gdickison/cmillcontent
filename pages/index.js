@@ -11,7 +11,6 @@ export default function Home() {
 		<link rel="icon" href="/images/curtis_miller_logo.png" />
 	  </Head>
 
-	  {/* <main className={styles.main}> */}
 	  <div className={styles.headerWrapper}>
 		<div className={styles.headerTextContainer}>
 			<h1 className={styles.title}>
@@ -35,30 +34,30 @@ export default function Home() {
 		</div>
 	  </div>
 
-		<div className={styles.grid}>
-		  <a href="https://nextjs.org/docs" className={styles.card}>
-			<h2>Marketing and Advertising</h2>
-			<p>Lorem ipsum dolor sit</p>
-		  </a>
-
-		  <a href="https://nextjs.org/learn" className={styles.card}>
-			<h2>Entertainment</h2>
-			<p>Lorem ipsum dolor sit</p>
-		  </a>
-
-		  <a
-			href="https://github.com/vercel/next.js/tree/master/examples"
-			className={styles.card}
-		  >
-			<h2>Publishing and Literary</h2>
-			<p>Lorem ipsum dolor sit</p>
-		  </a>
+	  <div className={styles.midPageNavSection}>
+		<div className={styles.midPageNavContainer}>
+			<div className={styles.midPageNavBox}>
+				<div className={styles.navBoxIcon}>
+					<Image src="/images/icon_megaphone.png" alt="megaphone" width={70} height={70} />
+				</div>
+			</div>
+			<div className={styles.midPageNavBox}>
+				<div className={styles.navBoxIcon}>
+					<Image src="/images/icon_monitor.png" alt="megaphone" width={70} height={70} />
+				</div>
+			</div>
+			<div className={styles.midPageNavBox}>
+				<div className={styles.navBoxIcon}>
+					<Image src="/images/icon_book.png" alt="megaphone" width={70} height={70} />
+				</div>
+			</div>
 		</div>
-	  {/* </main> */}
+	  </div>
+
 
 	  <footer className={styles.footer}>
 		<div>
-			<Image className={styles.grayscale} src="/images/logo_light.png" alt="Curtis Miller Logo" width={50} height={50} />
+			<Image src="/images/logo_light.png" alt="Curtis Miller Logo" width={50} height={50} />
 		</div>
 		<div>C.M. Miller</div>
 		<div className={styles.footerText}>
