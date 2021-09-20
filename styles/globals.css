@@ -27,18 +27,23 @@ h2 {
     margin: 0;
 }
 
-.nav {
-    align-items: center;
+.container {
     font-family: 'Poppins', sans-serif;
+    max-width: 600px !important;
 }
 
-.nav-item:hover {
-    background-color: #F1F1F1;
-    border-radius: 2px;
+.container-fluid {
+    justify-content: center !important;
+    padding: 0 !important;
 }
 
-.nav-link {
-    color: #444444;
-    text-decoration: none;
-    padding: 0.5rem 2rem !important;
+.container-fluid:hover{
+    background-color: #f1f1f1;
+}
+
+.navbar-brand {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    margin-right: 0 !important;
 }
