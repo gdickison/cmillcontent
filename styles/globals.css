@@ -1,6 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@100;200;400;600;700&display=swap');
 @import url("https://cloud.typenetwork.com/projects/3433/fontface.css/");
 
+:root {
+    --color-red: #FF5555;
+    --color-darkest: #000000;
+    --color-darker: #212121;
+    --color-dark: #444444;
+    --color-medium-dark: #616161;
+    --color-medium: #7E7E7E;
+    --color-medium-light: #9C9C9C;
+    --color-light: #B7B7B7;
+    --color-lighter: #D6D6D6;
+    --color-lightest: #F1F1F1;
+    --color-extra-light: #FFFFFF;
+}
+
 html,
 body {
   padding: 0;

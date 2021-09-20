@@ -22,7 +22,7 @@ export default function Home() {
 				C. M. Miller
 			</h1>
 
-			<p className={styles.description}>
+			<p className={styles.subtitle}>
 				Content Writer
 			</p>
 		</div>
@@ -39,14 +39,14 @@ export default function Home() {
 		</div>
 	  </div>
 
-	  <div className={styles.midPageNavSection}>
-		<div className={styles.midPageNavContainer}>
-			<div className={styles.midPageNavBox}>
-				<div className={styles.navBoxIcon}>
+	  <div className={styles.cardSection}>
+		<div className={styles.cardContainer}>
+			<div className={styles.card}>
+				<div className={styles.cardIcon}>
 					<Image src="/images/icon_megaphone.png" alt="megaphone" width={80} height={80} />
 				</div>
 				<h2 className="categoryHeader">Marketing and Advertising</h2>
-				<div className={styles.navContentList}>
+				<div className={styles.cardContentList}>
 					<ul>
 						<li>
 							Content writing and editing, ghostwriting, blogging, script writing, ad copy, site copy, SEO, social media
@@ -56,18 +56,18 @@ export default function Home() {
 						</li>
 					</ul>
 				</div>
-				<div className={styles.navBoxLinkContainer}>
+				<div className={styles.cardLinkContainer}>
 					<Link href="/portfolio" passHref>
-						<span className={styles.navBoxLink}>Visit Portfolio</span>
+						<span className={styles.cardLink}>Visit Portfolio</span>
 					</Link>
 				</div>
 			</div>
-			<div className={styles.midPageNavBox}>
-				<div className={styles.navBoxIcon}>
+			<div className={styles.card}>
+				<div className={styles.cardIcon}>
 					<Image src="/images/icon_monitor.png" alt="megaphone" width={80} height={80} />
 				</div>
 				<h2 className="categoryHeader">Entertainment</h2>
-				<div className={styles.navContentList}>
+				<div className={styles.cardContentList}>
 					<ul>
 						<li>
 							Film, web, T.V, stage
@@ -83,18 +83,18 @@ export default function Home() {
 						</li>
 					</ul>
 				</div>
-				<div className={styles.navBoxLinkContainer}>
+				<div className={styles.cardLinkContainer}>
 					<Link href="/creative" passHref>
-						<span className={styles.navBoxLink}>Visit Creative</span>
+						<span className={styles.cardLink}>Visit Creative</span>
 					</Link>
 				</div>
 			</div>
-			<div className={styles.midPageNavBox}>
-				<div className={styles.navBoxIcon}>
+			<div className={styles.card}>
+				<div className={styles.cardIcon}>
 					<Image src="/images/icon_book.png" alt="megaphone" width={80} height={80} />
 				</div>
 				<h2 className="categoryHeader">Publishing and Literary</h2>
-				<div className={styles.navContentList}>
+				<div className={styles.cardContentList}>
 					<ul>
 						<li>
 							Writing and ghostwriting (fiction, memoir, creative nonfiction), story development
@@ -107,16 +107,16 @@ export default function Home() {
 						</li>
 					</ul>
 				</div>
-				<div className={styles.navBoxLinkContainer}>
+				<div className={styles.cardLinkContainer}>
 					<Link href="/crocodiles" passHref>
-						<span className={styles.navBoxLink}>Visit Blog</span>
+						<span className={styles.cardLink}>Visit Blog</span>
 					</Link>
 				</div>
 			</div>
 		</div>
 	  </div>
 
-		<div className={styles.putMeToWork}>
+		<div className={styles.putMeToWorkContainer}>
 			<Link href="mailto:curtis.miller@biola.edu" passHref>
 				<span className={styles.putMeToWorkButton}>Put Me To Work</span>
 			</Link>
