@@ -26,3 +26,14 @@ h2 {
     padding-left: 3rem;
     margin: 0;
 }
+
+.nav {
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-link {
+    color: #444444;
+    text-decoration: none;
+    padding: 0.5rem 2rem;
+}

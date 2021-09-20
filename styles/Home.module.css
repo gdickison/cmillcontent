@@ -103,6 +103,7 @@
     background-image: url('../public/images/la_skyline_header_image.png');
     background-position: center center;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .grayscale {
@@ -167,7 +168,7 @@
 
 .midPageNavBox {
     background: #FFFFFF;
-    height: 120%;
+    height: 150%;
     width: auto;
     box-shadow: 2px 4px 10px 6px rgba(30, 52, 65, 0.07);
     border-radius: 3px;
