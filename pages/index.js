@@ -43,9 +43,9 @@ export default function Home() {
 		<div className={styles.midPageNavContainer}>
 			<div className={styles.midPageNavBox}>
 				<div className={styles.navBoxIcon}>
-					<Image src="/images/icon_megaphone.png" alt="megaphone" width={70} height={70} />
+					<Image src="/images/icon_megaphone.png" alt="megaphone" width={80} height={80} />
 				</div>
-				<h2>Marketing and Advertising</h2>
+				<h2 className="categoryHeader">Marketing and Advertising</h2>
 				<div className={styles.navContentList}>
 					<ul>
 						<li>
@@ -64,9 +64,9 @@ export default function Home() {
 			</div>
 			<div className={styles.midPageNavBox}>
 				<div className={styles.navBoxIcon}>
-					<Image src="/images/icon_monitor.png" alt="megaphone" width={70} height={70} />
+					<Image src="/images/icon_monitor.png" alt="megaphone" width={80} height={80} />
 				</div>
-				<h2>Entertainment</h2>
+				<h2 className="categoryHeader">Entertainment</h2>
 				<div className={styles.navContentList}>
 					<ul>
 						<li>
@@ -91,9 +91,9 @@ export default function Home() {
 			</div>
 			<div className={styles.midPageNavBox}>
 				<div className={styles.navBoxIcon}>
-					<Image src="/images/icon_book.png" alt="megaphone" width={70} height={70} />
+					<Image src="/images/icon_book.png" alt="megaphone" width={80} height={80} />
 				</div>
-				<h2>Publishing and Literary</h2>
+				<h2 className="categoryHeader">Publishing and Literary</h2>
 				<div className={styles.navContentList}>
 					<ul>
 						<li>
