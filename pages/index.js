@@ -116,6 +116,11 @@ export default function Home() {
 		</div>
 	  </div>
 
+		<div className={styles.putMeToWork}>
+			<Link href="mailto:curtis.miller@biola.edu" passHref>
+				<span className={styles.putMeToWorkButton}>Put Me To Work</span>
+			</Link>
+		</div>
 
 	  <footer className={styles.footer}>
 		<div>
