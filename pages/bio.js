@@ -12,8 +12,8 @@ function BioPage() {
                     <link rel="icon" href="/images/curtis_miller_logo.png" />
                 </Head>
                 <NavBar />
-                    <h1 className={styles.bioTitle}>Bio</h1>
                     <div className={styles.bioPageContainer}>
+                    <h1 className={styles.bioTitle}>Bio</h1>
                         <div className={styles.bioHero}>
                         </div>
                         <div className={styles.backToHomeButtonContainer}>

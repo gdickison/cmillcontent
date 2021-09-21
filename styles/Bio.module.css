@@ -4,6 +4,7 @@
     flex-direction: column;
     background-image: url('../public/images/bkgd_image_bio.png');
     background-repeat: no-repeat;
+    position: relative;
 }
 
 .bioHero {
@@ -16,13 +17,14 @@
 .bioTitle {
     position: absolute;
     top: 60px;
+    left: 50%;
+    transform: translate(-50%);
     font-family: 'IvyPresto Display', serif;
     font-weight: 600;
     font-size: 80px;
     line-height: 98px;
     color: var(--color-extra-light);
     text-align: center;
-    margin-top: 60px;
 }
 
 .backToHomeButtonContainer {
