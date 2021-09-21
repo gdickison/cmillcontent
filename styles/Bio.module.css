@@ -1,0 +1,52 @@
+.bioPageContainer {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../public/images/bkgd_image_bio.png');
+    background-repeat: no-repeat;
+}
+
+.bioHero {
+    height: 820px;
+    width: 100vw;
+    background-color: var(--color-darker);
+    z-index: -1;
+}
+
+.bioTitle {
+    position: absolute;
+    top: 60px;
+    font-family: 'IvyPresto Display', serif;
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 98px;
+    color: var(--color-extra-light);
+    text-align: center;
+    margin-top: 60px;
+}
+
+.backToHomeButtonContainer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 450px;
+}
+
+.backToHomeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--color-red);
+    line-height: 26px;
+    width: 265px;
+    height: 56px;
+    border: 2px solid var(--color-red);
+    margin-bottom: 82px;
+}
+
+.backToHomeButton:hover {
+    cursor: pointer;
+}

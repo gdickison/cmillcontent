@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import NavBar from '../components/navbar'
+import NavBar from '../components/Navbar'
+import Footer from '../components/Footer'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -45,7 +46,7 @@ export default function Home() {
 				<div className={styles.cardIcon}>
 					<Image src="/images/icon_megaphone.png" alt="megaphone" width={80} height={80} />
 				</div>
-				<h2 className="categoryHeader">Marketing and Advertising</h2>
+				<h2 className={styles.cardHeader}>Marketing and Advertising</h2>
 				<div className={styles.cardContentList}>
 					<ul>
 						<li>
@@ -66,7 +67,7 @@ export default function Home() {
 				<div className={styles.cardIcon}>
 					<Image src="/images/icon_monitor.png" alt="megaphone" width={80} height={80} />
 				</div>
-				<h2 className="categoryHeader">Entertainment</h2>
+				<h2 className={styles.cardHeader}>Entertainment</h2>
 				<div className={styles.cardContentList}>
 					<ul>
 						<li>
@@ -93,7 +94,7 @@ export default function Home() {
 				<div className={styles.cardIcon}>
 					<Image src="/images/icon_book.png" alt="megaphone" width={80} height={80} />
 				</div>
-				<h2 className="categoryHeader">Publishing and Literary</h2>
+				<h2 className={styles.cardHeader}>Publishing and Literary</h2>
 				<div className={styles.cardContentList}>
 					<ul>
 						<li>
@@ -122,15 +123,7 @@ export default function Home() {
 			</Link>
 		</div>
 
-	  <footer className={styles.footer}>
-		<div>
-			<Image src="/images/logo_light.png" alt="Curtis Miller Logo" width={50} height={50} />
-		</div>
-		<div>C.M. Miller</div>
-		<div className={styles.footerText}>
-			<p>Content writing and editing for marketing and advertising, entertainment, and publishing.</p>
-		</div>
-	  </footer>
+	  <Footer />
 	</div>
   )
 }

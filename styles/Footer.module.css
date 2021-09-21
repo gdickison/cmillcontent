@@ -1,0 +1,24 @@
+.footer {
+    width: 100vw;
+    height: 222px;
+    background-color: var(--color-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'IvyPresto Disp Reg', serif;
+    color: var(--color-lighter);
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 30px 0;
+  }
+
+  .footerText {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    text-transform: none;
+    text-align: center;
+    width: 360px;
+}

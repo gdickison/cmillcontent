@@ -64,3 +64,12 @@ a {
     font-size: 15px !important;
     line-height: 18.45px;
 }
+
+.pageContainer {
+    min-height: 100vh;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
