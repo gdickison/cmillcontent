@@ -83,3 +83,10 @@
 .subscribeButton:hover {
     cursor: pointer;
 }
+
+.crocText a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    color: var(--color-red);
+}

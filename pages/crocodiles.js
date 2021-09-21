@@ -39,11 +39,11 @@ function CrocodilesPage() {
                             Fist bump. 
                         </p>
                         <p>
-                            For a tasty essay on books and ideas, check out Shelf of Crocodiles, my monthly newsletter on Substack.
+                            For a tasty essay on books and ideas, check out <a href="https://crocodileshelf.substack.com/" target="_blank" rel="noreferrer">Shelf of Crocodiles</a>, my monthly newsletter on <a href="https://substack.com/" target="_blank" rel="noreferrer">Substack</a>.
                         </p>
                     </div>
                     <div className={styles.subscribeButtonContainer}>
-                        <Link href="#" passHref>
+                        <Link href="https://crocodileshelf.substack.com/subscribe?utm_source=menu&simple=true&next=https%3A%2F%2Fcrocodileshelf.substack.com%2F" passHref>
                             <span className={styles.subscribeButton}>subscribe for free</span>
                         </Link>
                     </div>
