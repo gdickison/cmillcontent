@@ -27,6 +27,43 @@
     text-align: center;
 }
 
+.authorImage {
+    position: absolute;
+    top: 170px;
+    left: 257px;
+}
+
+.bioSection {
+    position: absolute;
+    top: 170px;
+    right: 160px;
+    width: 45%;
+    height: 920px;
+    background-color: var(--color-extra-light);
+    box-shadow: 2px 4px 10px 6px rgba(30, 52, 65, 0.07);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bioContainer {
+    width: 80%;
+    height: 90%;
+}
+
+.bioContainer hr {
+    width: 25%;
+    border: 2px solid var(--color-red);
+    opacity: 1;
+}
+
+.bioContainer a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    color: var(--color-red);
+}
+
 .backToHomeButtonContainer {
     display: flex;
     align-items: flex-end;
