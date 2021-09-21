@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import NavBar from "../components/navbar"
@@ -7,6 +8,10 @@ import styles from '../styles/Crocodiles.module.css'
 function CrocodilesPage() {
     return(
         <div>
+            <Head>
+                <title>C.M. Miller - Content Writer</title>
+                <link rel="icon" href="/images/curtis_miller_logo.png" />
+            </Head>
             <NavBar />
             <div className={styles.headerWrapper}>
                 <div className={styles.headerTextContainer}>
