@@ -22,7 +22,6 @@ export default function Home() {
 			<h1 className={styles.title}>
 				C. M. Miller
 			</h1>
-
 			<p className={styles.subtitle}>
 				Content Writer
 			</p>

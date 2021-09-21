@@ -1,0 +1,85 @@
+.headerWrapper {
+    width: 100vw;
+    background-image: url('../public/images/bkgd_image_bookshelf.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.headerTextContainer {
+    padding: 10rem 0;
+}
+
+.title {
+    margin: 0;
+    line-height: 98px;
+    font-size: 80px;
+    font-family: "IvyPresto Disp Reg", serif;
+    font-weight: 600;
+    text-align: center;
+}
+
+.underBookshelf {
+    display: flex;
+    width: 100vw;
+    height: 400px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.left,
+.right {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    /* text-align: center; */
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.crocImage {
+    padding-right: 80px;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.rightChild {
+    padding-left: 20px;
+    padding-bottom: 20px;
+    margin-right: 35%;
+}
+
+.crocText {
+    font-size: 19px;
+    font-weight: 200;
+}
+
+.subscribeButtonContainer {
+    display: flex;
+}
+
+.subscribeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 17px;
+    text-transform: capitalize;
+    background-color: var(--color-red);
+    color: var(--color-extra-light);
+    line-height: 26px;
+    width: 210px;
+    height: 40px;
+    border: 2px solid var(--color-red);
+}
+
+.subscribeButton:hover {
+    cursor: pointer;
+}

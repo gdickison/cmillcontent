@@ -53,7 +53,7 @@ a {
 }
 
 .container-fluid:hover{
-    background-color: #f1f1f1;
+    background-color: var(--color-lightest);
 }
 
 .navbar-brand {
