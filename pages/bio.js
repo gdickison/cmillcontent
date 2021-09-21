@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/dist/client/image";
-import NavBar from "../components/navbar"
+import NavBar from "../components/Navbar"
 import Footer from '../components/Footer'
 import styles from '../styles/Bio.module.css'
 

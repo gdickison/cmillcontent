@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import NavBar from "../components/navbar"
+import NavBar from "../components/Navbar"
 import Footer from "../components/Footer"
 import styles from '../styles/Creative.module.css'
 
