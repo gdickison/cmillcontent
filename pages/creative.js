@@ -1,4 +1,4 @@
-import Head from "next/head";
+import Head from "next/head"
 import NavBar from "../components/Navbar"
 import Footer from "../components/Footer"
 import styles from '../styles/Creative.module.css'
