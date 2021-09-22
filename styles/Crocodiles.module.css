@@ -14,8 +14,9 @@
     margin: 0;
     line-height: 98px;
     font-size: 80px;
-    font-family: "IvyPresto Disp Reg", serif;
+    font-family: 'ivypresto-display', serif;
     font-weight: 600;
+    font-style: normal;
     text-align: center;
 }
 

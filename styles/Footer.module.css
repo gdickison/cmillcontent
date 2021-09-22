@@ -6,10 +6,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'IvyPresto Disp Reg', serif;
+    font-family: 'ivypresto-display', serif;
     color: var(--color-lighter);
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 600;
+    font-style: normal;
     text-transform: uppercase;
     padding: 30px 0;
   }

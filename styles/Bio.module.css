@@ -19,8 +19,9 @@
     top: 60px;
     left: 50%;
     transform: translate(-50%);
-    font-family: 'IvyPresto Display', serif;
+    font-family: 'ivypresto-display', serif;
     font-weight: 600;
+    font-style: normal;
     font-size: 80px;
     line-height: 98px;
     color: var(--color-extra-light);
