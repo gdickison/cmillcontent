@@ -1,4 +1,5 @@
 import Head from "next/head"
+import Image from "next/image"
 import NavBar from "../components/Navbar"
 import Footer from "../components/Footer"
 import styles from '../styles/Creative.module.css'
@@ -23,6 +24,56 @@ function CreativePage() {
                         <p>
                             Here’s what’s landed—and what’s in the pipeline.
                         </p>
+                    </div>
+                </div>
+            </div>
+            <div className={styles.creativeContent}>
+                <div className={styles.creativeContentSection}>
+                    <div>
+                        <span className={styles.creativeContentIcon}>
+                            <Image src="/images/icon_film.png" alt="film" width={74} height={61} />
+                        </span>
+                        <h2 className={styles.creativeContentHeader}>Short Film</h2>
+                    </div>
+                    <div className={styles.videoContainer}>
+                        <iframe className={styles.video} controls width={720} height={576} src="https://www.youtube.com/embed/G55hKNh7NT8" />
+                    </div>
+                    <div>
+                        <p className={styles.videoTitle}>Date Works</p>
+                        <p className={styles.videoCredits}>Wrote, Produced, and Directed</p>
+                        <p className={styles.videoYear}>2020</p>
+                    </div>
+                    <div className={styles.videoContainer}>
+                        <iframe className={styles.video} controls width={720} height={576} src="https://www.youtube.com/embed/diqkZ-jq1JQ" />
+                    </div>
+                    <div>
+                        <p className={styles.videoTitle}>Gio Boone: Live With Friends</p>
+                        <p className={styles.videoCredits}>Produced and Directed</p>
+                        <p className={styles.videoYear}>2021</p>
+                    </div>
+                </div>
+                <div className={styles.creativeContentSection}>
+                    <div>
+                        <span className={styles.creativeContentIcon}>
+                            <Image src="/images/icon_feature_film.png" alt="film" width={59} height={70} />
+                        </span>
+                        <h2 className={styles.creativeContentHeader}>Feature Film Treatments</h2>
+                    </div>
+                </div>
+                <div className={styles.creativeContentSection}>
+                    <div>
+                        <span className={styles.creativeContentIcon}>
+                            <Image src="/images/icon_fiction.png" alt="film" width={63} height={63} />
+                        </span>
+                        <h2 className={styles.creativeContentHeader}>Fiction and Literary</h2>
+                    </div>
+                </div>
+                <div className={styles.creativeContentSection}>
+                    <div>
+                        <span className={styles.creativeContentIcon}>
+                            <Image src="/images/icon_stage_plays.png" alt="film" width={70} height={74} />
+                        </span>
+                        <h2 className={styles.creativeContentHeader}>Stage Plays</h2>
                     </div>
                 </div>
             </div>
