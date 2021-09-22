@@ -97,6 +97,26 @@ function CreativePage() {
                         </span>
                         <h2 className={styles.creativeContentHeaderText}>Fiction and Literary</h2>
                     </div>
+                    <div className={styles.fictionContentContainer}>
+                        <div className={styles.fictionContentCard}>
+                            Item
+                        </div>
+                        <div className={styles.fictionContentCard}>
+                            Item
+                        </div>
+                        <div className={styles.fictionContentCard}>
+                            Item
+                        </div>
+                        <div className={styles.fictionContentCard}>
+                            Item
+                        </div>
+                        <div className={styles.fictionContentCard}>
+                            Item
+                        </div>
+                        <div className={styles.fictionContentCard}>
+                            Item
+                        </div>
+                    </div>
                 </div>
                 {/* stage plays section */}
                 <div className={styles.creativeContentSection}>
@@ -105,6 +125,34 @@ function CreativePage() {
                             <Image src="/images/icon_stage_plays.png" alt="film" width={70} height={74} />
                         </span>
                         <h2 className={styles.creativeContentHeaderText}>Stage Plays</h2>
+                    </div>
+                    <div className={styles.stagePlaysContentContainer}>
+                        <div className={styles.stagePlaysContentCard}>
+                            Item
+                        </div>
+                        <div className={styles.stagePlaysContentCard}>
+                            <p>Item</p>
+                            <p>Item</p>
+                            <p>Item</p>
+                        </div>
+                        <div className={styles.stagePlaysContentCard}>
+                            Item
+                        </div>
+                        <div className={styles.stagePlaysContentCard}>
+                            <p>Item</p>
+                            <p>Item</p>
+                            <p>Item</p>
+                        </div>
+                        <div className={styles.stagePlaysContentCard}>
+                            Item
+                        </div>
+                        <div className={styles.stagePlaysContentCard}>
+                            Item
+                        </div>
+                    </div>
+                    <div className={styles.stagePlaysLinkContainer}>
+                        <p className={styles.stagePlaysLinkText}>Need a play?</p>
+                        <p className={styles.stagePlaysLinkText}>for permissions and more, <a href='mailto:curtis@cmillcontent.com'>contact me</a></p>
                     </div>
                 </div>
             </div>
