@@ -49,7 +49,7 @@ function BioPage() {
                                     Now, I’m doing this full time.  
                                 </p>
                                 <p>
-                                    Whether your project’s large or small, in utero or hot to trot, I’m ready to <a href="#">have your back</a>. I’m positive I can whip your content, script, draft, newsletter, copy, social, or brainstorm into fighting shape.
+                                    Whether your project’s large or small, in utero or hot to trot, I’m ready to have your back. I’m positive I can whip your content, script, draft, newsletter, copy, social, or brainstorm into fighting shape.
                                 </p>
                                 <p>
                                     Like what you see? You’re gonna love the way you read. 

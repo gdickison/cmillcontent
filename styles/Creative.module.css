@@ -7,6 +7,7 @@
     font-style: normal;
     text-transform: capitalize;
     text-align: center;
+    margin-bottom: 20px;
 }
   
 .subtitle {
@@ -27,14 +28,15 @@
 
 .headerWrapper {
     width: 100vw;
-    height: 450px;
+    height: 420px;
     background-image: url('../public/images/bkgd_image_inkwell.png');
     background-position: left;
     background-repeat: no-repeat;
+    margin-bottom: 50px;
 }
 
 .headerTextContainer {
-    padding: 10rem 0;
+    padding: 7rem 0;
     position: relative;
 }
 
@@ -42,19 +44,24 @@
     margin: 0 16%;
 }
 
-.creativeContentIcon {
-    /* text-align: center; */
-    padding: 15px 0;
+.creativeContentSection {
+    margin-bottom: 130px;
 }
 
 .creativeContentHeader {
+    display: flex;
+    align-items: center;
+    padding-bottom: 32px;
+}
+
+.creativeContentHeaderText {
     font-family: 'ivypresto-display', serif;
     font-weight: 400;
     font-style: normal;
     font-size: 2.2rem;
     line-height: 1.24;
     padding: 0 3rem;
-    margin: 0;
+    margin-bottom: -15px;
     display: inline-block;
 }
 
@@ -62,7 +69,7 @@
     padding-top: 56.25%;
     height: 0px;
     position: relative;
-    margin: 30px 0;
+    margin-bottom: 14px;
 }
 
 .video {
@@ -71,6 +78,10 @@
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.videoCaption {
+    margin-bottom: 41px;
 }
 
 .videoTitle {
@@ -82,7 +93,7 @@
 
 .videoCredits,
 .videoYear {
-    margin: 5px 0;
+    margin: 0;
     font-size: 14px;
     text-transform: uppercase;
 }

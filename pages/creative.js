@@ -29,16 +29,16 @@ function CreativePage() {
             </div>
             <div className={styles.creativeContent}>
                 <div className={styles.creativeContentSection}>
-                    <div>
-                        <span className={styles.creativeContentIcon}>
+                    <div className={styles.creativeContentHeader}>
+                        <span className={styles.creativeContentHeaderIcon}>
                             <Image src="/images/icon_film.png" alt="film" width={74} height={61} />
                         </span>
-                        <h2 className={styles.creativeContentHeader}>Short Film</h2>
+                        <h2 className={styles.creativeContentHeaderText}>Short Film</h2>
                     </div>
                     <div className={styles.videoContainer}>
                         <iframe className={styles.video} controls width={720} height={576} src="https://www.youtube.com/embed/G55hKNh7NT8" />
                     </div>
-                    <div>
+                    <div className={styles.videoCaption}>
                         <p className={styles.videoTitle}>Date Works</p>
                         <p className={styles.videoCredits}>Wrote, Produced, and Directed</p>
                         <p className={styles.videoYear}>2020</p>
@@ -46,34 +46,34 @@ function CreativePage() {
                     <div className={styles.videoContainer}>
                         <iframe className={styles.video} controls width={720} height={576} src="https://www.youtube.com/embed/diqkZ-jq1JQ" />
                     </div>
-                    <div>
+                    <div className={styles.videoCaption}>
                         <p className={styles.videoTitle}>Gio Boone: Live With Friends</p>
                         <p className={styles.videoCredits}>Produced and Directed</p>
                         <p className={styles.videoYear}>2021</p>
                     </div>
                 </div>
                 <div className={styles.creativeContentSection}>
-                    <div>
-                        <span className={styles.creativeContentIcon}>
+                    <div className={styles.creativeContentHeader}>
+                        <span className={styles.creativeContentHeaderIcon}>
                             <Image src="/images/icon_feature_film.png" alt="film" width={59} height={70} />
                         </span>
-                        <h2 className={styles.creativeContentHeader}>Feature Film Treatments</h2>
+                        <h2 className={styles.creativeContentHeaderText}>Feature Film Treatments</h2>
                     </div>
                 </div>
                 <div className={styles.creativeContentSection}>
-                    <div>
-                        <span className={styles.creativeContentIcon}>
+                    <div className={styles.creativeContentHeader}>
+                        <span className={styles.creativeContentHeaderIcon}>
                             <Image src="/images/icon_fiction.png" alt="film" width={63} height={63} />
                         </span>
-                        <h2 className={styles.creativeContentHeader}>Fiction and Literary</h2>
+                        <h2 className={styles.creativeContentHeaderText}>Fiction and Literary</h2>
                     </div>
                 </div>
                 <div className={styles.creativeContentSection}>
-                    <div>
-                        <span className={styles.creativeContentIcon}>
+                    <div className={styles.creativeContentHeader}>
+                        <span className={styles.creativeContentHeaderIcon}>
                             <Image src="/images/icon_stage_plays.png" alt="film" width={70} height={74} />
                         </span>
-                        <h2 className={styles.creativeContentHeader}>Stage Plays</h2>
+                        <h2 className={styles.creativeContentHeaderText}>Stage Plays</h2>
                     </div>
                 </div>
             </div>
