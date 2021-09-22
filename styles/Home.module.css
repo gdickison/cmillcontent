@@ -98,7 +98,7 @@
 .cardContainer {
     padding: 0 12%;
     margin-top: -2rem;
-    display: grid;
+    display: grid; /* change this to flex and make it wrap on shrink */
     grid-template-columns: repeat(3, 1fr);
     column-gap: 25px;
 }

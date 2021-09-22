@@ -1,5 +1,6 @@
 import Head from "next/head"
 import Image from "next/image"
+import Link from "next/dist/client/link"
 import NavBar from "../components/Navbar"
 import Footer from "../components/Footer"
 import styles from '../styles/Creative.module.css'
@@ -28,6 +29,7 @@ function CreativePage() {
                 </div>
             </div>
             <div className={styles.creativeContent}>
+                {/* short film section */}
                 <div className={styles.creativeContentSection}>
                     <div className={styles.creativeContentHeader}>
                         <span className={styles.creativeContentHeaderIcon}>
@@ -52,6 +54,7 @@ function CreativePage() {
                         <p className={styles.videoYear}>2021</p>
                     </div>
                 </div>
+                {/* feature film section */}
                 <div className={styles.creativeContentSection}>
                     <div className={styles.creativeContentHeader}>
                         <span className={styles.creativeContentHeaderIcon}>
@@ -59,7 +62,34 @@ function CreativePage() {
                         </span>
                         <h2 className={styles.creativeContentHeaderText}>Feature Film Treatments</h2>
                     </div>
+                    <div className={styles.featureFilmContentContainer}>
+                        <div className={styles.featureFilmContentCard}>
+                            <Image src="/images/image_b_to_a.png" alt="b to a" width={360} height={202} layout="responsive" />
+                            <div className={styles.featureFilmCaption}>
+                                <p className={styles.featureFilmTitle}>B to A</p>
+                                <p className={styles.featureFilmGenre}>straight drama</p>
+                                <p className={styles.featureFilmDescription}>When a self-reliant college athlete finds her life uprooted by an unplanned pregnancy, an oddball older brother helps her navigate the hurdles of returning home, pregnancy and adoption, and family restoration. </p>
+                            </div>
+                        </div>
+                        <div className={styles.featureFilmContentCard}>
+                            <Image src="/images/image_pivot_knowledge.png" alt="pivot knowledge" width={360} height={202} layout="responsive" />
+                            <div className={styles.featureFilmCaption}>
+                                <p className={styles.featureFilmTitle}>Pivot Knowledge</p>
+                                <p className={styles.featureFilmGenre}>thriller/heist</p>
+                                <p className={styles.featureFilmDescription}>To prevent a genocide, an American agent and her team travel back in time to convince a young, imprisoned radical and future Eastern Bloc dictator, to abandon his hate-fueled beliefs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div className={styles.cardLinkContainer}>
+                            <p className={styles.cardLinkTitle}>Want to see more?</p>
+                            <Link href="mailto:curtis@cmillcontent.com" passHref>
+                                <span className={styles.cardLink}>contact me</span>
+                            </Link>
+                        </div>
+                    </div>
                 </div>
+                {/* fiction & literary section */}
                 <div className={styles.creativeContentSection}>
                     <div className={styles.creativeContentHeader}>
                         <span className={styles.creativeContentHeaderIcon}>
@@ -68,6 +98,7 @@ function CreativePage() {
                         <h2 className={styles.creativeContentHeaderText}>Fiction and Literary</h2>
                     </div>
                 </div>
+                {/* stage plays section */}
                 <div className={styles.creativeContentSection}>
                     <div className={styles.creativeContentHeader}>
                         <span className={styles.creativeContentHeaderIcon}>
