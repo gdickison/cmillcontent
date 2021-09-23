@@ -235,8 +235,7 @@
     color: var(--color-dark);
 }
 
-.fictionTitle a,
-.fictionDescription a {
+.fictionTitle a {
     text-decoration: none;
     color: inherit;
 }
@@ -257,6 +256,11 @@
     font-weight: 500;
     font-size: 15px;
     color: var(--color-medium);
+}
+
+.fictionDescription a {
+    text-decoration: none;
+    color: var(--color-red);
 }
 
 /* Stage Plays Section */

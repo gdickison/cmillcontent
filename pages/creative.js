@@ -113,23 +113,25 @@ function CreativePage() {
                         <FictionContentCard
                             title="Both Feet"
                             genre="short fiction"
-                            description="Published in Dead Mule School of Southern Literature, Dec 2020"
+                            // eslint-disable-next-line react/jsx-key
+                            description={["Published in ", <a href='#'>Dead Mule School of Southern Literature</a>, ", Dec 2020"]}
                         />
-                        <div className={styles.fictionContentCard}>
-                            Item
-                        </div>
-                        <div className={styles.fictionContentCard}>
-                            Item
-                        </div>
-                        <div className={styles.fictionContentCard}>
-                            Item
-                        </div>
-                        <div className={styles.fictionContentCard}>
-                            Item
-                        </div>
-                        <div className={styles.fictionContentCard}>
-                            Item
-                        </div>
+                        <FictionContentCard
+                            title="Entradero"
+                            genre="short fiction"
+                            // eslint-disable-next-line react/jsx-key
+                            description={["Published in ", <a href='#'>Music Art and Literary Journal</a>, ", Vol 49, 2010"]}
+                        />
+                        <FictionContentCard
+                            title="Camden Angel"
+                            genre="creative nonfiction"
+                            // eslint-disable-next-line react/jsx-key
+                            description={["Finalist, 2011 Vandermey Nonfiction Contest, ", <a href='#'>Ruminate Magazine</a>]}
+                        />
+                        <FictionContentCard
+                            title="One Shot North"
+                            genre="novel in development"
+                        />
                     </div>
                 </div>
                 {/* stage plays section */}
