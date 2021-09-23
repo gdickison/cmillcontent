@@ -4,6 +4,7 @@ import Link from "next/dist/client/link"
 import NavBar from "../components/Navbar"
 import Footer from "../components/Footer"
 import FictionContentCard from "../components/FictionContentCard"
+import StagePlaysContentCard from "../components/StagePlaysContentCard"
 import styles from '../styles/Creative.module.css'
 
 function CreativePage() {
@@ -99,17 +100,6 @@ function CreativePage() {
                         <h2 className={styles.creativeContentHeaderText}>Fiction and Literary</h2>
                     </div>
                     <div className={styles.fictionContentContainer}>
-                        {/* <div className={styles.fictionContentCard}>
-                            <div className={styles.fictionContentCardGrid}>
-                                <div className={styles.fictionContentCardContents}>
-                                    <p className={styles.fictionTitle}><a href="#">Title</a></p>
-                                    <p className={styles.fictionGenre}>Genre</p>
-                                </div>
-                                <div className={styles.fictionContentCardContents}>
-                                    <p className={styles.fictionDescription}>Published in <a href="#">Dead Mule School of Southern Literature</a>, Dec 2020</p>
-                                </div>
-                            </div>
-                        </div> */}
                         <FictionContentCard
                             title="Both Feet"
                             genre="short fiction"
@@ -143,28 +133,51 @@ function CreativePage() {
                         <h2 className={styles.creativeContentHeaderText}>Stage Plays</h2>
                     </div>
                     <div className={styles.stagePlaysContentContainer}>
-                        <div className={styles.stagePlaysContentCard}>
-                            Item
-                        </div>
-                        <div className={styles.stagePlaysContentCard}>
-                            <p>Item</p>
-                            <p>Item</p>
-                            <p>Item</p>
-                        </div>
-                        <div className={styles.stagePlaysContentCard}>
-                            Item
-                        </div>
-                        <div className={styles.stagePlaysContentCard}>
-                            <p>Item</p>
-                            <p>Item</p>
-                            <p>Item</p>
-                        </div>
-                        <div className={styles.stagePlaysContentCard}>
-                            Item
-                        </div>
-                        <div className={styles.stagePlaysContentCard}>
-                            Item
-                        </div>
+                        <StagePlaysContentCard
+                            title="Packed, Prepared"
+                            genre="one act lockdown comedy"
+                            description="Semi-finalist, Kennedy Center American College Theater Festival, Region VII, 2021"
+                            performance="Staged reading at New Saint Andrews College"
+                            link="#"
+                        />
+                        <StagePlaysContentCard
+                            title="Antigone"
+                            genre="a one act adaptation"
+                            performance="Performed on the patio at Restoration Life Church, 2017"
+                            link="#"
+                        />
+                        <StagePlaysContentCard
+                            title="Six From the Strand"
+                            genre="full-length drama"
+                            performance="Performed at the Second Story Theater, 2011"
+                            link="#"
+                        />
+                        <StagePlaysContentCard
+                            title="Ten-Minute Plays"
+                            // eslint-disable-next-line react/jsx-key
+                            description={[<ul>
+                            <li>
+                                The French Reality
+                            </li>
+                            <li>
+                                Fate, Necessity, and Patrick&apos;s Soul
+                            </li>
+                            <li>
+                                Pasadena
+                            </li>
+                            <li>
+                                The Tide Law
+                            </li>
+                            </ul>]}
+                            performance="Performed by the Golden Mean Players, at the Second Story Theater, and in workshops at the University of London, Royal Holloway, 2007-2010."
+                            link="#"
+                        />
+                        <StagePlaysContentCard
+                            title="Bombing Hills"
+                            genre="full-length drama"
+                            performance="Honors thesis; staged reading at U.C. Riverside, 2009"
+                            link="#"
+                        />
                     </div>
                     <div className={styles.stagePlaysLinkContainer}>
                         <p className={styles.stagePlaysLinkText}>Need a play?</p>

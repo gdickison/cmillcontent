@@ -193,6 +193,7 @@
     margin-left: -23.5%
 }
 
+/* row/card */
 .fictionContentCard {
     height: 72px;
     margin: 5px 16%;
@@ -201,6 +202,7 @@
     background-color: var(--color-extra-light);
 }
 
+/* offset top row/card */
 .fictionContentCard:first-of-type {
     margin-top: -36px;
 }
@@ -209,6 +211,7 @@
     margin-bottom: 36px;
 }
 
+/* inner row/card structure */
 .fictionContentCardGrid {
     height: 100%;
     padding: 10px 30px;
@@ -229,6 +232,7 @@
     width: 30%;
 }
 
+/* text in row/card */
 .fictionTitle {
     font-weight: 600;
     font-size: 20px;
@@ -276,6 +280,7 @@
     margin-left: -23.5%
 }
 
+/* row/card */
 .stagePlaysContentCard {
     min-height: 72px;
     margin: 5px 16%;
@@ -284,12 +289,62 @@
     background-color: var(--color-extra-light);
 }
 
+/* offset top row/card */
 .stagePlaysContentCard:first-of-type {
     margin-top: -36px;
 }
 
 .stagePlaysContentCard:last-of-type {
     margin-bottom: 36px;
+}
+
+/* inner row/card structure */
+.stagePlaysContentGrid {
+    height: 100%;
+    padding: 10px 30px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.stagePlaysContentCardContents p {
+    margin: 0;
+}
+
+.stagePlaysContentCardContents:first-of-type {
+    width: 29%;
+}
+
+.stagePlaysContentCardContents:nth-of-type(2) {
+    width: 28%
+}
+
+.stagePlaysContentCardContents:nth-of-type(3) {
+    width: 24%
+}
+
+.stagePlaysContentCardContents:last-of-type {
+    width: 19%;
+}
+
+.stagePlaysTitle {
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--color-dark);
+}
+
+.stagePlaysGenre {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--color-medium);
+    text-transform: uppercase;
+}
+
+.stagePlaysDescription,
+.stagePlaysPerformance {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--color-medium);
 }
 
 .stagePlaysLinkContainer {
