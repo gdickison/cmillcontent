@@ -3,6 +3,7 @@ import Image from "next/image"
 import Link from "next/dist/client/link"
 import NavBar from "../components/Navbar"
 import Footer from "../components/Footer"
+import FictionContentCard from "../components/FictionContentCard"
 import styles from '../styles/Creative.module.css'
 
 function CreativePage() {
@@ -98,9 +99,22 @@ function CreativePage() {
                         <h2 className={styles.creativeContentHeaderText}>Fiction and Literary</h2>
                     </div>
                     <div className={styles.fictionContentContainer}>
-                        <div className={styles.fictionContentCard}>
-                            Item
-                        </div>
+                        {/* <div className={styles.fictionContentCard}>
+                            <div className={styles.fictionContentCardGrid}>
+                                <div className={styles.fictionContentCardContents}>
+                                    <p className={styles.fictionTitle}><a href="#">Title</a></p>
+                                    <p className={styles.fictionGenre}>Genre</p>
+                                </div>
+                                <div className={styles.fictionContentCardContents}>
+                                    <p className={styles.fictionDescription}>Published in <a href="#">Dead Mule School of Southern Literature</a>, Dec 2020</p>
+                                </div>
+                            </div>
+                        </div> */}
+                        <FictionContentCard
+                            title="Both Feet"
+                            genre="short fiction"
+                            description="Published in Dead Mule School of Southern Literature, Dec 2020"
+                        />
                         <div className={styles.fictionContentCard}>
                             Item
                         </div>
