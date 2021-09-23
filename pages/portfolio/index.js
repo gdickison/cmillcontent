@@ -60,12 +60,12 @@ function PortfolioPage() {
                             <hr/>
                         </div>
                     </div>
-                    <div className={styles.contentSubSection}>
+                    <div className={styles.contentSecondSection}>
                         <div className={styles.contentTitleContainer}>
                             <p className={styles.contentTitle}>Arizona Milk Producers Blog</p>
                             <p className={styles.contentSubtitle}>Featured monthly blog</p>
                         </div>
-                        <div className={styles.contentSubContainer}>
+                        <div className={styles.contentSecondContainer}>
                             <div className={styles.cardContainer}>
                                 <PortfolioContentCard
                                     date="September 2021"
@@ -95,6 +95,26 @@ function PortfolioPage() {
                         </div>
                         <div className={styles.testimonialBorder}>
                             <hr/>
+                        </div>
+                    </div>
+                    <div className={styles.contentThirdSection}>
+                        <div className={styles.contentTitleContainer}>
+                            <p className={styles.contentTitle}>Resoundcast Branding</p>
+                            <p className={styles.contentSubtitle}>Edited and co-written, with content from Resound Creative Media CEO Mike Jones </p>
+                        </div>
+                        <div className={styles.contentThirdContainer}>
+                            <div className={styles.cardContainer}>
+                                <PortfolioContentCard
+                                    date="July 2021"
+                                    title="Why Real Brands Can’t Be Invented (Part II)"
+                                    image="/images/image_lies.png"
+                                />
+                                <PortfolioContentCard
+                                    date="June 2021"
+                                    title="Why Real Brands Can’t Be Invented"
+                                    image="/images/image_bulb.png"
+                                />
+                            </div>
                         </div>
                     </div>
             <Footer />

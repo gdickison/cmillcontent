@@ -160,15 +160,28 @@
     text-align: center;
 }
 
-.contentSubSection {
+.contentSecondSection {
     width: 100vw;
     height: auto;
 }
 
-.contentSubContainer {
+.contentSecondContainer {
     background-color: var(--color-dark);
     width: 100vw;
     height: auto;
     border: 1px solid var(--color-dark);
+    margin-top: 80px;
+}
+
+.contentThirdSection {
+    width: 100vw;
+    height: auto;
+}
+
+.contentThirdContainer {
+    background-color: var(--color-medium);
+    width: 100vw;
+    height: auto;
+    border: 1px solid var(--color-medium);
     margin-top: 80px;
 }
