@@ -1,0 +1,117 @@
+
+.headerWrapper {
+    width: 100vw;
+    height: 940px;
+    background-image: url('../public/images/bkgd_portfolio_hero.png');
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.headerTextContainer {
+    padding: 4rem 0 6rem 0;
+}
+
+.title {
+    margin: 0;
+    line-height: 98px;
+    font-size: 80px;
+    font-family: 'ivypresto-display', serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: capitalize;
+}
+
+.subtitle {
+  line-height: 1.5;
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: .4rem;
+  text-transform: uppercase;
+  margin: 0;
+  padding-top: 13px;
+}
+
+.title,
+.subtitle {
+    color: var(--color-darkest);
+  text-align: center;
+}
+
+.contentSection {
+    width: 100vw;
+    height: auto;
+    margin-top: -600px;
+}
+
+.contentTitleContainer {
+    margin-left: 16%;
+    width: 30%;
+}
+
+.contentTitle {
+    font-family: 'ivypresto-display', serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 35px;
+    color: var(--color-dark);
+}
+
+.contentSubtitle {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 19px;
+    color: var(--color-medium-dark);
+}
+
+.contentContainer {
+    background-color: var(--color-lightest);
+    width: 100vw;
+    height: auto;
+    border: 1px solid var(--color-lightest);
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+.cardContainer {
+    margin: -50px 16% 50px 16%;
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 2%;;
+    row-gap: 20px;
+}
+
+.card {
+    width: 32%;
+    height: 300px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    background-color: var(--color-extra-light);
+    box-shadow: 2px 4px 10px 6px rgba(30, 52, 65, 0.07);
+}
+
+.cardTitleContainer {
+    height: 47%;
+    padding: 30px;
+}
+
+.cardDate {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18.45px;
+    color: var(--color-light);
+    text-transform: uppercase;
+}
+
+.cardTitle {
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 29px;
+    color: var(--color-red);
+    text-transform: capitalize;
+}
+
+.cardImageContainer {
+    height: 53%;
+}
