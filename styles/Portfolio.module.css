@@ -91,8 +91,8 @@
 }
 
 .cardTitleContainer {
-    height: 47%;
-    padding: 30px;
+    min-height: 47%;
+    padding: 30px 30px 0 30px;
 }
 
 .cardDate {
@@ -158,4 +158,17 @@
     line-height: 21.75px;
     color: var(--color-medium-light);
     text-align: center;
+}
+
+.contentSubSection {
+    width: 100vw;
+    height: auto;
+}
+
+.contentSubContainer {
+    background-color: var(--color-dark);
+    width: 100vw;
+    height: auto;
+    border: 1px solid var(--color-dark);
+    margin-top: 80px;
 }

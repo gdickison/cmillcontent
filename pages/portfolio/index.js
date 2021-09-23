@@ -60,6 +60,43 @@ function PortfolioPage() {
                             <hr/>
                         </div>
                     </div>
+                    <div className={styles.contentSubSection}>
+                        <div className={styles.contentTitleContainer}>
+                            <p className={styles.contentTitle}>Arizona Milk Producers Blog</p>
+                            <p className={styles.contentSubtitle}>Featured monthly blog</p>
+                        </div>
+                        <div className={styles.contentSubContainer}>
+                            <div className={styles.cardContainer}>
+                                <PortfolioContentCard
+                                    date="September 2021"
+                                    title="Going Camping? Out in the wild, dairy ups the ante"
+                                    image="/images/image_campers.png"
+                                />
+                                <PortfolioContentCard
+                                    date="July 2021"
+                                    title="Milk in the Summertime - a Splendid Choice"
+                                    image="/images/image_girl.png"
+                                />
+                                <PortfolioContentCard
+                                    date="June 2021"
+                                    title="Even in Summer Heat, AZ Cows are Happier than you Think"
+                                    image="/images/image_wolves.png"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div className={styles.testimonialSection}>
+                        <div className={styles.testimonialBorder}>
+                            <hr/>
+                        </div>
+                        <div className={styles.testimonialContainer}>
+                            <p className={styles.testimonialText}>“Curtis gets it. He understands what we are looking for. He's excellent to work with and highly recommended.”</p>
+                            <p className={styles.testimonialSource}>- Cole Harmonson, Co-Founder and CEO, Dare Capital</p>
+                        </div>
+                        <div className={styles.testimonialBorder}>
+                            <hr/>
+                        </div>
+                    </div>
             <Footer />
         </div>
     );
