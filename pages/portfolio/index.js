@@ -24,10 +24,10 @@ function PortfolioPage() {
                     </div>
                 </div>
                     <div className={styles.contentSection}>
-                            <div className={styles.contentTitleContainer}>
-                                <p className={styles.contentTitle}>Dare Capital Blog</p>
-                                <p className={styles.contentSubtitle}>Co-authored with Dare Capital CEO Cole Harmonson and the Resound team</p>
-                            </div>
+                        <div className={styles.contentTitleContainer}>
+                            <p className={styles.contentTitle}>Dare Capital Blog</p>
+                            <p className={styles.contentSubtitle}>Co-authored with Dare Capital CEO Cole Harmonson and the Resound team</p>
+                        </div>
                         <div className={styles.contentContainer}>
                             <div className={styles.cardContainer}>
                                 <PortfolioContentCard
@@ -46,6 +46,18 @@ function PortfolioPage() {
                                     image="/images/image_wolves.png"
                                 />
                             </div>
+                        </div>
+                    </div>
+                    <div className={styles.testimonialSection}>
+                        <div className={styles.testimonialBorder}>
+                            <hr/>
+                        </div>
+                        <div className={styles.testimonialContainer}>
+                            <p className={styles.testimonialText}>"Curtis is able to bring depth to any project. He doesn&apos;t stop until he finds something interesting to say, even if that means he has to go deep. Because he always emerges with a clever, simple insight that works. This is not something you can teach.&quot;</p>
+                            <p className={styles.testimonialSource}>- Chris Stadler, Resound Creative Media</p>
+                        </div>
+                        <div className={styles.testimonialBorder}>
+                            <hr/>
                         </div>
                     </div>
             <Footer />

@@ -71,7 +71,6 @@
     height: auto;
     border: 1px solid var(--color-lightest);
     margin-top: 80px;
-    margin-bottom: 50px;
 }
 
 .cardContainer {
@@ -114,4 +113,49 @@
 
 .cardImageContainer {
     height: 53%;
+}
+
+.testimonialSection {
+    width: 100vw;
+    height: 430px;
+    display: flex;
+    column-gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonialBorder {
+    width: 53px;
+    text-align: center;
+}
+
+.testimonialBorder hr {
+    width: 100%;
+    border: 2px solid var(--color-red);
+    opacity: 1;
+    margin-bottom: 40px;
+}
+
+.testimonialContainer {
+    width: 35%;
+    height: auto;
+}
+
+.testimonialText {
+    font-family: "ivypresto_display", serif;
+    font-style: normal;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 36.25px;
+    text-align: center;
+}
+
+.testimonialSource {
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 21.75px;
+    color: var(--color-medium-light);
+    text-align: center;
 }
