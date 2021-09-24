@@ -115,6 +115,11 @@
     text-transform: capitalize;
 }
 
+.cardTitle a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .cardImageContainer {
     height: 53%;
 }

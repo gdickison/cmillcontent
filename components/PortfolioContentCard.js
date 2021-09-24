@@ -1,12 +1,12 @@
-import Image from "next/dist/client/image"
+import Link from "next/dist/client/link"
 import styles from "../styles/Portfolio.module.css"
 
-const PortfolioContentCard = ({date, title, image}) => {
+const PortfolioContentCard = ({date, title, image, link}) => {
     return(
         <div className={styles.card}>
             <div className={styles.cardTitleContainer}>
                 <p className={styles.cardDate}>{date}</p>
-                <p className={styles.cardTitle}>{title}</p>
+                <p className={styles.cardTitle}><a href={link} target="_blank" rel="noreferrer">{title}</a></p>
             </div>
             <div className={styles.cardImageContainer} style={{backgroundImage: "url(" + image + ")"}}></div>
         </div>
