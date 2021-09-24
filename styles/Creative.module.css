@@ -113,8 +113,7 @@
 .featureFilmContentContainer {
     display: flex;
     flex-flow: row wrap;
-    column-gap: 40px;
-    justify-content: center;
+    justify-content: space-between;
     margin-bottom: 50px;
     font-family: 'Poppins', sans-serif;
 }
