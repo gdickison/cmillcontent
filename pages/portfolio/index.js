@@ -53,7 +53,7 @@ function PortfolioPage() {
                             <hr/>
                         </div>
                         <div className={styles.testimonialContainer}>
-                            <p className={styles.testimonialText}>"Curtis is able to bring depth to any project. He doesn&apos;t stop until he finds something interesting to say, even if that means he has to go deep. Because he always emerges with a clever, simple insight that works. This is not something you can teach.&quot;</p>
+                            <p className={styles.testimonialText}>&quot;Curtis is able to bring depth to any project. He doesn&apos;t stop until he finds something interesting to say, even if that means he has to go deep. Because he always emerges with a clever, simple insight that works. This is not something you can teach.&quot;</p>
                             <p className={styles.testimonialSource}>- Chris Stadler, Resound Creative Media</p>
                         </div>
                         <div className={styles.testimonialBorder}>
@@ -90,7 +90,7 @@ function PortfolioPage() {
                             <hr/>
                         </div>
                         <div className={styles.testimonialContainer}>
-                            <p className={styles.testimonialText}>“Curtis gets it. He understands what we are looking for. He's excellent to work with and highly recommended.”</p>
+                            <p className={styles.testimonialText}>&quot;Curtis gets it. He understands what we are looking for. He&apos;s excellent to work with and highly recommended.&quot;</p>
                             <p className={styles.testimonialSource}>- Cole Harmonson, Co-Founder and CEO, Dare Capital</p>
                         </div>
                         <div className={styles.testimonialBorder}>
