@@ -346,6 +346,11 @@
     color: var(--color-medium);
 }
 
+.stagePlaysDescription a {
+    text-decoration: none;
+    color: var(--color-red);
+}
+
 .stagePlaysLinkContainer {
     width: 100vw;
     height: auto;

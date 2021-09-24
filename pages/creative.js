@@ -102,21 +102,22 @@ function CreativePage() {
                     <div className={styles.fictionContentContainer}>
                         <FictionContentCard
                             title="Both Feet"
+                            link="https://deadmule.com/curtis-miller-fiction-dec-2020-2/"
                             genre="short fiction"
                             // eslint-disable-next-line react/jsx-key
-                            description={["Published in ", <a href='#'>Dead Mule School of Southern Literature</a>, ", Dec 2020"]}
+                            description={["Published in ", <a href="https://deadmule.com/" target="_blank" rel="noreferrer">Dead Mule School of Southern Literature</a>, ", Dec 2020"]}
                         />
                         <FictionContentCard
                             title="Entradero"
                             genre="short fiction"
                             // eslint-disable-next-line react/jsx-key
-                            description={["Published in ", <a href='#'>Music Art and Literary Journal</a>, ", Vol 49, 2010"]}
+                            description={["Published in ", <a href="https://mosaiczine.com/" target="_blank" rel="noreferrer">Mosaic Art and Literary Journal</a>, ", Vol 49, 2010"]}
                         />
                         <FictionContentCard
                             title="Camden Angel"
                             genre="creative nonfiction"
                             // eslint-disable-next-line react/jsx-key
-                            description={["Finalist, 2011 Vandermey Nonfiction Contest, ", <a href='#'>Ruminate Magazine</a>]}
+                            description={["Finalist, 2011 Vandermey Nonfiction Contest, ", <a href="https://www.ruminatemagazine.com/" target="_blank" rel="noreferrer">Ruminate Magazine</a>]}
                         />
                         <FictionContentCard
                             title="One Shot North"
@@ -136,7 +137,8 @@ function CreativePage() {
                         <StagePlaysContentCard
                             title="Packed, Prepared"
                             genre="one act lockdown comedy"
-                            description="Semi-finalist, Kennedy Center American College Theater Festival, Region VII, 2021"
+                            // eslint-disable-next-line react/jsx-key
+                            description={["Semi-finalist, Kennedy Center American College Theater Festival, ", <a href="https://www.kcactf7.org/" target="_blank" rel="noreferrer">Region VII</a>, ", 2021"]}
                             performance="Staged reading at New Saint Andrews College"
                             link="#"
                         />
