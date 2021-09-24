@@ -1,7 +1,7 @@
 import NavBar from "../../components/Navbar"
 import Head from "next/dist/shared/lib/head"
 import Footer from "../../components/Footer"
-import Image from "next/dist/client/image"
+import Link from "next/dist/client/link"
 import styles from '../../styles/Portfolio.module.css'
 import PortfolioContentCard from "../../components/PortfolioContentCard"
 
@@ -117,6 +117,22 @@ function PortfolioPage() {
                             </div>
                         </div>
                     </div>
+                    <div className={styles.creativeContentSection}>
+                    <div className={styles.creativeContentHeader}>
+                        <p className={styles.contentTitle}>United Dairyment of Arizona</p>
+                    </div>
+                    <div className={styles.contentTitleContainer}>
+                        <p className={styles.contentSubtitle}>90 second video script</p>
+                    </div>
+                    <div className={styles.videoContainer}>
+                        <iframe className={styles.video} controls width={720} height={576} src="https://www.youtube.com/embed/vnmeyvh5ZhI"/>
+                    </div>
+                </div>
+                <div className={styles.putMeToWorkContainer}>
+                    <Link href="mailto:curtis.miller@biola.edu" passHref>
+                        <span className={styles.putMeToWorkButton}>Put Me To Work</span>
+                    </Link>
+                </div>
             <Footer />
         </div>
     );

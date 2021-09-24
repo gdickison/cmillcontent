@@ -185,3 +185,82 @@
     border: 1px solid var(--color-medium);
     margin-top: 80px;
 }
+
+.creativeContentSection {
+    margin: 130px 16%;
+}
+
+.creativeContentHeader {
+    display: flex;
+    align-items: center;
+    padding-bottom: 32px;
+}
+
+.creativeContentHeaderText {
+    font-family: 'ivypresto-display', serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.2rem;
+    line-height: 1.24;
+    padding: 0 3rem;
+    margin-bottom: -15px;
+    display: inline-block;
+}
+
+.videoContainer {
+    padding-top: 56.25%;
+    height: 0px;
+    position: relative;
+    margin-bottom: 14px;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.videoCaption {
+    margin-bottom: 41px;
+}
+
+.videoTitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.videoCredits,
+.videoYear {
+    margin: 0;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.putMeToWorkContainer {
+    height: 200px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.putMeToWorkButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--color-red);
+    line-height: 26px;
+    width: 265px;
+    height: 56px;
+    border: 2px solid var(--color-red);
+}
+
+.putMeToWorkButton:hover {
+    cursor: pointer;
+}
