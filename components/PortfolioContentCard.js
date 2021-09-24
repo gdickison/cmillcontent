@@ -8,7 +8,7 @@ const PortfolioContentCard = ({date, title, image}) => {
                 <p className={styles.cardDate}>{date}</p>
                 <p className={styles.cardTitle}>{title}</p>
             </div>
-            <div className={styles.cardImageContainer}><Image src={image} alt={title} width={360} height={170} layout="intrinsic" /></div>
+            <div className={styles.cardImageContainer} style={{backgroundImage: "url(" + image + ")"}}></div>
         </div>
     );
 }

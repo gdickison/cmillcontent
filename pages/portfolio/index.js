@@ -121,7 +121,7 @@ function PortfolioPage() {
                     <div className={styles.creativeContentHeader}>
                         <p className={styles.contentTitle}>United Dairyment of Arizona</p>
                     </div>
-                    <div className={styles.contentTitleContainer}>
+                    <div className={styles.videoTitleContainer}>
                         <p className={styles.contentSubtitle}>90 second video script</p>
                     </div>
                     <div className={styles.videoContainer}>

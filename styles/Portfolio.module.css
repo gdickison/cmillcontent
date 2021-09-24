@@ -49,6 +49,10 @@
     width: 30%;
 }
 
+.videoTitleContainer {
+    width: 30%;
+}
+
 .contentTitle {
     font-family: 'ivypresto-display', serif;
     font-weight: 600;
