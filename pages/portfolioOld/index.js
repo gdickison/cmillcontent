@@ -9,12 +9,13 @@ import Testimonial from "../../components/Testimonial"
 
 function PortfolioPage() {
     return (
-        <div>
+        <div className="page-container">
             <Head>
                 <title>C.M. Miller - Content Writer</title>
                 <link rel="icon" href="/images/curtis_miller_logo.png" />
             </Head>
             <NavBar />
+            <div className="content-wrapper">
                 <div className={styles.headerWrapper}>
                     <div className={styles.headerTextContainer}>
                         <h1 className={styles.title}>
@@ -127,6 +128,7 @@ function PortfolioPage() {
                         <span className={styles.putMeToWorkButton}>Put Me To Work</span>
                     </Link>
                 </div>
+            </div>
             <Footer />
         </div>
     );

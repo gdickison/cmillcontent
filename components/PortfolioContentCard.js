@@ -1,4 +1,3 @@
-import Link from "next/dist/client/link"
 import styles from "../styles/Portfolio.module.css"
 
 const PortfolioContentCard = ({date, title, image, link}) => {

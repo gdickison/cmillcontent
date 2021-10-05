@@ -23,6 +23,20 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+.page-container {
+    position: relative;
+    min-height: 100vh;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-wrapper {
+    padding-bottom: 222px;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -64,13 +78,4 @@ a {
     margin-right: 0 !important;
     font-size: 15px !important;
     line-height: 18.45px;
-}
-
-.pageContainer {
-    min-height: 100vh;
-    padding: 0 0.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
