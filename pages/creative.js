@@ -66,20 +66,19 @@ function CreativePage() {
                             <h2 className={styles.creativeContentHeaderText}>Feature Film Treatments</h2>
                         </div>
                         <div className={styles.featureFilmContentContainer}>
-                            <div className={styles.featureFilmContentCard}>
+                            <div className={styles.featureFilmContentCard}> {/* repeat the featureFilmContentCard for each new feature film */}
                                 <Image src="/images/image_b_to_a.png" alt="b to a" width={360} height={202} layout="responsive" />
                                 <div className={styles.featureFilmCaption}>
                                     <p className={styles.featureFilmTitle}>B to A</p>
                                     <p className={styles.featureFilmGenre}>straight drama</p>
-                                    <p className={styles.featureFilmDescription}>When a self-reliant college athlete finds her life uprooted by an unplanned pregnancy, an oddball older brother helps her navigate the hurdles of returning home, pregnancy and adoption, and family restoration. </p>
-                                </div>
-                            </div>
-                            <div className={styles.featureFilmContentCard}>
-                                <Image src="/images/image_pivot_knowledge.png" alt="pivot knowledge" width={360} height={202} layout="responsive" />
-                                <div className={styles.featureFilmCaption}>
-                                    <p className={styles.featureFilmTitle}>Pivot Knowledge</p>
-                                    <p className={styles.featureFilmGenre}>thriller/heist</p>
-                                    <p className={styles.featureFilmDescription}>To prevent a genocide, an American agent and her team travel back in time to convince a young, imprisoned radical and future Eastern Bloc dictator, to abandon his hate-fueled beliefs.</p>
+                                    <p className={styles.featureFilmDescription}>When a college athlete finds her life uprooted by an unplanned pregnancy, her eccentric, older, army veteran brother lends a helping hand.</p>
+                                    <p className={styles.featureFilmDescription}>While they navigate the hurdles of returning home, family restoration and the adoption process, a beleaguered couple struggle with infertility clings to hope.</p>
+                                    <p>
+                                        <a className={styles.creativeLink} href="/files/B_to_A_Film_Treatment_2021.pdf" alt="B to A Film Treatment 2021" target="_blank" rel="noopener noreferror">Full Treatment</a>
+                                    </p>
+                                    <p>
+                                        <a className={styles.creativeLink} href="/files/B_to_A_Ten_minute_sample_scene.pdf" alt="B to A Ten Minute Sample Scene" target="_blank" rel="noopener noreferror">Sample Scene</a>
+                                    </p>
                                 </div>
                             </div>
                         </div>

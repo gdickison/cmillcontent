@@ -385,3 +385,8 @@
     color: var(--color-red);
     text-decoration: none;
 }
+
+.creativeLink {
+    text-decoration: none;
+    color: inherit;
+}
