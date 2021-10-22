@@ -76,7 +76,14 @@ a {
     line-height: 18.45px;
 }
 
-.navbar-light .navbar-brand:hover,
-.navbar-light .navbar-brand.active {
+.navbar-light .navbar-brand:hover {
     color: var(--color-red) !important;
+}
+
+#active-link {
+    color: var(--color-red);
+}
+
+#home-link:hover {
+    filter: grayscale(100%);
 }
