@@ -1,14 +1,14 @@
 import Head from "next/dist/shared/lib/head"
 import NavBar from "../components/Navbar"
 import Footer from "../components/Footer"
-import styles from '../styles/PortfolioTest.module.css'
+import styles from '../styles/Portfolio.module.css'
 import PortfolioSectionTitle from "../components/PortfolioSectionTitle"
 import Testimonial from "../components/Testimonial"
 import WritingLinkSection from "../components/WritingLink"
 import Link from "next/dist/client/link"
 import { dareCapital, arizonaMilk, resoundcastBranding } from "../public/data/dummydata"
 
-function PortfolioTestPage(){
+function PortfolioPage(){
     return (
         <div className="page-container">
             <Head>
@@ -70,4 +70,4 @@ function PortfolioTestPage(){
     );
 }
 
-export default PortfolioTestPage;
+export default PortfolioPage;

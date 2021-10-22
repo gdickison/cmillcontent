@@ -1,28 +1,4 @@
-.content-title-container {
-    position: relative;
-    margin-left: 16%;
-    width: 50%;
-    padding-bottom: 67px;
-}
-
-.content-title {
-    font-family: 'ivypresto-display', serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 35px;
-    color: var(--color-dark);
-}
-
-.content-subtitle {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 19px;
-    color: var(--color-medium-dark);
-    width: 65%;
-}
-
-.testimonial-section {
+.testimonialSection {
     width: 100vw;
     height: auto;
     display: flex;
@@ -31,34 +7,35 @@
     align-items: center;
 }
 
-.testimonial-border {
+.testimonialBorder {
     width: 53px;
     text-align: center;
 }
 
-.testimonial-border hr {
+.testimonialBorder hr {
     width: 100%;
     border: 2px solid var(--color-red);
     opacity: 1;
     margin-bottom: 40px;
 }
 
-.testimonial-container {
+.testimonialContainer {
     width: 35%;
     height: auto;
     padding: 100px 0;
 }
 
-.testimonial-text {
+.testimonialText {
     font-family: "ivypresto_display", serif;
     font-style: normal;
     font-size: 25px;
     font-weight: 400;
     line-height: 36.25px;
     text-align: center;
+    color: var(--color-dark);
 }
 
-.testimonial-source {
+.testimonialSource {
     font-family: 'Poppins', sans-serif;
     font-style: italic;
     font-weight: 500;

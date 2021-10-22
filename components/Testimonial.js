@@ -1,14 +1,16 @@
+import styles from '../styles/Testimonial.module.css'
+
 const Testimonial = ({testimonial, source}) => {
     return (
-        <div className="testimonial-section">
-            <div className="testimonial-border">
+        <div className={styles.testimonialSection}>
+            <div className={styles.testimonialBorder}>
                 <hr/>
             </div>
-            <div className="testimonial-container">
-                <p className="testimonial-text">{testimonial}</p>
-                <p className="testimonial-source">- {source}</p>
+            <div className={styles.testimonialContainer}>
+                <p className={styles.testimonialText}>{testimonial}</p>
+                <p className={styles.testimonialSource}>- {source}</p>
             </div>
-            <div className="testimonial-border">
+            <div className={styles.testimonialBorder}>
                 <hr/>
             </div>
         </div>

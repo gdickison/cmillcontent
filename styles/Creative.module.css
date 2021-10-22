@@ -8,6 +8,7 @@
     text-transform: capitalize;
     text-align: center;
     margin-bottom: 20px;
+    color: var(--color-darkest);
 }
   
 .subtitle {
@@ -20,6 +21,7 @@
     position: absolute;
     left: 50%;
     transform: translate(-50%);
+    color: var(--color-dark);
 }
 
 .subtitle p {
@@ -71,6 +73,7 @@
     padding: 0 3rem;
     margin-bottom: -15px;
     display: inline-block;
+    color: var(--color-dark);
 }
 
 /* Short Film Section */
@@ -99,6 +102,7 @@
     font-size: 22px;
     font-weight: 600;
     margin-bottom: 10px;
+    color: var(--color-dark);
 }
 
 .videoCredits,
@@ -106,6 +110,7 @@
     margin: 0;
     font-size: 14px;
     text-transform: uppercase;
+    color: var(--color-medium);
 }
 
 /* Feature Film Section */
@@ -131,6 +136,7 @@
     font-size: 22px;
     font-weight: 600;
     margin-bottom: 10px;
+    color: var(--color-red);
 }
 
 .featureFilmGenre {
@@ -139,6 +145,7 @@
     font-weight: 500;
     font-style: normal;
     text-transform: uppercase;
+    color: var(--color-medium);
 }
 
 .featureFilmDescription {
@@ -146,6 +153,7 @@
     font-weight: 400;
     font-style: normal;
     margin: 10px 0;
+    color: var(--color-dark);
 }
 
 /* .cardLinkContainer {
@@ -159,6 +167,7 @@
     font-size: 17px;
     font-weight: 500;
     text-transform: uppercase;
+    color: var(--color-dark);
 }
 
 .cardLink {

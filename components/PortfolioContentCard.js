@@ -1,4 +1,4 @@
-import styles from "../styles/Portfolio.module.css"
+import styles from "../styles/PortfolioContentCard.module.css"
 
 const PortfolioContentCard = ({date, title, image, link}) => {
     return(

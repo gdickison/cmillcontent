@@ -18,6 +18,7 @@
     font-weight: 600;
     font-style: normal;
     text-align: center;
+    color: var(--color-darkest);
 }
 
 .underBookshelf {
@@ -60,6 +61,7 @@
 .crocText {
     font-size: 19px;
     font-weight: 200;
+    color: var(--color-dark);
 }
 
 .subscribeButtonContainer {

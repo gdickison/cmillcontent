@@ -1,9 +1,9 @@
-.writing-link-section {
+.writingLinkSection {
     width: 100vw;
     height: auto;
 }
 
-.writing-link-container {
+.writingLinkContainer {
     /* position: static; */
     width: 100%;
     border: .5px solid rgba(0,0,0,0);
@@ -11,7 +11,7 @@
     background-color: var(--color-lightest);
 }
 
-.writing-link-card-container {
+.writingLinkCardContainer {
     position: relative;
     height: auto;
     margin: -42px 16% 42px 16%;
@@ -32,12 +32,12 @@
     box-shadow: 2px 4px 10px 6px rgba(30, 52, 65, 0.07);
 }
 
-.card-title-container {
+.cardTitleContainer {
     min-height: 47%;
     padding: 30px 30px 0 30px;
 }
 
-.card-date {
+.cardDate {
     font-weight: 700;
     font-size: 15px;
     line-height: 18.45px;
@@ -45,7 +45,7 @@
     text-transform: uppercase;
 }
 
-.card-title {
+.cardTitle {
     font-weight: 500;
     font-size: 23px;
     line-height: 29px;
@@ -53,11 +53,11 @@
     text-transform: capitalize;
 }
 
-.card-title a {
+.cardTitle a {
     text-decoration: none;
     color: inherit;
 }
 
-.card-image-container {
+.cardTitleContainer {
     height: 53%;
 }
