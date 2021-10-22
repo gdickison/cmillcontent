@@ -15,13 +15,15 @@ const StagePlaysContentCard = ({title, genre, description, performance, link}) =
                 <div className={styles.stagePlaysContentCardContents}>
                     <p className={styles.stagePlaysPerformance}>{performance}</p>
                 </div>
-                <div className={styles.stagePlaysContentCardContents}>
-                    <div className={styles.cardLinkContainer}>
-                        <Link href={link} passHref>
-                            <span className={styles.cardLink}>Read Sample</span>
-                        </Link>
+                {link &&
+                    <div className={styles.stagePlaysContentCardContents}>
+                        <div className={styles.cardLinkContainer}>
+                            <Link href={link} passHref>
+                                <span className={styles.cardLink}>Read Sample</span>
+                            </Link>
+                        </div>
                     </div>
-                </div>
+                }
             </div>
         </div>
     );

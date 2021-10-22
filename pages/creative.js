@@ -146,13 +146,11 @@ function CreativePage() {
                                 title="Antigone"
                                 genre="a one act adaptation"
                                 performance="Performed on the patio at Restoration Life Church, 2017"
-                                link="#"
                             />
                             <StagePlaysContentCard
                                 title="Six From the Strand"
                                 genre="full-length drama"
                                 performance="Performed at the Second Story Theater, 2011"
-                                link="#"
                             />
                             <StagePlaysContentCard
                                 title="Ten-Minute Plays"
@@ -172,13 +170,11 @@ function CreativePage() {
                                 </li>
                                 </ul>]}
                                 performance="Performed by the Golden Mean Players, at the Second Story Theater, and in workshops at the University of London, Royal Holloway, 2007-2010."
-                                link="#"
                             />
                             <StagePlaysContentCard
                                 title="Bombing Hills"
                                 genre="full-length drama"
                                 performance="Honors thesis; staged reading at U.C. Riverside, 2009"
-                                link="#"
                             />
                         </div>
                         <div className={styles.stagePlaysLinkContainer}>

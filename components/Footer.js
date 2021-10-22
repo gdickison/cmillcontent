@@ -9,7 +9,7 @@ const Footer = () => {
 			</div>
 			<div>C.M. Miller</div>
 			<div className={styles.footerText}>
-				<p>Writing and editing for advertising, entertainment, and publishing.</p>
+				<p>Content writing for advertising, entertainment, and publishing.</p>
 			</div>
 	  </footer>
 	);

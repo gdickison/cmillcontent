@@ -45,3 +45,28 @@
     top: 0;
     left: 0;
 }
+
+.putMeToWorkContainer {
+    height: 200px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.putMeToWorkButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--color-red);
+    line-height: 26px;
+    width: 265px;
+    height: 56px;
+    border: 2px solid var(--color-red);
+}
+
+.putMeToWorkButton:hover {
+    cursor: pointer;
+}

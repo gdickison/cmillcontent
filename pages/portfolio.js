@@ -5,6 +5,7 @@ import styles from '../styles/PortfolioTest.module.css'
 import PortfolioSectionTitle from "../components/PortfolioSectionTitle"
 import Testimonial from "../components/Testimonial"
 import WritingLinkSection from "../components/WritingLink"
+import Link from "next/dist/client/link"
 import { dareCapital, arizonaMilk, resoundcastBranding } from "../public/data/dummydata"
 
 function PortfolioTestPage(){
@@ -25,7 +26,7 @@ function PortfolioTestPage(){
                 {/* Dare Capital Blog Section */}
                 <PortfolioSectionTitle
                     title="Dare Capital Blog"
-                    subtitle="Co-authored with Dare Capital CEO Cole Harmonson and the Resound team"
+                    subtitle="Co-authored with CEO Cole Harmonson"
                 />
                 <WritingLinkSection color="var(--color-lightest)" cardData={dareCapital} />
                 <Testimonial
@@ -45,7 +46,7 @@ function PortfolioTestPage(){
                 {/* Resound Broadcasting Blog Section */}
                 <PortfolioSectionTitle
                     title="Resoundcast Branding"
-                    subtitle="Edited and co-written, with content from Resound Creative Media CEO Mike Jones"
+                    subtitle="Edited and co-written with Resound CEO Mike Jones"
                 />
                 <WritingLinkSection color="var(--color-medium)" cardData={resoundcastBranding} />
                 {/* United Dairymen of AZ video section */}
@@ -58,6 +59,11 @@ function PortfolioTestPage(){
                         <iframe className={styles.video} controls width={720} height={576} src="https://www.youtube.com/embed/vnmeyvh5ZhI"/>
                     </div>
                 </div>
+                <div className={styles.putMeToWorkContainer}>
+			<Link href="mailto:curtis.miller@biola.edu" passHref>
+				<span className={styles.putMeToWorkButton}>Put Me To Work</span>
+			</Link>
+		</div>
             </div>
             <Footer />
         </div>
