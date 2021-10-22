@@ -67,10 +67,6 @@ a {
     padding: 0 !important;
 }
 
-.container-fluid:hover{
-    background-color: var(--color-lightest);
-}
-
 .navbar-brand {
     height: 100%;
     width: 100%;
@@ -78,4 +74,9 @@ a {
     margin-right: 0 !important;
     font-size: 15px !important;
     line-height: 18.45px;
+}
+
+.navbar-light .navbar-brand:hover,
+.navbar-light .navbar-brand.active {
+    color: var(--color-red) !important;
 }
