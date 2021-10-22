@@ -1,5 +1,4 @@
 import styles from '../styles/Creative.module.css'
-import Link from 'next/dist/client/link';
 
 const StagePlaysContentCard = ({title, genre, description, performance, link}) => {
     return (
@@ -18,9 +17,9 @@ const StagePlaysContentCard = ({title, genre, description, performance, link}) =
                 {link &&
                     <div className={styles.stagePlaysContentCardContents}>
                         <div className={styles.cardLinkContainer}>
-                            <Link href={link} passHref>
+                            <a className={styles.externalLink} href={link} target="_blank" rel="noreferrer">
                                 <span className={styles.cardLink}>Read Sample</span>
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 }

@@ -390,3 +390,7 @@
     text-decoration: none;
     color: inherit;
 }
+
+.externalLink {
+    text-decoration: none;
+}

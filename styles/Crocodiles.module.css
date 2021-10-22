@@ -91,3 +91,7 @@
     font-size: 17px;
     color: var(--color-red);
 }
+
+.externalLink {
+    text-decoration: none;
+}

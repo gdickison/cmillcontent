@@ -44,9 +44,9 @@ function CrocodilesPage() {
                             </p>
                         </div>
                         <div className={styles.subscribeButtonContainer}>
-                            <Link href="https://crocodileshelf.substack.com/subscribe?utm_source=menu&simple=true&next=https%3A%2F%2Fcrocodileshelf.substack.com%2F" passHref>
+                            <a className={styles.externalLink} href="https://crocodileshelf.substack.com/p/coming-soon" target="_blank" rel="noreferrer" >
                                 <span className={styles.subscribeButton}>subscribe for free</span>
-                            </Link>
+                            </a>
                         </div>
                     </div>
                     </div>

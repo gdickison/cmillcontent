@@ -140,7 +140,8 @@ function CreativePage() {
                                 // eslint-disable-next-line react/jsx-key
                                 description={["Semi-finalist, Kennedy Center American College Theater Festival, ", <a href="https://www.kcactf7.org/" target="_blank" rel="noreferrer">Region VII</a>, ", 2021"]}
                                 performance="Staged reading at New Saint Andrews College"
-                                link="#"
+                                link="/files/All_Packed_10_Page_Sample.pdf"
+                                target="_blank"
                             />
                             <StagePlaysContentCard
                                 title="Antigone"
@@ -179,7 +180,7 @@ function CreativePage() {
                         </div>
                         <div className={styles.stagePlaysLinkContainer}>
                             <p className={styles.stagePlaysLinkText}>Need a play?</p>
-                            <p className={styles.stagePlaysLinkText}>for permissions and more, <a href='mailto:curtis@cmillcontent.com'>contact me</a></p>
+                            <p className={styles.stagePlaysLinkText}>For permissions, sample scenes, and more,  <a href='mailto:curtis@cmillcontent.com'>give me a shout</a></p>
                         </div>
                     </div>
                 </div>
