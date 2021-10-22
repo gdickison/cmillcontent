@@ -7,13 +7,13 @@ import styles from '../styles/Bio.module.css'
 
 function BioPage() {
     return (
-        <div>
+        <div className="page-container">
             <Head>
                 <title>C.M. Miller - Content Writer</title>
                 <link rel="icon" href="/images/curtis_miller_logo.png" />
             </Head>
             <NavBar />
-            <div className={styles.contentWrapper}>
+            <div className="content-wrapper">
                 <div className={styles.bioPageContainer}>
                     <h1 className={styles.bioTitle}>Bio</h1>
                     <div className={styles.authorImage}>
