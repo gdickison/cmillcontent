@@ -62,6 +62,10 @@ a {
     font-weight: 600;
 }
 
+#nav-container {
+    max-width: 600px !important;
+}
+
 .container-fluid {
     justify-content: center !important;
     padding: 0 !important;

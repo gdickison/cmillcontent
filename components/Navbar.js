@@ -6,7 +6,7 @@ const NavBar = () => {
     const router = useRouter();
 
     return (
-        <div className="container">
+        <div id="nav-container" className="container">
             <nav className="navbar navbar-expand-sm navbar-light">
                 <div className="container-fluid">
                     <Link href="/portfolio" passHref>
