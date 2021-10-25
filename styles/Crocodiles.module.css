@@ -81,6 +81,7 @@
     width: 210px;
     height: 40px;
     border: 2px solid var(--color-red);
+    border-radius: 3px;
 }
 
 .subscribeButton:hover {

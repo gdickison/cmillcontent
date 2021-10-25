@@ -65,6 +65,7 @@
     width: 265px;
     height: 56px;
     border: 2px solid var(--color-red);
+    border-radius: 3px;
 }
 
 .putMeToWorkButton:hover {

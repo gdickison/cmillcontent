@@ -179,6 +179,7 @@
     background-color: var(--color-red);
     color: var(--color-extra-light);
     text-transform: capitalize;
+    border-radius: 3px;
 }
 
 .cardLink:hover {
