@@ -55,14 +55,14 @@
 
 .bioContainer hr {
     width: 25%;
-    border: 2px solid var(--color-red);
+    border: 1px solid var(--color-red);
     opacity: 1;
 }
 
 .bioContainer a {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    font-size: 17px;
+    font-size: 16px;
     color: var(--color-red);
 }
 
