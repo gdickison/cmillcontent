@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import NavBar from '../components/Navbar'
 import Footer from '../components/Footer'
+import HomeSubheader from '../components/HomeSubheader'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -27,18 +28,9 @@ export default function Home() {
 				</p>
 			</div>
 		</div>
-
-		<div className={styles.subHeaderTextSection}>
-			<div className={styles.subHeaderTextContainer}>
-				<p className={styles.subHeaderTextWithDropCap}>
-					With plenty of elbow grease and a sharp eye on story, audience, style and substance, I write killer content for a range of mediums.
-				</p>
-				<p className={styles.subHeaderText}>
-					I’m delighted to roll up my sleeves and help you out with:
-				</p>
-			</div>
-		</div>
-
+        <HomeSubheader
+            subheaderText="With plenty of elbow grease and a sharp eye on story, audience, style and substance, I write killer content for a range of mediums. I'm delighted to roll up my sleeves and help you out with:"
+        />
 		<div className={styles.cardSection}>
 			<div className={styles.cardContainer}>
 				<div className={styles.card}>
