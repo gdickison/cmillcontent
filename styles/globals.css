@@ -95,3 +95,7 @@ a {
 #home-link:hover {
     filter: grayscale(100%);
 }
+
+.navbar.navbar-expand-sm.navbar-light {
+    padding-bottom: 0;
+}
