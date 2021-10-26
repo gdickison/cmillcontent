@@ -1,24 +1,27 @@
 .cardContainer {
-    height: 490px;
     width: 100vw;
     background: var(--color-lightest);
-    padding: 0 12%;
-    margin-top: -2rem;
+    position: relative;
+    height: auto;
     display: flex;
-    gap: 25px;
-    justify-content: space-between;
+    flex-flow: row wrap;
+    row-gap: 20px;
+    column-gap: 2%;
+    justify-content: center;
 }
 
 .card {
     background: var(--color-extra-light);
-    height: 465px;
-    width: 35%;
+    min-height: 465px;
     max-width: 360px;
+    min-width: 320px;
     box-shadow: 2px 4px 10px 6px rgba(30, 52, 65, 0.07);
     border-radius: 3px;
     position: relative;
     display: inline-block;
     margin-top: -2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 5%;
 }
 
 .cardIcon {

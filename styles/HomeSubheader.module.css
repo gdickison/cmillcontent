@@ -1,6 +1,7 @@
 .subheaderSection {
     width: 100vw;
-    height: 275px;
+    height: auto;
+    min-height: 275px;
     margin-bottom: 40px;
     display: flex;
     column-gap: 40px;
