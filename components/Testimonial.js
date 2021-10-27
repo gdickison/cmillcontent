@@ -7,7 +7,7 @@ const Testimonial = ({testimonial, source}) => {
                 <hr/>
             </div>
             <div className={styles.testimonialContainer}>
-                <p className={styles.testimonialText}>{testimonial}</p>
+                <p className={styles.testimonialText}>&quot;{testimonial}&quot;</p>
                 <p className={styles.testimonialSource}>- {source}</p>
             </div>
             <div className={styles.testimonialBorder}>

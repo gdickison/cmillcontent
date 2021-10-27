@@ -70,3 +70,7 @@
 .putMeToWorkButton:hover {
     cursor: pointer;
 }
+
+.placeholder {
+    height: 60px;
+}

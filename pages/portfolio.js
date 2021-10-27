@@ -6,7 +6,9 @@ import PortfolioSectionTitle from "../components/PortfolioSectionTitle"
 import Testimonial from "../components/Testimonial"
 import WritingLinkSection from "../components/WritingLink"
 import Link from "next/dist/client/link"
-import { dareCapital, arizonaMilk, resoundcastBranding, radicalRick } from "../public/data/dummydata"
+// import { dareCapital, arizonaMilk, resoundcastBranding, radicalRick } from "../public/data/dummydata"
+import { portfolioData } from "../public/data/dummydatatest"
+import { Fragment } from "react"
 
 function PortfolioPage(){
     return (
@@ -23,14 +25,36 @@ function PortfolioPage(){
                     <h1 className={styles.heroTitle}>Portfolio</h1>
                     <h2 className={styles.heroSubtitle}>Marketing and Advertising</h2>
                 </div>
+                {
+                    portfolioData && portfolioData.map((data) => {
+                            console.log(data);
+                        return (
+                            <Fragment key={data.portfolioSectionTitle}>
+                                <PortfolioSectionTitle
+                                    key={data.portfolioSectionTitle}
+                                    title={data.portfolioSectionTitle}
+                                    subtitle={data.portfolioSectionSubtitle}
+                                />
+                                <WritingLinkSection color={data.color} cardData={data.sectionData} />
+                                {data.testimonialText ?
+                                    <Testimonial
+                                        testimonial={data.testimonialText}
+                                        source={data.testimonialSource}
+                                    />
+                                    : <div className={styles.placeholder}/>
+                                }
+                            </Fragment>
+                        )
+                    })
+                }
                 {/* Radical Rick Section */}
-                <PortfolioSectionTitle
+                {/* <PortfolioSectionTitle
                     title="Radical Rick BMX"
                     subtitle="Bi-monthly blog, with visual content by Radical Rick creator Damian Fulton"
                 />
-                <WritingLinkSection color="var(--color-light)" cardData={radicalRick} />
+                <WritingLinkSection color="var(--color-light)" cardData={radicalRick} /> */}
                 {/* Dare Capital Blog Section */}
-                <PortfolioSectionTitle
+                {/* <PortfolioSectionTitle
                     title="Dare Capital Blog"
                     subtitle="Co-authored with CEO Cole Harmonson"
                 />
@@ -38,9 +62,9 @@ function PortfolioPage(){
                 <Testimonial
                     testimonial="&quot;Curtis is able to bring depth to any project. He doesn&apos;t stop until he finds something interesting to say, even if that means he has to go deep. Because he always emerges with a clever, simple insight that works. This is not something you can teach.&quot;"
                     source="Chris Stadler, Resound Creative Media"
-                />
+                /> */}
                 {/* AZ Milk Producers Blog Section */}
-                <PortfolioSectionTitle
+                {/* <PortfolioSectionTitle
                     title="Arizona Milk Producers Blog"
                     subtitle="Featured monthly blog"
                 />
@@ -48,13 +72,13 @@ function PortfolioPage(){
                 <Testimonial
                     testimonial="&quot;Curtis gets it. He understands what we are looking for. He&apos;s excellent to work with and highly recommended.&quot;"
                     source="Cole Harmonson, Co-Founder and CEO, Dare Capital"
-                />
+                /> */}
                 {/* Resound Broadcasting Blog Section */}
-                <PortfolioSectionTitle
+                {/* <PortfolioSectionTitle
                     title="Resoundcast Branding"
                     subtitle="Edited and co-written with Resound CEO Mike Jones"
                 />
-                <WritingLinkSection color="var(--color-medium)" cardData={resoundcastBranding} />
+                <WritingLinkSection color="var(--color-medium)" cardData={resoundcastBranding} /> */}
                 {/* United Dairymen of AZ video section */}
                 <PortfolioSectionTitle
                     title="United Dairymen of Arizona"
