@@ -1,9 +1,8 @@
 .headerWrapper {
-    width: 100vw;
     background-image: url('../public/images/bkgd_image_bookshelf.png');
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100vw 420px;
     margin-top: -25px;
 }
 
