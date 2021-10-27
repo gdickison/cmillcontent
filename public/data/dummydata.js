@@ -54,3 +54,12 @@ export const resoundcastBranding = [
         image: "/images/image_lies.png"
     }
 ];
+
+export const radicalRick = [
+    {
+        date: "October 2021",
+        title: "Proof That October is the Raddest Month of the Year",
+        link: "https://radicalrickbmx.com/blogs/news/proof-that-october-is-the-raddest-month-of-the-year",
+        image: "/images/image_campers.png"
+    }
+]

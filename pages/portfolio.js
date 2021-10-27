@@ -6,7 +6,7 @@ import PortfolioSectionTitle from "../components/PortfolioSectionTitle"
 import Testimonial from "../components/Testimonial"
 import WritingLinkSection from "../components/WritingLink"
 import Link from "next/dist/client/link"
-import { dareCapital, arizonaMilk, resoundcastBranding } from "../public/data/dummydata"
+import { dareCapital, arizonaMilk, resoundcastBranding, radicalRick } from "../public/data/dummydata"
 
 function PortfolioPage(){
     return (
@@ -23,6 +23,12 @@ function PortfolioPage(){
                     <h1 className={styles.heroTitle}>Portfolio</h1>
                     <h2 className={styles.heroSubtitle}>Marketing and Advertising</h2>
                 </div>
+                {/* Radical Rick Section */}
+                <PortfolioSectionTitle
+                    title="Radical Rick BMX"
+                    subtitle="Bi-monthly blog, with visual content by Radical Rick creator Damian Fulton"
+                />
+                <WritingLinkSection color="var(--color-lightest)" cardData={radicalRick} />
                 {/* Dare Capital Blog Section */}
                 <PortfolioSectionTitle
                     title="Dare Capital Blog"
