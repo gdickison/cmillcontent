@@ -25,7 +25,8 @@
 .card {
     height: 299px;
     width: 32%;
-    min-width: 300px;
+    min-width: 315px;
+    max-width: 360px;
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     background-color: var(--color-extra-light);
