@@ -35,6 +35,8 @@
 .cardTitleContainer {
     min-height: 47%;
     padding: 30px 30px 0 30px;
+    background-repeat: no-repeat;
+    background-position: center top;
 }
 
 .cardDate {

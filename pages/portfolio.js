@@ -28,7 +28,7 @@ function PortfolioPage(){
                     title="Radical Rick BMX"
                     subtitle="Bi-monthly blog, with visual content by Radical Rick creator Damian Fulton"
                 />
-                <WritingLinkSection color="var(--color-lightest)" cardData={radicalRick} />
+                <WritingLinkSection color="var(--color-light)" cardData={radicalRick} />
                 {/* Dare Capital Blog Section */}
                 <PortfolioSectionTitle
                     title="Dare Capital Blog"
