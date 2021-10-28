@@ -10,7 +10,7 @@ export const portfolioData = [
                 image: "/images/image_radical_rick.png"
             }
         ],
-        color: "var(--color-light)"
+        color: "light"
     },
     {
         portfolioSectionTitle: "Dare Capital Blog",
@@ -35,7 +35,7 @@ export const portfolioData = [
                 image: "images/image_wolves.png"
             }
         ],
-        color: "var(--color-lightest)",
+        color: "lightest",
         testimonialText: "Curtis gets it. He understands what we are looking for. He's excellent to work with and highly recommended.",
         testimonialSource: "Cole Harmonson, Co-Founder and CEO, Dare Capital",
     },
@@ -62,7 +62,7 @@ export const portfolioData = [
                 image: "/images/image_cow.png"
             }
         ],
-        color: "var(--color-dark)"
+        color: "dark"
     },
     {
         portfolioSectionTitle: "Resoundcast Branding",
@@ -81,7 +81,7 @@ export const portfolioData = [
                 image: "/images/image_lies.png"
             }
         ],
-        color: "var(--color-medium)",
+        color: "medium",
         testimonialText: "Curtis is able to bring depth to any project. He doesn't stop until he finds something interesting to say, even if that means he has to go deep. Because he always emerges with a clever, simple insight that works. This is not something you can teach.",
         testimonialSource: "Chris Stadler, Resound Creative Media"
     }

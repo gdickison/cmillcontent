@@ -35,7 +35,7 @@ function PortfolioPage(){
                                     title={data.portfolioSectionTitle}
                                     subtitle={data.portfolioSectionSubtitle}
                                 />
-                                <WritingLinkSection color={data.color} cardData={data.sectionData} />
+                                <WritingLinkSection color={'var(--color-' + data.color + ')'} cardData={data.sectionData} />
                                 {data.testimonialText ?
                                     <Testimonial
                                         testimonial={data.testimonialText}
