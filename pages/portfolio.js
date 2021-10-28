@@ -10,7 +10,27 @@ import Link from "next/dist/client/link"
 import { portfolioData } from "../public/data/dummydatatest"
 import { Fragment } from "react"
 
-function PortfolioPage(){
+import { createClient } from "contentful"
+
+export async function getStaticProps(){
+    const client = createClient({
+        space: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_KEY
+    });
+
+    const res = await client.getEntries({
+        content_type: "portfolioCard"
+    });
+
+    return {
+        props: {
+            sections: res.items
+        }
+    }
+}
+
+function PortfolioPage({sections}){
+    console.log(sections);
     return (
         <div className="page-container">
             <Head>
@@ -27,7 +47,7 @@ function PortfolioPage(){
                 </div>
                 {
                     portfolioData && portfolioData.map((data) => {
-                            console.log(data);
+                        {/* console.log(data); */}
                         return (
                             <Fragment key={data.portfolioSectionTitle}>
                                 <PortfolioSectionTitle
