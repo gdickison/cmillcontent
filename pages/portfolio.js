@@ -31,6 +31,7 @@ export async function getStaticProps(){
 
 function PortfolioPage({sections}){
     console.log(sections);
+
     return (
         <div className="page-container">
             <Head>
@@ -46,8 +47,30 @@ function PortfolioPage({sections}){
                     <h2 className={styles.heroSubtitle}>Marketing and Advertising</h2>
                 </div>
                 {
+                    sections && sections.map((section) => {
+                        {/* console.log(section); */}
+                        return (
+                            <Fragment key={section.sys.id}>
+                                <PortfolioSectionTitle
+                                    key={section.sys.id}
+                                    title={section.fields.portfolioSectionTitle}
+                                    subtitle={section.fields.portfolioSectionSubtitle}
+                                />
+                                <WritingLinkSection color={'var(--color-' + section.fields.sectionColor + ')'} cards={section.fields.cards} />
+                                {section.fields.testimonial ?
+                                    <Testimonial
+                                        testimonial={section.fields.testimonial}
+                                        source={section.fields.testimonialSource}
+                                    />
+                                    : <div className={styles.placeholder}/>
+                                }
+                            </Fragment>
+                        )
+                    })
+                }
+                {/* {
                     portfolioData && portfolioData.map((data) => {
-                        {/* console.log(data); */}
+                        console.log(data);
                         return (
                             <Fragment key={data.portfolioSectionTitle}>
                                 <PortfolioSectionTitle
@@ -66,7 +89,7 @@ function PortfolioPage({sections}){
                             </Fragment>
                         )
                     })
-                }
+                } */}
                 {/* Radical Rick Section */}
                 {/* <PortfolioSectionTitle
                     title="Radical Rick BMX"

@@ -12,19 +12,19 @@ const WritingLinkCard = ({date, link, title, image}) => {
     );
 }
 
-const WritingLinkSection = ({color, cardData}) => {
+const WritingLinkSection = ({color, cards}) => {
     return (
         <div className={styles.writingLinkSection}>
             <div className={styles.writingLinkContainer} style={{backgroundColor: color}}>
                 <div className={styles.writingLinkCardContainer}>
-                    {cardData.map((data) => {
+                    {cards.map((card) => {
                         return (
                             <WritingLinkCard
-                                key={data.link.substr(-20)}
-                                date={data.date}
-                                link={data.link}
-                                title={data.title}
-                                image={data.image}
+                                key={card.sys.id}
+                                date={card.fields.date}
+                                link={card.fields.link}
+                                title={card.fields.title}
+                                image={card.fields.image.fields.file.url}
                             />
                         )
                     })}
