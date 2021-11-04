@@ -6,11 +6,31 @@ import PortfolioSectionTitle from "../components/PortfolioSectionTitle"
 import Testimonial from "../components/Testimonial"
 import WritingLinkSection from "../components/WritingLink"
 import Link from "next/dist/client/link"
-// import { dareCapital, arizonaMilk, resoundcastBranding, radicalRick } from "../public/data/dummydata"
-import { portfolioData } from "../public/data/dummydatatest"
 import { Fragment } from "react"
+import { useState, useEffect } from 'react'
+import sanityClient from "../src/client"
 
 function PortfolioPage(){
+    const [portfolioData, setPortfolioData] = useState(null);
+
+    useEffect(() => {
+        sanityClient.fetch(`*[_type == "portfolioSection"]{
+            _id,
+            title,
+            subtitle,
+            color,
+            testimonialText,
+            testimonialSource,
+            "cards": *[ _type == "portfolioCard" && _id in ^.cards[]._ref ]{
+                date,
+                title,
+                link,
+                "imageUrl": image.asset->url
+            } | order(_createdAt)
+        } | order(_createdAt)`)
+        .then((data) => setPortfolioData(data));
+    }, []);
+
     return (
         <div className="page-container">
             <Head>
@@ -25,19 +45,20 @@ function PortfolioPage(){
                     <h1 className={styles.heroTitle}>Portfolio</h1>
                     <h2 className={styles.heroSubtitle}>Marketing and Advertising</h2>
                 </div>
+                {/* Writing Sample Links */}
                 {
                     portfolioData && portfolioData.map((data) => {
-                            console.log(data);
                         return (
-                            <Fragment key={data.portfolioSectionTitle}>
+                        <Fragment key={data.title}>
                                 <PortfolioSectionTitle
-                                    key={data.portfolioSectionTitle}
-                                    title={data.portfolioSectionTitle}
-                                    subtitle={data.portfolioSectionSubtitle}
+                                    key={data.title}
+                                    title={data.title}
+                                    subtitle={data.subtitle}
                                 />
-                                <WritingLinkSection color={'var(--color-' + data.color + ')'} cardData={data.sectionData} />
-                                {data.testimonialText ?
-                                    <Testimonial
+                                {data.cards ? console.log(data.cards) : console.log('no cards for ' + data._id)}
+                                <WritingLinkSection color={'var(--color-' + data.color + ')'} cardData={data.cards} />
+                                {data.testimonialText
+                                    ? <Testimonial
                                         testimonial={data.testimonialText}
                                         source={data.testimonialSource}
                                     />
@@ -47,38 +68,6 @@ function PortfolioPage(){
                         )
                     })
                 }
-                {/* Radical Rick Section */}
-                {/* <PortfolioSectionTitle
-                    title="Radical Rick BMX"
-                    subtitle="Bi-monthly blog, with visual content by Radical Rick creator Damian Fulton"
-                />
-                <WritingLinkSection color="var(--color-light)" cardData={radicalRick} /> */}
-                {/* Dare Capital Blog Section */}
-                {/* <PortfolioSectionTitle
-                    title="Dare Capital Blog"
-                    subtitle="Co-authored with CEO Cole Harmonson"
-                />
-                <WritingLinkSection color="var(--color-lightest)" cardData={dareCapital} />
-                <Testimonial
-                    testimonial="&quot;Curtis is able to bring depth to any project. He doesn&apos;t stop until he finds something interesting to say, even if that means he has to go deep. Because he always emerges with a clever, simple insight that works. This is not something you can teach.&quot;"
-                    source="Chris Stadler, Resound Creative Media"
-                /> */}
-                {/* AZ Milk Producers Blog Section */}
-                {/* <PortfolioSectionTitle
-                    title="Arizona Milk Producers Blog"
-                    subtitle="Featured monthly blog"
-                />
-                <WritingLinkSection color="var(--color-dark)" cardData={arizonaMilk} />
-                <Testimonial
-                    testimonial="&quot;Curtis gets it. He understands what we are looking for. He&apos;s excellent to work with and highly recommended.&quot;"
-                    source="Cole Harmonson, Co-Founder and CEO, Dare Capital"
-                /> */}
-                {/* Resound Broadcasting Blog Section */}
-                {/* <PortfolioSectionTitle
-                    title="Resoundcast Branding"
-                    subtitle="Edited and co-written with Resound CEO Mike Jones"
-                />
-                <WritingLinkSection color="var(--color-medium)" cardData={resoundcastBranding} /> */}
                 {/* United Dairymen of AZ video section */}
                 <PortfolioSectionTitle
                     title="United Dairymen of Arizona"
@@ -86,7 +75,7 @@ function PortfolioPage(){
                 />
                 <div style={{margin: '0 16%'}}>
                     <div className={styles.videoContainer}>
-                        <iframe className={styles.video} controls width={720} height={576} src="https://www.youtube.com/embed/vnmeyvh5ZhI"/>
+                        <iframe className={styles.video} controls width={720} height={576} src="https://www.youtube.com/embed/Z2S5a8hK7m0"/>
                     </div>
                 </div>
                 <div className={styles.putMeToWorkContainer}>
