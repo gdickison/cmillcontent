@@ -55,7 +55,6 @@ function PortfolioPage(){
                                     title={data.title}
                                     subtitle={data.subtitle}
                                 />
-                                {data.cards ? console.log(data.cards) : console.log('no cards for ' + data._id)}
                                 <WritingLinkSection color={'var(--color-' + data.color + ')'} cardData={data.cards} />
                                 {data.testimonialText
                                     ? <Testimonial
