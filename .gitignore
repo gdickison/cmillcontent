@@ -3,6 +3,7 @@
 # dependencies
 /cmmiller/node_modules
 /node_modules
+/cmmiller/node_modules
 /.pnp
 .pnp.js
 

@@ -24,7 +24,7 @@ const WritingLinkSection = ({color, cardData}) => {
                                 date={data.date}
                                 link={data.link}
                                 title={data.title}
-                                image={data.image}
+                                image={data.imageUrl}
                             />
                         )
                     })}
