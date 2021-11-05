@@ -205,6 +205,408 @@ a {
     cursor: pointer;
 }
 
+/* Creative page styles */
+
+.creative-title {
+    margin: 0;
+    line-height: 98px;
+    font-size: 80px;
+    font-family: 'ivypresto-display', serif;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--color-darkest);
+}
+
+.creative-subtitle {
+    line-height: 1.5;
+    font-size: 19px;
+    width: 490px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    color: var(--color-dark);
+}
+
+.creative-subtitle p {
+    text-align: center;
+}
+
+.creative-headerWrapper {
+    width: 100vw;
+    height: 420px;
+    background-image: url('../public/images/bkgd_image_inkwell.png');
+    background-position: left;
+    background-repeat: no-repeat;
+    margin-bottom: 50px;
+}
+
+.creative-headerTextContainer {
+    padding: 7rem 0;
+    position: relative;
+}
+
+.creative-creativeContent {
+    margin: 0 16%;
+}
+
+.creative-creativeContentSection {
+    margin-bottom: 130px;
+}
+
+.creative-creativeContentSection:nth-of-type(3) {
+    margin-bottom: 62px;
+}
+
+.creative-creativeContentSection:last-of-type {
+    margin-bottom: 0;
+}
+
+.creative-creativeContentHeader {
+    display: flex;
+    align-items: center;
+    padding-bottom: 32px;
+}
+
+.creative-creativeContentHeaderText {
+    font-family: 'ivypresto-display', serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.2rem;
+    line-height: 1.24;
+    padding: 0 1rem;
+    margin-bottom: -15px;
+    display: inline-block;
+    color: var(--color-dark);
+}
+
+/* Short Film Section */
+
+.creative-videoContainer {
+    padding-top: 56.25%;
+    height: 0px;
+    position: relative;
+    margin-bottom: 14px;
+}
+
+.creative-video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.creative-videoCaption {
+    margin-bottom: 41px;
+}
+
+.creative-videoTitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--color-dark);
+}
+
+.creative-videoCredits,
+.creative-videoYear {
+    margin: 0;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--color-medium);
+}
+
+/* Feature Film Section */
+
+.creative-featureFilmContentContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.creative-featureFilmContentCard {
+    width: 48%;
+}
+
+.creative-featureFilmCaption {
+    margin-top: 14px;
+}
+
+.creative-featureFilmTitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--color-red);
+}
+
+.creative-featureFilmGenre {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    text-transform: uppercase;
+    color: var(--color-medium);
+}
+
+.creative-featureFilmDescription {
+    font-size: 17px;
+    font-weight: 400;
+    font-style: normal;
+    margin: 10px 0;
+    color: var(--color-dark);
+}
+
+.creative-cardLinkTitle {
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--color-dark);
+}
+
+.creative-cardLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 40px;
+    background-color: var(--color-red);
+    color: var(--color-extra-light);
+    text-transform: capitalize;
+    border-radius: 3px;
+}
+
+.creative-cardLink:hover {
+    cursor: pointer;
+}
+
+/* Fiction and Literary Section */
+
+.creative-fictionContentContainer {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--color-lightest);
+    margin-top: 35px;
+    margin-bottom: 50px;
+    margin-left: -23.5%
+}
+
+/* row/card */
+.creative-fictionContentCard {
+    height: 72px;
+    margin: 5px 16%;
+    border-radius: 3px;
+    box-shadow: 2px 4px 10px 6px rgba(30, 52, 65, 0.07);
+    background-color: var(--color-extra-light);
+}
+
+/* offset top row/card */
+.creative-fictionContentCard:first-of-type {
+    margin-top: -36px;
+}
+
+.creative-fictionContentCard:last-of-type {
+    margin-bottom: 36px;
+}
+
+/* inner row/card structure */
+.creative-fictionContentCardGrid {
+    height: 100%;
+    padding: 10px 30px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.creative-fictionContentCardContents p {
+    margin: 0;
+}
+
+.creative-fictionContentCardContents:first-of-type {
+    width: 28%;
+}
+
+.creative-fictionContentCardContents:last-of-type {
+    width: 30%;
+}
+
+/* text in row/card */
+.creative-fictionTitle {
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--color-dark);
+}
+
+.creative-fictionTitle a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.creative-fictionTitle a:hover,
+.creative-fictionDescription a:hover {
+    color: var(--color-red);
+}
+
+.creative-fictionGenre {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--color-medium);
+    text-transform: uppercase;
+}
+
+.creative-fictionDescription {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--color-medium);
+}
+
+.creative-fictionDescription a {
+    text-decoration: none;
+    color: var(--color-red);
+}
+
+/* Stage Plays Section */
+
+.creative-stagePlaysContentContainer {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--color-darker);
+    margin-top: 35px;
+    margin-left: -23.5%
+}
+
+/* row/card */
+.creative-stagePlaysContentCard {
+    min-height: 72px;
+    margin: 5px 16%;
+    border-radius: 3px;
+    box-shadow: 2px 4px 10px 6px rgba(30, 52, 65, 0.07);
+    background-color: var(--color-extra-light);
+}
+
+/* offset top row/card */
+.creative-stagePlaysContentCard:first-of-type {
+    margin-top: -36px;
+}
+
+.creative-stagePlaysContentCard:last-of-type {
+    margin-bottom: 36px;
+}
+
+/* inner row/card structure */
+.creative-stagePlaysContentGrid {
+    height: 100%;
+    padding: 10px 30px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.creative-stagePlaysContentCardContents p {
+    margin: 0;
+}
+
+.creative-stagePlaysContentCardContents:first-of-type {
+    width: 29%;
+}
+
+.creative-stagePlaysContentCardContents:nth-of-type(2) {
+    width: 28%
+}
+
+.creative-stagePlaysContentCardContents:nth-of-type(3) {
+    width: 24%
+}
+
+.creative-stagePlaysContentCardContents:last-of-type {
+    width: 19%;
+}
+
+.creative-stagePlaysTitle {
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--color-dark);
+}
+
+.creative-stagePlaysGenre {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--color-medium);
+    text-transform: uppercase;
+}
+
+.creative-stagePlaysDescription,
+.creative-stagePlaysPerformance {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--color-medium);
+}
+
+.creative-stagePlaysDescription a {
+    text-decoration: none;
+    color: var(--color-red);
+}
+
+.creative-stagePlaysLinkContainer {
+    width: 100vw;
+    height: auto;
+    background-color: var(--color-darker);
+    margin-left: -23.5%;
+    color: var(--color-extra-light);
+    padding: 20px 0 80px 0;
+}
+
+.creative-stagePlaysLinkText {
+    margin-left: 16%;
+    margin-bottom: 0;
+}
+
+.creative-stagePlaysLinkText:first-of-type {
+    font-family: 'ivypresto-display', serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 30px;
+    padding-bottom: 13px;
+}
+
+.creative-stagePlaysLinkText:last-of-type {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+.creative-stagePlaysLinkText:last-of-type a {
+    color: var(--color-red);
+    text-decoration: none;
+}
+
+.creative-creativeLink {
+    text-decoration: none;
+    color: inherit;
+}
+
+.creative-externalLink {
+    text-decoration: none;
+}
+
 /* Portfolio page styles */
 
 .portfolio-heroBackground {

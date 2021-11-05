@@ -1,24 +1,22 @@
-import styles from '../styles/Creative.module.css'
-
 const StagePlaysContentCard = ({title, genre, description, performance, link}) => {
     return (
-        <div className={styles.stagePlaysContentCard}>
-            <div className={styles.stagePlaysContentGrid}>
-                <div className={styles.stagePlaysContentCardContents}>
-                    <p className={styles.stagePlaysTitle}>{title}</p>
-                    <p className={styles.stagePlaysGenre}>{genre}</p>
+        <div className="creative-stagePlaysContentCard">
+            <div className="creative-stagePlaysContentGrid">
+                <div className="creative-stagePlaysContentCardContents">
+                    <p className="creative-stagePlaysTitle">{title}</p>
+                    <p className="creative-stagePlaysGenre">{genre}</p>
                 </div>
-                <div className={styles.stagePlaysContentCardContents}>
-                    <p className={styles.stagePlaysDescription}>{description}</p>
+                <div className="creative-stagePlaysContentCardContents">
+                    <p className="creative-stagePlaysDescription">{description}</p>
                 </div>
-                <div className={styles.stagePlaysContentCardContents}>
-                    <p className={styles.stagePlaysPerformance}>{performance}</p>
+                <div className="creative-stagePlaysContentCardContents">
+                    <p className="creative-stagePlaysPerformance">{performance}</p>
                 </div>
                 {link &&
-                    <div className={styles.stagePlaysContentCardContents}>
-                        <div className={styles.cardLinkContainer}>
-                            <a className={styles.externalLink} href={link} target="_blank" rel="noreferrer">
-                                <span className={styles.cardLink}>Read Sample</span>
+                    <div className="creative-stagePlaysContentCardContents">
+                        <div className="creative-cardLinkContainer">
+                            <a className="creative-externalLink" href={link} target="_blank" rel="noreferrer">
+                                <span className="creative-cardLink">Read Sample</span>
                             </a>
                         </div>
                     </div>

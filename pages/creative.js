@@ -5,7 +5,6 @@ import NavBar from "../components/Navbar"
 import Footer from "../components/Footer"
 import FictionContentCard from "../components/FictionContentCard"
 import StagePlaysContentCard from "../components/StagePlaysContentCard"
-import styles from '../styles/Creative.module.css'
 
 function CreativePage() {
     return(
@@ -16,12 +15,12 @@ function CreativePage() {
             </Head>
             <NavBar />
             <div className="content-wrapper">
-                <div className={styles.headerWrapper}>
-                    <div className={styles.headerTextContainer}>
-                        <h1 className={styles.title}>
+                <div className="creative-headerWrapper">
+                    <div className="creative-headerTextContainer">
+                        <h1 className="creative-title">
                             Creative
                         </h1>
-                        <div className={styles.subtitle}>
+                        <div className="creative-subtitle">
                             <p>
                                 For a decent stretch, I’ve been writing plays, sketches, screenplays, essays, and short fiction.
                             </p>
@@ -31,75 +30,75 @@ function CreativePage() {
                         </div>
                     </div>
                 </div>
-                <div className={styles.creativeContent}>
+                <div className="creative-creativeContent">
                     {/* short film section */}
-                    <div className={styles.creativeContentSection}>
-                        <div className={styles.creativeContentHeader}>
-                            <span className={styles.creativeContentHeaderIcon}>
+                    <div className="creative-creativeContentSection">
+                        <div className="creative-creativeContentHeader">
+                            <span className="creative-creativeContentHeaderIcon">
                                 <Image src="/images/icon_film.png" alt="film" width={74} height={61} />
                             </span>
-                            <h2 className={styles.creativeContentHeaderText}>Short Film</h2>
+                            <h2 className="creative-creativeContentHeaderText">Short Film</h2>
                         </div>
-                        <div className={styles.videoContainer}>
-                            <iframe className={styles.video} controls width={720} height={576} src="https://www.youtube.com/embed/G55hKNh7NT8" />
+                        <div className="creative-videoContainer">
+                            <iframe className="creative-video" controls width={720} height={576} src="https://www.youtube.com/embed/G55hKNh7NT8" />
                         </div>
-                        <div className={styles.videoCaption}>
-                            <p className={styles.videoTitle}>Date Works</p>
-                            <p className={styles.videoCredits}>Wrote, Produced, and Directed</p>
-                            <p className={styles.videoYear}>2020</p>
+                        <div className="creative-videoCaption">
+                            <p className="creative-videoTitle">Date Works</p>
+                            <p className="creative-videoCredits">Wrote, Produced, and Directed</p>
+                            <p className="creative-videoYear">2020</p>
                         </div>
-                        <div className={styles.videoContainer}>
-                            <iframe className={styles.video} controls width={720} height={576} src="https://www.youtube.com/embed/diqkZ-jq1JQ" />
+                        <div className="creative-videoContainer">
+                            <iframe className="creative-video" controls width={720} height={576} src="https://www.youtube.com/embed/diqkZ-jq1JQ" />
                         </div>
-                        <div className={styles.videoCaption}>
-                            <p className={styles.videoTitle}>Gio Boone: Live With Friends</p>
-                            <p className={styles.videoCredits}>Produced and Directed</p>
-                            <p className={styles.videoYear}>2021</p>
+                        <div className="creative-videoCaption">
+                            <p className="creative-videoTitle">Gio Boone: Live With Friends</p>
+                            <p className="creative-videoCredits">Produced and Directed</p>
+                            <p className="creative-videoYear">2021</p>
                         </div>
                     </div>
                     {/* feature film section */}
-                    <div className={styles.creativeContentSection}>
-                        <div className={styles.creativeContentHeader}>
-                            <span className={styles.creativeContentHeaderIcon}>
+                    <div className="creative-creativeContentSection">
+                        <div className="creative-creativeContentHeader">
+                            <span className="creative-creativeContentHeaderIcon">
                                 <Image src="/images/icon_feature_film.png" alt="film" width={59} height={70} />
                             </span>
-                            <h2 className={styles.creativeContentHeaderText}>Feature Film Treatments</h2>
+                            <h2 className="creative-creativeContentHeaderText">Feature Film Treatments</h2>
                         </div>
-                        <div className={styles.featureFilmContentContainer}>
-                            <div className={styles.featureFilmContentCard}> {/* repeat the featureFilmContentCard for each new feature film */}
+                        <div className="creative-featureFilmContentContainer">
+                            <div className="creative-featureFilmContentCard"> {/* repeat the featureFilmContentCard for each new feature film */}
                                 <Image src="/images/image_b_to_a.png" alt="b to a" width={360} height={202} layout="responsive" />
-                                <div className={styles.featureFilmCaption}>
-                                    <p className={styles.featureFilmTitle}>B to A</p>
-                                    <p className={styles.featureFilmGenre}>straight drama</p>
-                                    <p className={styles.featureFilmDescription}>When a college athlete finds her life uprooted by an unplanned pregnancy, her eccentric, older, army veteran brother lends a helping hand.</p>
-                                    <p className={styles.featureFilmDescription}>While they navigate the hurdles of returning home, family restoration and the adoption process, a beleaguered couple struggle with infertility clings to hope.</p>
+                                <div className="creative-featureFilmCaption">
+                                    <p className="creative-featureFilmTitle">B to A</p>
+                                    <p className="creative-featureFilmGenre">straight drama</p>
+                                    <p className="creative-featureFilmDescription">When a college athlete finds her life uprooted by an unplanned pregnancy, her eccentric, older, army veteran brother lends a helping hand.</p>
+                                    <p className="creative-featureFilmDescription">While they navigate the hurdles of returning home, family restoration and the adoption process, a beleaguered couple struggle with infertility clings to hope.</p>
                                     <p>
-                                        <a className={styles.creativeLink} href="/files/B_to_A_Film_Treatment_2021.pdf" alt="B to A Film Treatment 2021" target="_blank" rel="noopener noreferror">Full Treatment</a>
+                                        <a className="creative-creativeLink" href="/files/B_to_A_Film_Treatment_2021.pdf" alt="B to A Film Treatment 2021" target="_blank" rel="noopener noreferror">Full Treatment</a>
                                     </p>
                                     <p>
-                                        <a className={styles.creativeLink} href="/files/B_to_A_Ten_minute_sample_scene.pdf" alt="B to A Ten Minute Sample Scene" target="_blank" rel="noopener noreferror">Sample Scene</a>
+                                        <a className="creative-creativeLink" href="/files/B_to_A_Ten_minute_sample_scene.pdf" alt="B to A Ten Minute Sample Scene" target="_blank" rel="noopener noreferror">Sample Scene</a>
                                     </p>
                                 </div>
                             </div>
                         </div>
                         <div>
-                            <div className={styles.cardLinkContainer}>
-                                <p className={styles.cardLinkTitle}>Want to see more?</p>
+                            <div className="creative-cardLinkContainer">
+                                <p className="creative-cardLinkTitle">Want to see more?</p>
                                 <Link href="mailto:curtis@cmillcontent.com" passHref>
-                                    <span className={styles.cardLink}>contact me</span>
+                                    <span className="creative-cardLink">contact me</span>
                                 </Link>
                             </div>
                         </div>
                     </div>
                     {/* fiction & literary section */}
-                    <div className={styles.creativeContentSection}>
-                        <div className={styles.creativeContentHeader}>
-                            <span className={styles.creativeContentHeaderIcon}>
+                    <div className="creative-creativeContentSection">
+                        <div className="creative-creativeContentHeader">
+                            <span className="creative-creativeContentHeaderIcon">
                                 <Image src="/images/icon_fiction.png" alt="film" width={63} height={63} />
                             </span>
-                            <h2 className={styles.creativeContentHeaderText}>Fiction and Literary</h2>
+                            <h2 className="creative-creativeContentHeaderText">Fiction and Literary</h2>
                         </div>
-                        <div className={styles.fictionContentContainer}>
+                        <div className="creative-fictionContentContainer">
                             <FictionContentCard
                                 title="Both Feet"
                                 link="https://deadmule.com/curtis-miller-fiction-dec-2020-2/"
@@ -126,14 +125,14 @@ function CreativePage() {
                         </div>
                     </div>
                     {/* stage plays section */}
-                    <div className={styles.creativeContentSection}>
-                        <div className={styles.creativeContentHeader}>
-                            <span className={styles.creativeContentHeaderIcon}>
+                    <div className="creative-creativeContentSection">
+                        <div className="creative-creativeContentHeader">
+                            <span className="creative-creativeContentHeaderIcon">
                                 <Image src="/images/icon_stage_plays.png" alt="film" width={70} height={74} />
                             </span>
-                            <h2 className={styles.creativeContentHeaderText}>Stage Plays</h2>
+                            <h2 className="creative-creativeContentHeaderText">Stage Plays</h2>
                         </div>
-                        <div className={styles.stagePlaysContentContainer}>
+                        <div className="creative-stagePlaysContentContainer">
                             <StagePlaysContentCard
                                 title="Packed, Prepared"
                                 genre="one act lockdown comedy"
@@ -178,9 +177,9 @@ function CreativePage() {
                                 performance="Honors thesis; staged reading at U.C. Riverside, 2009"
                             />
                         </div>
-                        <div className={styles.stagePlaysLinkContainer}>
-                            <p className={styles.stagePlaysLinkText}>Need a play?</p>
-                            <p className={styles.stagePlaysLinkText}>For permissions, sample scenes, and more,  <a href='mailto:curtis@cmillcontent.com'>give me a shout</a></p>
+                        <div className="creative-stagePlaysLinkContainer">
+                            <p className="creative-stagePlaysLinkText">Need a play?</p>
+                            <p className="creative-stagePlaysLinkText">For permissions, sample scenes, and more,  <a href='mailto:curtis@cmillcontent.com'>give me a shout</a></p>
                         </div>
                     </div>
                 </div>
