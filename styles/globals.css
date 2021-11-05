@@ -204,3 +204,271 @@ a {
 .backToHomeButton:hover {
     cursor: pointer;
 }
+
+/* Portfolio page styles */
+
+.portfolio-heroBackground {
+    position: absolute;
+    width: 100vw;
+    height: 944px;
+    background-image: url('/images/bkgd_portfolio_hero.png');
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.portfolio-heroTitleContainer {
+    margin: 102px 0;
+    position: relative;
+    text-align: center;
+    color: var(--color-darkest)
+}
+
+.portfolio-heroTitle {
+    font-family: 'ivypresto-display', serif;
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 98.4px;
+}
+
+.portfolio-heroSubtitle {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 123%;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+}
+
+.portfolio-videoContainer {
+    padding-top: 56.25%;
+    height: 0px;
+    position: relative;
+    margin-bottom: 14px;
+}
+
+.portfolio-video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.portfolio-putMeToWorkContainer {
+    height: 200px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio-putMeToWorkButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--color-red);
+    line-height: 26px;
+    width: 265px;
+    height: 56px;
+    border: 2px solid var(--color-red);
+    border-radius: 3px;
+}
+
+.portfolio-putMeToWorkButton:hover {
+    cursor: pointer;
+}
+
+.portfolio-placeholder {
+    height: 60px;
+}
+
+/* Portfolio Section styles */
+
+.portfolio-section-contentTitleContainer {
+    position: relative;
+    margin-left: 16%;
+    width: 50%;
+    padding-bottom: 67px;
+}
+
+.portfolio-section-contentTitle {
+    font-family: 'ivypresto-display', serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 35px;
+    color: var(--color-dark);
+}
+
+.portfolio-section-contentSubtitle {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 19px;
+    color: var(--color-medium-dark);
+    width: 65%;
+}
+
+/* Portfolio card styles */
+
+.portfolio-content-card-card {
+    width: 32%;
+    min-width: 300px;
+    height: 300px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    background-color: var(--color-extra-light);
+    box-shadow: 2px 4px 10px 6px rgba(30, 52, 65, 0.07);
+}
+
+.portfolio-content-card-cardTitleContainer {
+    min-height: 47%;
+    padding: 30px 30px 0 30px;
+}
+
+.portfolio-content-card-cardDate {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18.45px;
+    color: var(--color-light);
+    text-transform: uppercase;
+}
+
+.portfolio-content-card-cardTitle {
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 29px;
+    color: var(--color-red);
+    text-transform: capitalize;
+}
+
+.portfolio-content-card-cardTitle a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.portfolio-content-card-cardImageContainer {
+    height: 53%;
+}
+
+/* WritingLinkSection component styles */
+
+.writingLinkSection {
+    width: 100vw;
+    height: auto;
+}
+
+.writingLinkSection-container {
+    /* position: static; */
+    width: 100%;
+    border: .5px solid rgba(0,0,0,0);
+    height: auto;
+    background-color: var(--color-lightest);
+}
+
+.writingLinkSection-cardContainer {
+    position: relative;
+    height: auto;
+    margin: -42px 16% 42px 16%;
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: 20px;
+    column-gap: 2%;
+    justify-content: center;
+}
+
+/* WritingLinkCard component styles */
+
+.writingLinkCard-card {
+    height: 299px;
+    width: 32%;
+    min-width: 315px;
+    max-width: 360px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    background-color: var(--color-extra-light);
+    box-shadow: 2px 4px 10px 6px rgba(30, 52, 65, 0.07);
+}
+
+.writingLinkCard-cardTitleContainer {
+    min-height: 47%;
+    padding: 30px 30px 0 30px;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.writingLinkCard-cardDate {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18.45px;
+    color: var(--color-light);
+    text-transform: uppercase;
+}
+
+.writingLinkCard-cardTitle {
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 29px;
+    color: var(--color-red);
+    text-transform: capitalize;
+}
+
+.writingLinkCard-cardTitle a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.writingLinkCard-cardTitleContainer {
+    height: 53%;
+}
+
+/* Testimonial component styles */
+
+.testimonialSection {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    column-gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonialBorder {
+    width: 53px;
+    text-align: center;
+}
+
+.testimonialBorder hr {
+    width: 100%;
+    border: 2px solid var(--color-red);
+    opacity: 1;
+    margin-bottom: 40px;
+}
+
+.testimonialContainer {
+    width: 35%;
+    height: auto;
+    padding: 100px 0;
+}
+
+.testimonialText {
+    font-family: "ivypresto_display", serif;
+    font-style: normal;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 36.25px;
+    text-align: center;
+    color: var(--color-dark);
+}
+
+.testimonialSource {
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 21.75px;
+    color: var(--color-medium-light);
+    text-align: center;
+    margin: 0;
+}

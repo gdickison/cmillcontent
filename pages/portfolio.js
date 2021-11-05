@@ -1,7 +1,6 @@
 import Head from "next/dist/shared/lib/head"
 import NavBar from "../components/Navbar"
 import Footer from "../components/Footer"
-import styles from '../styles/Portfolio.module.css'
 import PortfolioSectionTitle from "../components/PortfolioSectionTitle"
 import Testimonial from "../components/Testimonial"
 import WritingLinkSection from "../components/WritingLink"
@@ -48,9 +47,9 @@ function PortfolioPage(){
                     </div>
                     :
                     <>
-                        <div className={styles.heroBackground}></div><div className={styles.heroTitleContainer}>
-                            <h1 className={styles.heroTitle}>Portfolio</h1>
-                            <h2 className={styles.heroSubtitle}>Marketing and Advertising</h2>
+                        <div className="portfolio-heroBackground"></div><div className="portfolio-heroTitleContainer">
+                            <h1 className="portfolio-heroTitle">Portfolio</h1>
+                            <h2 className="portfolio-heroSubtitle">Marketing and Advertising</h2>
                         </div>
                         {portfolioData.map((data) => {
                             return (
@@ -66,7 +65,7 @@ function PortfolioPage(){
                                             testimonial={data.testimonialText}
                                             source={data.testimonialSource}
                                         />
-                                        : <div className={styles.placeholder}/>
+                                        : <div className="portfolio-placeholder"/>
                                     }
                                 </Fragment>
                             )
@@ -79,13 +78,13 @@ function PortfolioPage(){
                     subtitle="90 second video script"
                 />
                 <div style={{margin: '0 16%'}}>
-                    <div className={styles.videoContainer}>
-                        <iframe className={styles.video} controls width={720} height={576} src="https://www.youtube.com/embed/Z2S5a8hK7m0"/>
+                    <div className="portfolio-videoContainer">
+                        <iframe className="portfolio-video" controls width={720} height={576} src="https://www.youtube.com/embed/Z2S5a8hK7m0"/>
                     </div>
                 </div>
-                <div className={styles.putMeToWorkContainer}>
+                <div className="portfolio-putMeToWorkContainer">
                     <Link href="mailto:curtis.miller@biola.edu" passHref>
-                        <span className={styles.putMeToWorkButton}>Put Me To Work</span>
+                        <span className="portfolio-putMeToWorkButton">Put Me To Work</span>
                     </Link>
                 </div>
             </div>

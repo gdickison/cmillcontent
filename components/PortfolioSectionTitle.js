@@ -1,10 +1,8 @@
-import styles from '../styles/PortfolioSectionTitle.module.css'
-
 const PortfolioSectionTitle = ({key, title, subtitle}) => {
     return (
-        <div className={styles.contentTitleContainer}>
-            <p className={styles.contentTitle}>{title}</p>
-            <p className={styles.contentSubtitle}>{subtitle}</p>
+        <div className="portfolio-section-contentTitleContainer">
+            <p className="portfolio-section-contentTitle">{title}</p>
+            <p className="portfolio-section-contentSubtitle">{subtitle}</p>
         </div>
     );
 }
