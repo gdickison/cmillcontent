@@ -3,7 +3,6 @@ import Link from "next/link"
 import Image from "next/dist/client/image"
 import NavBar from "../components/Navbar"
 import Footer from '../components/Footer'
-import styles from '../styles/Bio.module.css'
 
 function BioPage() {
     return (
@@ -14,13 +13,13 @@ function BioPage() {
             </Head>
             <NavBar />
             <div className="content-wrapper">
-                <div className={styles.bioPageContainer}>
-                    <h1 className={styles.bioTitle}>Bio</h1>
-                    <div className={styles.authorImage}>
+                <div className="bioPageContainer">
+                    <h1 className="bioTitle">Bio</h1>
+                    <div className="authorImage">
                         <Image src="/images/image_author.png" alt="c m miller" width={265} height={265} />
                     </div>
-                    <div className={styles.bioSection}>
-                        <div className={styles.bioContainer}>
+                    <div className="bioSection">
+                        <div className="bioContainer">
                             <p>
                                 <strong>HEY THERE.</strong>
                             </p>
@@ -48,11 +47,11 @@ function BioPage() {
                             </p>
                         </div>
                     </div>
-                    <div className={styles.bioHero}>
+                    <div className="bioHero">
                     </div>
-                    <div className={styles.backToHomeButtonContainer}>
+                    <div className="backToHomeButtonContainer">
                         <Link href="/" passHref>
-                            <span className={styles.backToHomeButton}>Back To Home</span>
+                            <span className="backToHomeButton">Back To Home</span>
                         </Link>
                     </div>
                 </div>

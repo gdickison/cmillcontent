@@ -107,3 +107,100 @@ a {
 .spinner-border {
     margin: 50% 0;
 }
+
+/* Bio page styles */
+
+.bioPageContainer {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../public/images/bkgd_image_bio.png');
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.bioHero {
+    height: 820px;
+    width: 100vw;
+    background-color: var(--color-darker);
+    z-index: -1;
+}
+
+.bioTitle {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translate(-50%);
+    font-family: 'ivypresto-display', serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 80px;
+    line-height: 98px;
+    color: var(--color-extra-light);
+    text-align: center;
+}
+
+.authorImage {
+    position: absolute;
+    top: 170px;
+    left: 257px;
+}
+
+.bioSection {
+    position: absolute;
+    top: 170px;
+    right: 160px;
+    width: 45%;
+    height: 920px;
+    background-color: var(--color-extra-light);
+    box-shadow: 2px 4px 10px 6px rgba(30, 52, 65, 0.07);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bioContainer {
+    width: 80%;
+    height: 90%;
+    color: var(--color-dark);
+}
+
+.bioContainer hr {
+    width: 25%;
+    border: 1px solid var(--color-red);
+    opacity: 1;
+}
+
+.bioContainer a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--color-red);
+}
+
+.backToHomeButtonContainer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 450px;
+}
+
+.backToHomeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--color-red);
+    line-height: 26px;
+    width: 265px;
+    height: 56px;
+    border: 2px solid var(--color-red);
+    border-radius: 3px;
+    margin-bottom: 82px;
+}
+
+.backToHomeButton:hover {
+    cursor: pointer;
+}
