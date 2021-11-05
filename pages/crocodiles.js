@@ -1,9 +1,7 @@
 import Head from "next/head"
 import Image from "next/image"
-import Link from "next/link"
 import NavBar from "../components/Navbar"
 import Footer from "../components/Footer"
-import styles from '../styles/Crocodiles.module.css'
 
 function CrocodilesPage() {
     return(
@@ -14,22 +12,22 @@ function CrocodilesPage() {
             </Head>
             <NavBar />
             <div className="content-wrapper">
-                <div className={styles.headerWrapper}>
-                    <div className={styles.headerTextContainer}>
-                        <h1 className={styles.title}>
+                <div className="crocodiles-headerWrapper">
+                    <div className="crocodiles-headerTextContainer">
+                        <h1 className="crocodiles-title">
                             Crocodiles
                         </h1>
                     </div>
                 </div>
-                <div className={styles.underBookshelf}>
-                    <div className={styles.left}>
-                        <span className={styles.crocImage}>
+                <div className="crocodiles-underBookshelf">
+                    <div className="crocodiles-left">
+                        <span className="crocodiles-crocImage">
                             <Image src="/images/icon_crocodiles.png" alt="shelf of crocodiles" width={265} height={265}/>
                         </span>
                     </div>
-                    <div className={styles.right}>
-                    <div className={styles.rightChild}>
-                        <div className={styles.crocText}>
+                    <div className="crocodiles-right">
+                    <div className="crocodiles-rightChild">
+                        <div className="crocodiles-crocText">
                             <p>
                                 <strong>LOVE READING?</strong>
                             </p>
@@ -43,9 +41,9 @@ function CrocodilesPage() {
                                 For a tasty essay on books and ideas, check out <a href="https://crocodileshelf.substack.com/" target="_blank" rel="noreferrer">Shelf of Crocodiles</a>, my monthly newsletter on <a href="https://substack.com/" target="_blank" rel="noreferrer">Substack</a>.
                             </p>
                         </div>
-                        <div className={styles.subscribeButtonContainer}>
-                            <a className={styles.externalLink} href="https://crocodileshelf.substack.com/p/coming-soon" target="_blank" rel="noreferrer" >
-                                <span className={styles.subscribeButton}>subscribe for free</span>
+                        <div className="crocodiles-subscribeButtonContainer">
+                            <a className="crocodiles-externalLink" href="https://crocodileshelf.substack.com/p/coming-soon" target="_blank" rel="noreferrer" >
+                                <span className="crocodiles-subscribeButton">subscribe for free</span>
                             </a>
                         </div>
                     </div>

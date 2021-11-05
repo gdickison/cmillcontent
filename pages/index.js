@@ -1,11 +1,9 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Link from 'next/link'
 import NavBar from '../components/Navbar'
 import Footer from '../components/Footer'
 import HomeSubheader from '../components/HomeSubheader'
 import HomeCards from '../components/HomeCards'
-import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
@@ -19,12 +17,12 @@ export default function Home() {
 
 	<NavBar />
 	<div className="content-wrapper">
-		<div className={styles.headerWrapper}>
-			<div className={styles.headerTextContainer}>
-				<h1 className={styles.title}>
+		<div className="home-headerWrapper">
+			<div className="home-headerTextContainer">
+				<h1 className="home-title">
 					C. M. Miller
 				</h1>
-				<p className={styles.subtitle}>
+				<p className="home-subtitle">
 					Content Writer
 				</p>
 			</div>
@@ -33,9 +31,9 @@ export default function Home() {
             subheaderText="With plenty of elbow grease and a sharp eye on story, audience, style and substance, I write killer content for a range of mediums. I'm delighted to roll up my sleeves and help you out with:"
         />
         <HomeCards />
-		<div className={styles.putMeToWorkContainer}>
+		<div className="home-putMeToWorkContainer">
 			<Link href="mailto:curtis.miller@biola.edu" passHref>
-				<span className={styles.putMeToWorkButton}>Put Me To Work</span>
+				<span className="home-putMeToWorkButton">Put Me To Work</span>
 			</Link>
 		</div>
 

@@ -1,14 +1,13 @@
 import Image from "next/image";
-import styles from '../styles/Footer.module.css'
 
 const Footer = () => {
 	return (
-		<footer className={styles.footer}>
+		<footer className="footer-footer">
 			<div>
 				<Image src="/images/logo_light.png" alt="Curtis Miller Logo" width={50} height={50} />
 			</div>
-			<div className={styles.footerName}>C.M. Miller</div>
-			<div className={styles.footerText}>
+			<div className="footer-footerName">C.M. Miller</div>
+			<div className="footer-footerText">
 				<p>Content writing for advertising, entertainment, and publishing.</p>
 			</div>
 	  </footer>
