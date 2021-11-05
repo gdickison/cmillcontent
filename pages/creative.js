@@ -66,7 +66,7 @@ function CreativePage() {
                         </div>
                         <div className="creative-featureFilmContentContainer">
                             <div className="creative-featureFilmContentCard"> {/* repeat the featureFilmContentCard for each new feature film */}
-                                <Image src="/images/image_b_to_a.png" alt="b to a" width={360} height={202} layout="responsive" />
+                                <Image className="creative-featureFilmImage" src="/images/image_b_to_a.png" alt="b to a" width={360} height={202} layout="responsive" />
                                 <div className="creative-featureFilmCaption">
                                     <p className="creative-featureFilmTitle">B to A</p>
                                     <p className="creative-featureFilmGenre">straight drama</p>

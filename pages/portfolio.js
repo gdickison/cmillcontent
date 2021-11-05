@@ -49,7 +49,6 @@ function PortfolioPage(){
                     <>
                         <div className="portfolio-heroBackground"></div><div className="portfolio-heroTitleContainer">
                             <h1 className="portfolio-heroTitle">Portfolio</h1>
-                            <h2 className="portfolio-heroSubtitle">Marketing and Advertising</h2>
                         </div>
                         {portfolioData.map((data) => {
                             return (
@@ -75,7 +74,8 @@ function PortfolioPage(){
                 {/* United Dairymen of AZ video section */}
                 <PortfolioSectionTitle
                     title="United Dairymen of Arizona"
-                    subtitle="90 second video script"
+                    // eslint-disable-next-line react/jsx-key
+                    subtitle={["90 second video script, winner of a ", <a href='https://enter.marcomawards.com/entry/united-in-excellence/' target='_blank' rel="noreferrer">2021 Gold Marcom Award</a>]}
                 />
                 <div style={{margin: '0 16%'}}>
                     <div className="portfolio-videoContainer">

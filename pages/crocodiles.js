@@ -41,11 +41,6 @@ function CrocodilesPage() {
                                 For a tasty essay on books and ideas, check out <a href="https://crocodileshelf.substack.com/" target="_blank" rel="noreferrer">Shelf of Crocodiles</a>, my monthly newsletter on <a href="https://substack.com/" target="_blank" rel="noreferrer">Substack</a>.
                             </p>
                         </div>
-                        <div className="crocodiles-subscribeButtonContainer">
-                            <a className="crocodiles-externalLink" href="https://crocodileshelf.substack.com/p/coming-soon" target="_blank" rel="noreferrer" >
-                                <span className="crocodiles-subscribeButton">subscribe for free</span>
-                            </a>
-                        </div>
                     </div>
                     </div>
                 </div>

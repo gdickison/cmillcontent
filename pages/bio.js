@@ -26,7 +26,6 @@ function BioPage() {
                             <p>
                                 So glad you stopped by.
                             </p>
-                            <hr/>
                             <p>
                                 I’m a Sacramento-based content writer who isn’t afraid of a little elbow grease. I’m also an editor, a veteran educator, an avid reader, and an elevator pitchin’ creative
                             </p>
