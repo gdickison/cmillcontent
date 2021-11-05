@@ -99,3 +99,11 @@ a {
 .navbar.navbar-expand-sm.navbar-light {
     padding-bottom: 0;
 }
+
+.d-flex {
+    height: 100vh;
+}
+
+.spinner-border {
+    margin: 50% 0;
+}

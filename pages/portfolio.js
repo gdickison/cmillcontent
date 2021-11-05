@@ -14,20 +14,20 @@ function PortfolioPage(){
     const [portfolioData, setPortfolioData] = useState(null);
 
     useEffect(() => {
-        sanityClient.fetch(`*[_type == "portfolioSection"]{
+        sanityClient.fetch(`*[_type == "portfolioSection"] | order(_createdAt) {
             _id,
             title,
             subtitle,
             color,
             testimonialText,
             testimonialSource,
-            "cards": *[ _type == "portfolioCard" && _id in ^.cards[]._ref ]{
+            "cards": *[ _type == "portfolioCard" && _id in ^.cards[]._ref ] | order(_createdAt) {
                 date,
                 title,
                 link,
                 "imageUrl": image.asset->url
-            } | order(_createdAt)
-        } | order(_createdAt)`)
+            }
+        }`)
         .then((data) => setPortfolioData(data));
     }, []);
 
@@ -39,33 +39,39 @@ function PortfolioPage(){
             </Head>
             <NavBar />
             <div className="content-wrapper">
-                {/* Hero */}
-                <div className={styles.heroBackground}></div>
-                <div className={styles.heroTitleContainer}>
-                    <h1 className={styles.heroTitle}>Portfolio</h1>
-                    <h2 className={styles.heroSubtitle}>Marketing and Advertising</h2>
-                </div>
-                {/* Writing Sample Links */}
-                {
-                    portfolioData && portfolioData.map((data) => {
-                        return (
-                        <Fragment key={data.title}>
-                                <PortfolioSectionTitle
-                                    key={data.title}
-                                    title={data.title}
-                                    subtitle={data.subtitle}
-                                />
-                                <WritingLinkSection color={'var(--color-' + data.color + ')'} cardData={data.cards} />
-                                {data.testimonialText
-                                    ? <Testimonial
-                                        testimonial={data.testimonialText}
-                                        source={data.testimonialSource}
+                {!portfolioData
+                    ?
+                    <div className="d-flex justify-content-center">
+                        <div className="spinner-border text-primary" role="status">
+                            <span className="sr-only">Loading....</span>
+                        </div>
+                    </div>
+                    :
+                    <>
+                        <div className={styles.heroBackground}></div><div className={styles.heroTitleContainer}>
+                            <h1 className={styles.heroTitle}>Portfolio</h1>
+                            <h2 className={styles.heroSubtitle}>Marketing and Advertising</h2>
+                        </div>
+                        {portfolioData.map((data) => {
+                            return (
+                                <Fragment key={data.title}>
+                                    <PortfolioSectionTitle
+                                        key={data.title}
+                                        title={data.title}
+                                        subtitle={data.subtitle}
                                     />
-                                    : <div className={styles.placeholder}/>
-                                }
-                            </Fragment>
-                        )
-                    })
+                                    <WritingLinkSection color={'var(--color-' + data.color + ')'} cardData={data.cards} />
+                                    {data.testimonialText
+                                        ? <Testimonial
+                                            testimonial={data.testimonialText}
+                                            source={data.testimonialSource}
+                                        />
+                                        : <div className={styles.placeholder}/>
+                                    }
+                                </Fragment>
+                            )
+                        })}
+                    </>
                 }
                 {/* United Dairymen of AZ video section */}
                 <PortfolioSectionTitle
@@ -78,10 +84,10 @@ function PortfolioPage(){
                     </div>
                 </div>
                 <div className={styles.putMeToWorkContainer}>
-			<Link href="mailto:curtis.miller@biola.edu" passHref>
-				<span className={styles.putMeToWorkButton}>Put Me To Work</span>
-			</Link>
-		</div>
+                    <Link href="mailto:curtis.miller@biola.edu" passHref>
+                        <span className={styles.putMeToWorkButton}>Put Me To Work</span>
+                    </Link>
+                </div>
             </div>
             <Footer />
         </div>
