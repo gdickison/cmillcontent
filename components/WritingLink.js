@@ -1,12 +1,12 @@
 const WritingLinkCard = ({date, link, title, image}) => {
     return (
-        <div className="writingLinkCard-card">
+        <a className="writingLinkCard-card" href={link} target="_blank" rel="noreferrer">
             <div className="writingLinkCard-cardTitleContainer">
                 <p className="writingLinkCard-cardDate">{date}</p>
-                <p className="writingLinkCard-cardTitle"><a href={link} target="_blank" rel="noreferrer">{title}</a></p>
+                <p className="writingLinkCard-cardTitle">{title}</p>
             </div>
-            <div className="writingLinkCard-cardTitleContainer" style={{backgroundImage: "url(" + image + ")"}}></div>
-        </div>
+            <div className="writingLinkCard-cardImageContainer" style={{backgroundImage: "url(" + image + ")"}}></div>
+        </a>
     );
 }
 
