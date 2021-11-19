@@ -38,7 +38,7 @@ function CrocodilesPage() {
                                 Fist bump.
                             </p>
                             <p>
-                                For a tasty essay on books and ideas, check out <a href="https://crocodileshelf.substack.com/" target="_blank" rel="noreferrer">Shelf of Crocodiles</a>, my monthly newsletter on <a href="https://substack.com/" target="_blank" rel="noreferrer">Substack</a>.
+                                For a tasty essay on books and ideas, check out <a className="inline-link" href="https://crocodileshelf.substack.com/" target="_blank" rel="noreferrer">Shelf of Crocodiles</a>, my monthly newsletter on <a className="inline-link" href="https://substack.com/" target="_blank" rel="noreferrer">Substack</a>.
                             </p>
                         </div>
                     </div>

@@ -73,10 +73,10 @@ function CreativePage() {
                                     <p className="creative-featureFilmDescription">When a college athlete finds her life uprooted by an unplanned pregnancy, her eccentric, older, army veteran brother lends a helping hand.</p>
                                     <p className="creative-featureFilmDescription">While they navigate the hurdles of returning home, family restoration and the adoption process, a beleaguered couple struggle with infertility clings to hope.</p>
                                     <p>
-                                        <a className="creative-creativeLink" href="/files/B_to_A_Film_Treatment_2021.pdf" alt="B to A Film Treatment 2021" target="_blank" rel="noopener noreferror">Full Treatment</a>
+                                        <a className="inline-link" href="/files/B_to_A_Film_Treatment_2021.pdf" alt="B to A Film Treatment 2021" target="_blank" rel="noopener noreferror">Full Treatment</a>
                                     </p>
                                     <p>
-                                        <a className="creative-creativeLink" href="/files/B_to_A_Ten_minute_sample_scene.pdf" alt="B to A Ten Minute Sample Scene" target="_blank" rel="noopener noreferror">Sample Scene</a>
+                                        <a className="inline-link" href="/files/B_to_A_Ten_minute_sample_scene.pdf" alt="B to A Ten Minute Sample Scene" target="_blank" rel="noopener noreferror">Sample Scene</a>
                                     </p>
                                 </div>
                             </div>

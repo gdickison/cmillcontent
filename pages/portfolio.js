@@ -72,7 +72,7 @@ function PortfolioPage(){
                         <PortfolioSectionTitle
                             title="United Dairymen of Arizona"
                             // eslint-disable-next-line react/jsx-key
-                            subtitle={["90 second video script, winner of a ", <a href='https://enter.marcomawards.com/entry/united-in-excellence/' target='_blank' rel="noreferrer">2021 Gold Marcom Award</a>]}
+                            subtitle={["90 second video script, winner of a ", <a className="inline-link" href='https://enter.marcomawards.com/entry/united-in-excellence/' target='_blank' rel="noreferrer">2021 Gold Marcom Award</a>]}
                         />
                         <div style={{margin: '0 16%'}}>
                             <div className="portfolio-videoContainer">

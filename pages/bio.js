@@ -33,7 +33,7 @@ function BioPage() {
                                 In past lives I’ve wiped out on surfboards, acted on stages, dabbled in improv comedy, led Bible studies, lived abroad—and hit the books with snarky teenagers for a number of years as an honors English teacher.
                             </p>
                             <p>
-                                Recently, I’ve been cutting copy with <a href="https://resoundcreative.com/" target="_blank" rel="noreferrer">Resound Creative Media</a>, and finishing up my M.F.A. in Creative Writing from <a href="https://nsa.edu/" target="_blank" rel="noreferrer">New Saint Andrews College</a>
+                                Recently, I’ve been cutting copy with <a className="inline-link" href="https://resoundcreative.com/" target="_blank" rel="noreferrer">Resound Creative Media</a>, and finishing up my M.F.A. in Creative Writing from <a className="inline-link" href="https://nsa.edu/" target="_blank" rel="noreferrer">New Saint Andrews College</a>
                             </p>
                             <p>
                                 Whether your project’s large or small, in utero or hot to trot, I’m eager to hear about it. I’m positive I can whip your content, copy, script, blog, chapter, or first draft into fighting shape.
@@ -42,7 +42,7 @@ function BioPage() {
                                 Like what you see?
                             </p>
                             <p>
-                                <a href="mailto:curtis.miller@biola.edu">Give me a shout</a> and let’s get to work.
+                                <a className="inline-link" href="mailto:curtis.miller@biola.edu">Give me a shout</a> and let’s get to work.
                             </p>
                         </div>
                     </div>

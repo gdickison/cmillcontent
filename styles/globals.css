@@ -601,7 +601,8 @@ a {
     text-decoration: none;
 }
 
-.creative-creativeLink {
+.inline-link,
+.inline-link:hover {
     text-decoration: none;
     color: var(--color-red);
 }
