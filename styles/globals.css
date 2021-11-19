@@ -138,6 +138,12 @@ a {
     transform: scale(1.05);
 }
 
+.inline-link,
+.inline-link:hover {
+    text-decoration: none;
+    color: var(--color-red);
+}
+
 /* Bio page styles */
 
 .bioPageContainer {
@@ -635,10 +641,12 @@ a {
     text-decoration: none;
 }
 
-.inline-link,
-.inline-link:hover {
-    text-decoration: none;
-    color: var(--color-red);
+.creative-inline-link-container {
+    margin-top: 20px;
+}
+
+.creative-inline-link-container p {
+    margin-block: 4px;
 }
 
 .creative-externalLink {
