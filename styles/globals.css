@@ -80,12 +80,12 @@ a {
     line-height: 18.45px;
 }
 
-.navbar-light .navbar-brand {
-    color: var(--color-dark) !important;
-}
-
 .navbar-light .navbar-brand:hover {
     color: var(--color-red) !important;
+}
+
+#inactive-link {
+    color: var(--color-dark);
 }
 
 #active-link {
