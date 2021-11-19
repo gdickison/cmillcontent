@@ -31,9 +31,9 @@ export default function Home() {
             subheaderText="With plenty of elbow grease and a sharp eye on story, audience, style and substance, I write killer content for a range of mediums. I'm delighted to roll up my sleeves and help you out with:"
         />
         <HomeCards />
-		<div className="home-putMeToWorkContainer">
+		<div className="putMeToWorkContainer">
 			<Link href="mailto:curtis.miller@biola.edu" passHref>
-				<span className="home-putMeToWorkButton">Put Me To Work</span>
+				<span className="putMeToWorkButton">Put Me To Work</span>
 			</Link>
 		</div>
 

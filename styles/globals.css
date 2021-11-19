@@ -108,6 +108,34 @@ a {
     margin: 50% 0;
 }
 
+.putMeToWorkContainer {
+    height: 200px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.putMeToWorkButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--color-red);
+    line-height: 26px;
+    width: 265px;
+    height: 56px;
+    border: 2px solid var(--color-red);
+    border-radius: 3px;
+    transition: transform 0.2s;
+}
+
+.putMeToWorkButton:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
 /* Bio page styles */
 
 .bioPageContainer {
@@ -831,32 +859,6 @@ a {
     font-weight: 100;
     line-height: 0.65;
     margin-top: 0.15em;
-  }
-
-.home-putMeToWorkContainer {
-    height: 200px;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.home-putMeToWorkButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    font-size: 20px;
-    text-transform: uppercase;
-    color: var(--color-red);
-    line-height: 26px;
-    width: 265px;
-    height: 56px;
-    border: 2px solid var(--color-red);
-    border-radius: 3px;
-}
-
-.home-putMeToWorkButton:hover {
-    cursor: pointer;
 }
 
 .homeSubheader-subheaderSection {
@@ -1034,32 +1036,6 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-}
-
-.portfolio-putMeToWorkContainer {
-    height: 200px;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.portfolio-putMeToWorkButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    font-size: 20px;
-    text-transform: uppercase;
-    color: var(--color-red);
-    line-height: 26px;
-    width: 265px;
-    height: 56px;
-    border: 2px solid var(--color-red);
-    border-radius: 3px;
-}
-
-.portfolio-putMeToWorkButton:hover {
-    cursor: pointer;
 }
 
 .portfolio-placeholder {
