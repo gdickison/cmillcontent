@@ -20,6 +20,14 @@ export default {
             title: "Background Color",
             name: "color",
             type: "string",
+            options: {
+                list: [
+                    {title: "Lightest", value: "lightest"},
+                    {title: "Light", value: "light"},
+                    {title: "Dark", value: "dark"},
+                    {title: "Medium", value: "medium"}
+                ]
+            },
             validation: Rule => Rule.required()
         },
         {

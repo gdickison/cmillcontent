@@ -52,9 +52,8 @@ function PortfolioPage(){
                         </div>
                         {portfolioData.map((data) => {
                             return (
-                                <Fragment key={data.title}>
+                                <Fragment key={data._id}>
                                     <PortfolioSectionTitle
-                                        key={data.title}
                                         title={data.title}
                                         subtitle={data.subtitle}
                                     />

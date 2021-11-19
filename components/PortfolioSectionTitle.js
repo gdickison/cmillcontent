@@ -1,4 +1,4 @@
-const PortfolioSectionTitle = ({key, title, subtitle}) => {
+const PortfolioSectionTitle = ({title, subtitle}) => {
     return (
         <div className="portfolio-section-contentTitleContainer">
             <p className="portfolio-section-contentTitle">{title}</p>
