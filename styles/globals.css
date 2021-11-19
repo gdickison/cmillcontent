@@ -1151,7 +1151,7 @@ a {
 .writingLinkSection-cardContainer {
     position: relative;
     height: auto;
-    margin: -42px 16% 42px 16%;
+    margin: -42px 1.5rem 42px 1.5rem;
     display: flex;
     flex-flow: row wrap;
     row-gap: 20px;
