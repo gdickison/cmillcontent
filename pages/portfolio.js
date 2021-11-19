@@ -68,24 +68,24 @@ function PortfolioPage(){
                                 </Fragment>
                             )
                         })}
+                        {/* United Dairymen of AZ video section */}
+                        <PortfolioSectionTitle
+                            title="United Dairymen of Arizona"
+                            // eslint-disable-next-line react/jsx-key
+                            subtitle={["90 second video script, winner of a ", <a href='https://enter.marcomawards.com/entry/united-in-excellence/' target='_blank' rel="noreferrer">2021 Gold Marcom Award</a>]}
+                        />
+                        <div style={{margin: '0 16%'}}>
+                            <div className="portfolio-videoContainer">
+                                <iframe className="portfolio-video" controls width={720} height={576} src="https://www.youtube.com/embed/Z2S5a8hK7m0"/>
+                            </div>
+                        </div>
+                        <div className="portfolio-putMeToWorkContainer">
+                            <Link href="mailto:curtis.miller@biola.edu" passHref>
+                                <span className="portfolio-putMeToWorkButton">Put Me To Work</span>
+                            </Link>
+                        </div>
                     </>
                 }
-                {/* United Dairymen of AZ video section */}
-                <PortfolioSectionTitle
-                    title="United Dairymen of Arizona"
-                    // eslint-disable-next-line react/jsx-key
-                    subtitle={["90 second video script, winner of a ", <a href='https://enter.marcomawards.com/entry/united-in-excellence/' target='_blank' rel="noreferrer">2021 Gold Marcom Award</a>]}
-                />
-                <div style={{margin: '0 16%'}}>
-                    <div className="portfolio-videoContainer">
-                        <iframe className="portfolio-video" controls width={720} height={576} src="https://www.youtube.com/embed/Z2S5a8hK7m0"/>
-                    </div>
-                </div>
-                <div className="portfolio-putMeToWorkContainer">
-                    <Link href="mailto:curtis.miller@biola.edu" passHref>
-                        <span className="portfolio-putMeToWorkButton">Put Me To Work</span>
-                    </Link>
-                </div>
             </div>
             <Footer />
         </div>
