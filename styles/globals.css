@@ -147,7 +147,8 @@ a {
 /* Bio page styles */
 
 .bioPageContainer {
-    min-height: 100vh;
+    /* min-height: 100vh; */
+    width: 100vw;
     display: flex;
     flex-direction: column;
     background-image: url('../public/images/bkgd_image_bio.png');
@@ -156,6 +157,8 @@ a {
 }
 
 .bioHero {
+    position: absolute;
+    top: 0;
     height: 820px;
     width: 100vw;
     background-color: var(--color-darker);
@@ -163,10 +166,11 @@ a {
 }
 
 .bioTitle {
-    position: absolute;
+    /* position: absolute;
     top: 60px;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%); */
+    padding-top: 60px;
     font-family: 'ivypresto-display', serif;
     font-weight: 600;
     font-style: normal;
@@ -174,25 +178,38 @@ a {
     line-height: 98px;
     color: var(--color-extra-light);
     text-align: center;
+    width: 100vw;
+}
+
+.bioUnderTitle {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .authorImage {
-    position: absolute;
+    /* position: absolute;
     top: 170px;
-    left: 257px;
+    left: 257px; */
+    /* margin-left: 10%; */
+    height: 270px;
+    width: 270px;
 }
 
 .bioSection {
-    position: absolute;
+    /* position: absolute;
     top: 170px;
-    right: 160px;
-    width: 45%;
-    height: 920px;
+    right: 160px; */
+    width: 40rem;
+    height: 45rem;
     background-color: var(--color-extra-light);
     box-shadow: 2px 4px 10px 6px rgba(30, 52, 65, 0.07);
     display: flex;
     align-items: center;
     justify-content: center;
+    /* margin-left: -10%; */
+    margin-bottom: -4rem;
 }
 
 .bioContainer {
@@ -210,9 +227,10 @@ a {
 
 .backToHomeButtonContainer {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
-    height: 450px;
+    height: 250px;
+    margin-bottom: 222px;
 }
 
 .backToHomeButton {
@@ -228,7 +246,7 @@ a {
     height: 56px;
     border: 2px solid var(--color-red);
     border-radius: 3px;
-    margin-bottom: 82px;
+    /* margin-bottom: 82px; */
     transition: transform 0.2s;
 }
 
