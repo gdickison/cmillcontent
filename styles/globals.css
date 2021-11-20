@@ -147,7 +147,6 @@ a {
 /* Bio page styles */
 
 .bioPageContainer {
-    /* min-height: 100vh; */
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -166,10 +165,6 @@ a {
 }
 
 .bioTitle {
-    /* position: absolute;
-    top: 60px;
-    left: 50%;
-    transform: translate(-50%); */
     padding-top: 60px;
     font-family: 'ivypresto-display', serif;
     font-weight: 600;
@@ -189,18 +184,11 @@ a {
 }
 
 .authorImage {
-    /* position: absolute;
-    top: 170px;
-    left: 257px; */
-    /* margin-left: 10%; */
     height: 270px;
     width: 270px;
 }
 
 .bioSection {
-    /* position: absolute;
-    top: 170px;
-    right: 160px; */
     width: 40rem;
     height: 45rem;
     background-color: var(--color-extra-light);
@@ -208,7 +196,6 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* margin-left: -10%; */
     margin-bottom: -4rem;
 }
 
