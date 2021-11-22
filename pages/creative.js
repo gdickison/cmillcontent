@@ -5,8 +5,23 @@ import NavBar from "../components/Navbar"
 import Footer from "../components/Footer"
 import FictionContentCard from "../components/FictionContentCard"
 import StagePlaysContentCard from "../components/StagePlaysContentCard"
+import { useState, useEffect, Fragment } from 'react'
+import sanityClient from '../src/client'
 
 function CreativePage() {
+    const [shortfilmData, setShortfilmData] = useState(null);
+
+    useEffect(() => {
+        sanityClient.fetch(`*[_type == "shortFilm"] | order(_createdAt) {
+            _id,
+            link,
+            title,
+            roles,
+            year
+        }`)
+        .then((data) => setShortfilmData(data));
+    }, []);
+
     return(
         <div className="page-container">
             <Head>
@@ -31,68 +46,68 @@ function CreativePage() {
                     </div>
                 </div>
                 <div className="creative-creativeContent">
-                    {/* short film section */}
-                    <div className="creative-creativeContentSection">
-                        <div className="creative-creativeContentHeader">
-                            <span className="creative-creativeContentHeaderIcon">
-                                <Image src="/images/icon_film.png" alt="film" width={74} height={61} />
-                            </span>
-                            <h2 className="creative-creativeContentHeaderText">Short Film</h2>
+                    {!shortfilmData
+                        ?
+                        <div className="loader"></div>
+                        :
+                        <div className="creative-creativeContentSection">
+                            <div className="creative-creativeContentHeader">
+                                <span className="creative-creativeContentHeaderIcon">
+                                    <Image src="/images/icon_film.png" alt="film" width={74} height={61} />
+                                </span>
+                                <h2 className="creative-creativeContentHeaderText">Short Film</h2>
+                            </div>
+                            {shortfilmData.map((data) => {
+                                return (
+                                    <Fragment key={data._id}>
+                                        <div className="creative-videoContainer">
+                                            <iframe className="creative-video" controls width={720} height={576} src={data.link} />
+                                        </div>
+                                        <div className="creative-videoCaption">
+                                            <p className="creative-videoTitle">{data.title}</p>
+                                            <p className="creative-videoCredits">{data.roles}</p>
+                                            <p className="creative-videoYear">{data.year}</p>
+                                        </div>
+                                    </Fragment>
+                                )
+                            })}
                         </div>
-                        <div className="creative-videoContainer">
-                            <iframe className="creative-video" controls width={720} height={576} src="https://www.youtube.com/embed/G55hKNh7NT8" />
-                        </div>
-                        <div className="creative-videoCaption">
-                            <p className="creative-videoTitle">Date Works</p>
-                            <p className="creative-videoCredits">Wrote, Produced, and Directed</p>
-                            <p className="creative-videoYear">2020</p>
-                        </div>
-                        <div className="creative-videoContainer">
-                            <iframe className="creative-video" controls width={720} height={576} src="https://www.youtube.com/embed/diqkZ-jq1JQ" />
-                        </div>
-                        <div className="creative-videoCaption">
-                            <p className="creative-videoTitle">Gio Boone: Live With Friends</p>
-                            <p className="creative-videoCredits">Produced and Directed</p>
-                            <p className="creative-videoYear">2021</p>
-                        </div>
-                    </div>
-                    {/* feature film section */}
-                    <div className="creative-creativeContentSection">
-                        <div className="creative-creativeContentHeader">
-                            <span className="creative-creativeContentHeaderIcon">
-                                <Image src="/images/icon_feature_film.png" alt="film" width={59} height={70} />
-                            </span>
-                            <h2 className="creative-creativeContentHeaderText">Feature Film Treatments</h2>
-                        </div>
-                        <div className="creative-featureFilmContentContainer">
-                            <div className="creative-featureFilmContentCard"> {/* repeat the featureFilmContentCard for each new feature film */}
-                                <Image className="creative-featureFilmImage" src="/images/image_b_to_a.png" alt="b to a" width={360} height={202} layout="responsive" />
-                                <div className="creative-featureFilmCaption">
-                                    <p className="creative-featureFilmTitle">B to A</p>
-                                    <p className="creative-featureFilmGenre">straight drama</p>
-                                    <p className="creative-featureFilmDescription">When a college athlete finds her life uprooted by an unplanned pregnancy, her eccentric, older, army veteran brother lends a helping hand.</p>
-                                    <p className="creative-featureFilmDescription">While they navigate the hurdles of returning home, family restoration and the adoption process, a beleaguered couple struggle with infertility clings to hope.</p>
-                                    <div className="creative-inline-link-container">
-                                        <p>
-                                            <a className="inline-link" href="/files/B_to_A_Film_Treatment_2021.pdf" alt="B to A Film Treatment 2021" target="_blank" rel="noopener noreferror">Full Treatment</a>
-                                        </p>
-                                        <p>
-                                            <a className="inline-link" href="/files/B_to_A_Ten_minute_sample_scene.pdf" alt="B to A Ten Minute Sample Scene" target="_blank" rel="noopener noreferror">Sample Scene</a>
-                                        </p>
+                    }
+                            <div className="creative-creativeContentSection">
+                                <div className="creative-creativeContentHeader">
+                                    <span className="creative-creativeContentHeaderIcon">
+                                        <Image src="/images/icon_feature_film.png" alt="film" width={59} height={70} />
+                                    </span>
+                                    <h2 className="creative-creativeContentHeaderText">Feature Film Treatments</h2>
+                                </div>
+                                <div className="creative-featureFilmContentContainer">
+                                    <div className="creative-featureFilmContentCard"> {/* repeat the featureFilmContentCard for each new feature film */}
+                                        <Image className="creative-featureFilmImage" src="/images/image_b_to_a.png" alt="b to a" width={360} height={202} layout="responsive" />
+                                        <div className="creative-featureFilmCaption">
+                                            <p className="creative-featureFilmTitle">B to A</p>
+                                            <p className="creative-featureFilmGenre">straight drama</p>
+                                            <p className="creative-featureFilmDescription">When a college athlete finds her life uprooted by an unplanned pregnancy, her eccentric, older, army veteran brother lends a helping hand.</p>
+                                            <p className="creative-featureFilmDescription">While they navigate the hurdles of returning home, family restoration and the adoption process, a beleaguered couple struggle with infertility clings to hope.</p>
+                                            <div className="creative-inline-link-container">
+                                                <p>
+                                                    <a className="inline-link" href="/files/B_to_A_Film_Treatment_2021.pdf" alt="B to A Film Treatment 2021" target="_blank" rel="noopener noreferror">Full Treatment</a>
+                                                </p>
+                                                <p>
+                                                    <a className="inline-link" href="/files/B_to_A_Ten_minute_sample_scene.pdf" alt="B to A Ten Minute Sample Scene" target="_blank" rel="noopener noreferror">Sample Scene</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div className="creative-cardLinkContainer">
+                                        <p className="creative-cardLinkTitle">Want to see more?</p>
+                                        <Link href="mailto:curtis@cmillcontent.com" passHref>
+                                            <span className="creative-cardLink">contact me</span>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div>
-                            <div className="creative-cardLinkContainer">
-                                <p className="creative-cardLinkTitle">Want to see more?</p>
-                                <Link href="mailto:curtis@cmillcontent.com" passHref>
-                                    <span className="creative-cardLink">contact me</span>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                    {/* fiction & literary section */}
                     <div className="creative-creativeContentSection">
                         <div className="creative-creativeContentHeader">
                             <span className="creative-creativeContentHeaderIcon">
@@ -126,7 +141,6 @@ function CreativePage() {
                             />
                         </div>
                     </div>
-                    {/* stage plays section */}
                     <div className="creative-creativeContentSection">
                         <div className="creative-creativeContentHeader">
                             <span className="creative-creativeContentHeaderIcon">

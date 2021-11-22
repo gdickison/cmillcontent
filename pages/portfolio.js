@@ -5,8 +5,7 @@ import PortfolioSectionTitle from "../components/PortfolioSectionTitle"
 import Testimonial from "../components/Testimonial"
 import WritingLinkSection from "../components/WritingLink"
 import Link from "next/dist/client/link"
-import { Fragment } from "react"
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Fragment } from 'react'
 import sanityClient from "../src/client"
 
 function PortfolioPage(){
@@ -40,11 +39,7 @@ function PortfolioPage(){
             <div className="content-wrapper">
                 {!portfolioData
                     ?
-                    <div className="d-flex justify-content-center">
-                        <div className="spinner-border text-primary" role="status">
-                            <span className="sr-only">Loading....</span>
-                        </div>
-                    </div>
+                    <div className="loader"></div>
                     :
                     <>
                         <div className="portfolio-heroBackground"></div><div className="portfolio-heroTitleContainer">

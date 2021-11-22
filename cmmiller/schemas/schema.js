@@ -5,6 +5,7 @@ import createSchema from 'part:@sanity/base/schema-creator'
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 import portfolioSection from './portfolioSectionSchema'
 import portfolioCard from './portfolioCardSchema'
+import shortFilm from './creativeShortFilmSchema'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -15,6 +16,7 @@ export default createSchema({
   types: schemaTypes.concat([
     /* Your types here! */
     portfolioSection,
-    portfolioCard
+    portfolioCard,
+    shortFilm
   ]),
 })
