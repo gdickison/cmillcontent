@@ -7,6 +7,7 @@ import FictionContentCard from "../components/FictionContentCard"
 import StagePlaysContentCard from "../components/StagePlaysContentCard"
 import { useState, useEffect, Fragment } from 'react'
 import sanityClient from '../src/client'
+import getYouTubeId from 'get-youtube-id'
 
 function CreativePage() {
     const [shortfilmData, setShortfilmData] = useState(null);
@@ -58,10 +59,11 @@ function CreativePage() {
                                 <h2 className="creative-creativeContentHeaderText">Short Film</h2>
                             </div>
                             {shortfilmData.map((data) => {
+                                const youTubeId = getYouTubeId(data.link);
                                 return (
                                     <Fragment key={data._id}>
                                         <div className="creative-videoContainer">
-                                            <iframe className="creative-video" controls width={720} height={576} src={data.link} />
+                                            <iframe className="creative-video" controls width={720} height={576} src={`https://youtube.com/embed/${youTubeId}`} />
                                         </div>
                                         <div className="creative-videoCaption">
                                             <p className="creative-videoTitle">{data.title}</p>
