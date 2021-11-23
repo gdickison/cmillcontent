@@ -5,6 +5,7 @@ import NavBar from "../components/Navbar"
 import Footer from "../components/Footer"
 import FictionContentCard from "../components/FictionContentCard"
 import StagePlaysContentCard from "../components/StagePlaysContentCard"
+import Loader from "../components/Loader"
 import { useState, useEffect, Fragment } from 'react'
 import sanityClient from '../src/client'
 import getYouTubeId from 'get-youtube-id'
@@ -49,7 +50,7 @@ function CreativePage() {
                 <div className="creative-creativeContent">
                     {!shortfilmData
                         ?
-                        <div className="loader"></div>
+                        <Loader />
                         :
                         <div className="creative-creativeContentSection">
                             <div className="creative-creativeContentHeader">

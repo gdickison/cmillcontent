@@ -7,6 +7,7 @@ import WritingLinkSection from "../components/WritingLink"
 import Link from "next/dist/client/link"
 import { useState, useEffect, Fragment } from 'react'
 import sanityClient from "../src/client"
+import Loader from "../components/Loader"
 
 function PortfolioPage(){
     const [portfolioData, setPortfolioData] = useState(null);
@@ -39,7 +40,7 @@ function PortfolioPage(){
             <div className="content-wrapper">
                 {!portfolioData
                     ?
-                    <div className="loader"></div>
+                    <Loader />
                     :
                     <>
                         <div className="portfolio-heroBackground"></div><div className="portfolio-heroTitleContainer">
