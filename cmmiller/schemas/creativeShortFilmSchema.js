@@ -7,6 +7,7 @@ export default {
         {
             title: "Film Link",
             name: 'link',
+            placeholder: 'Paste the full url from YouTube',
             type: 'url',
             validation: Rule => Rule.required()
         },

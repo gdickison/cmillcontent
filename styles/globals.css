@@ -389,12 +389,20 @@ a {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    margin-bottom: 50px;
+    gap: 2%;
     font-family: 'Poppins', sans-serif;
 }
 
+@media (min-width: 587px) and (max-width: 1200px) {
+    .creative-featureFilmContentContainer {
+        justify-content: center;
+    }
+}
+
 .creative-featureFilmContentCard {
-    width: 48%;
+    width: 49%;
+    min-width: 400px;
+    margin-bottom: 50px;
 }
 
 .creative-featureFilmCaption {

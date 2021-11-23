@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from "next/head"
 import Image from "next/image"
 import Link from "next/dist/client/link"
@@ -11,7 +12,7 @@ import sanityClient from '../src/client'
 import getYouTubeId from 'get-youtube-id'
 
 function CreativePage() {
-    const [shortfilmData, setShortfilmData] = useState(null);
+    const [shortFilmData, setShortFilmData] = useState(null);
 
     useEffect(() => {
         sanityClient.fetch(`*[_type == "shortFilm"] | order(_createdAt) {
@@ -21,7 +22,23 @@ function CreativePage() {
             roles,
             year
         }`)
-        .then((data) => setShortfilmData(data));
+        .then((data) => setShortFilmData(data));
+    }, []);
+
+    const [featureFilmData, setFeatureFilmData] = useState(null);
+
+    useEffect(() => {
+        sanityClient.fetch(`*[_type == "featureFilm"] | order(_createdAt) {
+            _id,
+            "filmImageUrl": filmImage.asset->url,
+            title,
+            genre,
+            description1,
+            description2,
+            "fullTreatmentUrl": fullTreatment.asset->url,
+            "sampleSceneUrl": sampleScene.asset->url
+        }`)
+        .then((data) => setFeatureFilmData(data));
     }, []);
 
     return(
@@ -48,7 +65,7 @@ function CreativePage() {
                     </div>
                 </div>
                 <div className="creative-creativeContent">
-                    {!shortfilmData
+                    {!shortFilmData
                         ?
                         <Loader />
                         :
@@ -59,7 +76,7 @@ function CreativePage() {
                                 </span>
                                 <h2 className="creative-creativeContentHeaderText">Short Film</h2>
                             </div>
-                            {shortfilmData.map((data) => {
+                            {shortFilmData.map((data) => {
                                 const youTubeId = getYouTubeId(data.link);
                                 return (
                                     <Fragment key={data._id}>
@@ -76,41 +93,52 @@ function CreativePage() {
                             })}
                         </div>
                     }
-                            <div className="creative-creativeContentSection">
-                                <div className="creative-creativeContentHeader">
-                                    <span className="creative-creativeContentHeaderIcon">
-                                        <Image src="/images/icon_feature_film.png" alt="film" width={59} height={70} />
-                                    </span>
-                                    <h2 className="creative-creativeContentHeaderText">Feature Film Treatments</h2>
-                                </div>
-                                <div className="creative-featureFilmContentContainer">
-                                    <div className="creative-featureFilmContentCard"> {/* repeat the featureFilmContentCard for each new feature film */}
-                                        <Image className="creative-featureFilmImage" src="/images/image_b_to_a.png" alt="b to a" width={360} height={202} layout="responsive" />
-                                        <div className="creative-featureFilmCaption">
-                                            <p className="creative-featureFilmTitle">B to A</p>
-                                            <p className="creative-featureFilmGenre">straight drama</p>
-                                            <p className="creative-featureFilmDescription">When a college athlete finds her life uprooted by an unplanned pregnancy, her eccentric, older, army veteran brother lends a helping hand.</p>
-                                            <p className="creative-featureFilmDescription">While they navigate the hurdles of returning home, family restoration and the adoption process, a beleaguered couple struggle with infertility clings to hope.</p>
-                                            <div className="creative-inline-link-container">
-                                                <p>
-                                                    <a className="inline-link" href="/files/B_to_A_Film_Treatment_2021.pdf" alt="B to A Film Treatment 2021" target="_blank" rel="noopener noreferror">Full Treatment</a>
-                                                </p>
-                                                <p>
-                                                    <a className="inline-link" href="/files/B_to_A_Ten_minute_sample_scene.pdf" alt="B to A Ten Minute Sample Scene" target="_blank" rel="noopener noreferror">Sample Scene</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="creative-cardLinkContainer">
-                                        <p className="creative-cardLinkTitle">Want to see more?</p>
-                                        <Link href="mailto:curtis@cmillcontent.com" passHref>
-                                            <span className="creative-cardLink">contact me</span>
-                                        </Link>
-                                    </div>
+                    {!featureFilmData
+                        ?
+                        <Loader />
+                        :
+                        <div className="creative-creativeContentSection">
+                            <div className="creative-creativeContentHeader">
+                                <span className="creative-creativeContentHeaderIcon">
+                                    <Image src="/images/icon_feature_film.png" alt="film" width={59} height={70} />
+                                </span>
+                                <h2 className="creative-creativeContentHeaderText">Feature Film Treatments</h2>
+                            </div>
+                            <div className="creative-featureFilmContentContainer">
+                                {featureFilmData.map((data) => {
+                                    return (
+                                        <Fragment key={data._id}>
+                                                <div className="creative-featureFilmContentCard"> {/* repeat the featureFilmContentCard for each new feature film */}
+                                                    <Image className="creative-featureFilmImage" src={data.filmImageUrl} alt="b to a" width={360} height={202} layout="responsive" />
+                                                    <div className="creative-featureFilmCaption">
+                                                        <p className="creative-featureFilmTitle">{data.title}</p>
+                                                        <p className="creative-featureFilmGenre">{data.genre}</p>
+                                                        <p className="creative-featureFilmDescription">{data.description1}</p>
+                                                        {data.description2 && <p className="creative-featureFilmDescription">{data.description2}</p>}
+                                                        <div className="creative-inline-link-container">
+                                                            {data.fullTreatmentUrl && <p>
+                                                                <a className="inline-link" href={`${data.fullTreatmentUrl}?dl=`} alt="B to A Film Treatment 2021" target="_blank" rel="noopener noreferrer">Full Treatment</a>
+                                                            </p>}
+                                                            {data.sampleSceneUrl && <p>
+                                                                <a className="inline-link" href={`${data.sampleSceneUrl}?dl=`} alt="B to A Ten Minute Sample Scene" target="_blank" rel="noopener noreferrer">Sample Scene</a>
+                                                            </p>}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </Fragment>
+                                    )
+                                })}
+                            </div>
+                            <div>
+                                <div className="creative-cardLinkContainer">
+                                    <p className="creative-cardLinkTitle">Want to see more?</p>
+                                    <Link href="mailto:curtis@cmillcontent.com" passHref>
+                                        <span className="creative-cardLink">contact me</span>
+                                    </Link>
                                 </div>
                             </div>
+                        </div>
+                    }
                     <div className="creative-creativeContentSection">
                         <div className="creative-creativeContentHeader">
                             <span className="creative-creativeContentHeaderIcon">
