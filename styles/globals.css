@@ -301,10 +301,28 @@ a {
 .creative-headerWrapper {
     width: 100vw;
     height: 420px;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.creative-headerWrapper:after {
+    content: '';
     background-image: url('../public/images/bkgd_image_inkwell.png');
     background-position: left;
     background-repeat: no-repeat;
-    margin-bottom: 50px;
+    background-color: transparent;
+    width: 100vw;
+    height: 420px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+@media (max-width: 1000px) {
+    .creative-headerWrapper:after {
+        opacity: 0.5;
+    }
 }
 
 .creative-headerTextContainer {
