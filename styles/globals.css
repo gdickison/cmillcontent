@@ -521,24 +521,45 @@ a {
 }
 
 /* inner row/card structure */
+@media (max-width: 1060px) {
+    .creative-fictionContentCard {
+        height: auto;
+    }
+
+    .creative-fictionContentCardGrid {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #fl-title,
+    #fl-description {
+        width: auto;
+    }
+}
+
+@media (min-width: 1061px) {
+    .creative-fictionContentCardGrid {
+        align-items: center;
+    }
+
+    #fl-title {
+        width: 28%;
+    }
+
+    #fl-description {
+        width: 30%;
+    }
+}
+
 .creative-fictionContentCardGrid {
     height: 100%;
     padding: 10px 30px;
     display: flex;
     gap: 5px;
-    align-items: center;
 }
 
 .creative-fictionContentCardContents p {
     margin: 0;
-}
-
-.creative-fictionContentCardContents:first-of-type {
-    width: 28%;
-}
-
-.creative-fictionContentCardContents:last-of-type {
-    width: 30%;
 }
 
 /* text in row/card */
