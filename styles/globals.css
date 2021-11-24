@@ -1142,6 +1142,12 @@ a {
     padding-bottom: 67px;
 }
 
+@media (max-width: 720px) {
+    .portfolio-section-contentTitleContainer {
+        width: 75%
+    }
+}
+
 .portfolio-section-contentTitle {
     font-family: 'ivypresto-display', serif;
     font-weight: 600;
@@ -1157,6 +1163,12 @@ a {
     font-size: 19px;
     color: var(--color-medium-dark);
     width: 65%;
+}
+
+@media (max-width: 1110px) {
+    .portfolio-section-contentSubtitle {
+        width: 100%;
+    }
 }
 
 /* Portfolio card styles */
