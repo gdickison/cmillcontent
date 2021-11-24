@@ -608,32 +608,31 @@ a {
 }
 
 /* inner row/card structure */
-.creative-stagePlaysContentGrid {
-    height: 100%;
-    padding: 10px 30px;
-    display: flex;
-    gap: 5px;
-    align-items: center;
+@media (max-width: 1324px) {
+    .creative-stagePlaysContentGrid {
+        display: grid;
+        grid-template-rows: auto;
+        padding: 10px 30px;
+    }
+
+    .creative-stagePlaysContentCardContents {
+        padding: 3px 0;
+    }
+}
+
+@media (min-width: 1325px) {
+    .creative-stagePlaysContentGrid {
+        height: 100%;
+        padding: 10px 30px;
+        display: grid;
+        grid-template-columns: 29% 28% 24% 19%;
+        gap: 5px;
+        align-items: center;
+    }
 }
 
 .creative-stagePlaysContentCardContents p {
     margin: 0;
-}
-
-.creative-stagePlaysContentCardContents:first-of-type {
-    width: 29%;
-}
-
-.creative-stagePlaysContentCardContents:nth-of-type(2) {
-    width: 28%
-}
-
-.creative-stagePlaysContentCardContents:nth-of-type(3) {
-    width: 24%
-}
-
-.creative-stagePlaysContentCardContents:last-of-type {
-    width: 19%;
 }
 
 .creative-stagePlaysTitle {
