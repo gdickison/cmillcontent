@@ -1328,7 +1328,7 @@ a {
     padding: 100px 0;
 }
 
-@media (max-width: 1040px) {
+@media (max-width: 1110px) {
     .testimonialContainer {
         width: 50%;
     }
