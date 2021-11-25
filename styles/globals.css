@@ -1328,6 +1328,12 @@ a {
     padding: 100px 0;
 }
 
+@media (max-width: 1040px) {
+    .testimonialContainer {
+        width: 50%;
+    }
+}
+
 .testimonialText {
     font-family: "ivypresto_display", serif;
     font-style: normal;
