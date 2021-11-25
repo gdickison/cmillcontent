@@ -20,13 +20,10 @@ function CrocodilesPage() {
                     </div>
                 </div>
                 <div className="crocodiles-underBookshelf">
-                    <div className="crocodiles-left">
-                        <span className="crocodiles-crocImage">
-                            <Image src="/images/icon_crocodiles.png" alt="shelf of crocodiles" width={265} height={265}/>
-                        </span>
+                    <div className="crocodiles-crocImage">
+                        <Image src="/images/icon_crocodiles.png" alt="shelf of crocodiles" width={265} height={265}/>
                     </div>
-                    <div className="crocodiles-right">
-                    <div className="crocodiles-rightChild">
+                    <div className="crocodiles-crocTextContainer">
                         <div className="crocodiles-crocText">
                             <p>
                                 <strong>LOVE READING?</strong>
@@ -41,7 +38,6 @@ function CrocodilesPage() {
                                 For a tasty essay on books and ideas, check out <a className="inline-link" href="https://crocodileshelf.substack.com/" target="_blank" rel="noreferrer">Shelf of Crocodiles</a>, my monthly newsletter on <a className="inline-link" href="https://substack.com/" target="_blank" rel="noreferrer">Substack</a>.
                             </p>
                         </div>
-                    </div>
                     </div>
                 </div>
             </div>
