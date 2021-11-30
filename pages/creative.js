@@ -10,6 +10,7 @@ import Loader from "../components/Loader"
 import { useState, useEffect, Fragment } from 'react'
 import sanityClient from '../src/client'
 import getYouTubeId from 'get-youtube-id'
+import PortableText from '@sanity/block-content-to-react'
 
 function CreativePage() {
     const [shortFilmData, setShortFilmData] = useState(null);
@@ -39,6 +40,19 @@ function CreativePage() {
             "sampleSceneUrl": sampleScene.asset->url
         }`)
         .then((data) => setFeatureFilmData(data));
+    }, []);
+
+    const [fictionData, setFictionData] = useState(null);
+
+    useEffect(() => {
+        sanityClient.fetch(`*[_type == "fiction"] | order(_createdAt) {
+            _id,
+            title,
+            link,
+            genre,
+            description
+        }`)
+        .then((data) => setFictionData(data));
     }, []);
 
     return(
@@ -139,39 +153,45 @@ function CreativePage() {
                             </div>
                         </div>
                     }
-                    <div className="creative-creativeContentSection">
-                        <div className="creative-creativeContentHeader">
-                            <span className="creative-creativeContentHeaderIcon">
-                                <Image src="/images/icon_fiction.png" alt="film" width={63} height={63} />
-                            </span>
-                            <h2 className="creative-creativeContentHeaderText">Fiction and Literary</h2>
+                    {!fictionData
+                        ?
+                        <Loader />
+                        :
+                        <div className="creative-creativeContentSection">
+                            <div className="creative-creativeContentHeader">
+                                <span className="creative-creativeContentHeaderIcon">
+                                    <Image src="/images/icon_fiction.png" alt="film" width={63} height={63} />
+                                </span>
+                                <h2 className="creative-creativeContentHeaderText">Fiction and Literary</h2>
+                            </div>
+                            <div className="creative-fictionContentContainer">
+                                {fictionData.map((data) => {
+                                    const serializers = {
+                                        marks: {
+                                            link: ({ children, mark }) => <a href={mark.href} target="_blank" rel="noreferrer">{children}</a>
+                                        }
+                                    }
+
+                                    return (
+                                        <Fragment key={data._id}>
+                                            <FictionContentCard
+                                                title={data.title}
+                                                link={data.link}
+                                                genre={data.genre}
+                                                // eslint-disable-next-line react/jsx-key
+                                                description={
+                                                    <PortableText
+                                                        blocks={data.description}
+                                                        serializers={serializers}
+                                                    />
+                                                }
+                                            />
+                                        </Fragment>
+                                    )
+                                })}
+                            </div>
                         </div>
-                        <div className="creative-fictionContentContainer">
-                            <FictionContentCard
-                                title="Both Feet"
-                                link="https://deadmule.com/curtis-miller-fiction-dec-2020-2/"
-                                genre="short fiction"
-                                // eslint-disable-next-line react/jsx-key
-                                description={["Published in ", <a href="https://deadmule.com/" target="_blank" rel="noreferrer">Dead Mule School of Southern Literature</a>, ", Dec 2020"]}
-                            />
-                            <FictionContentCard
-                                title="Entradero"
-                                genre="short fiction"
-                                // eslint-disable-next-line react/jsx-key
-                                description={["Published in ", <a href="https://mosaiczine.com/" target="_blank" rel="noreferrer">Mosaic Art and Literary Journal</a>, ", Vol 49, 2010"]}
-                            />
-                            <FictionContentCard
-                                title="Camden Angel"
-                                genre="creative nonfiction"
-                                // eslint-disable-next-line react/jsx-key
-                                description={["Finalist, 2011 Vandermey Nonfiction Contest, ", <a href="https://www.ruminatemagazine.com/" target="_blank" rel="noreferrer">Ruminate Magazine</a>]}
-                            />
-                            <FictionContentCard
-                                title="One Shot North"
-                                genre="novel in development"
-                            />
-                        </div>
-                    </div>
+                    }
                     <div className="creative-creativeContentSection">
                         <div className="creative-creativeContentHeader">
                             <span className="creative-creativeContentHeaderIcon">
