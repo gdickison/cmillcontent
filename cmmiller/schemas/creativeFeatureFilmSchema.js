@@ -23,15 +23,25 @@ export default {
             validation: Rule => Rule.required()
         },
         {
-            title: "Description (paragraph 1)",
-            name: "description1",
-            type: "text",
-            validation: Rule => Rule.required()
-        },
-        {
-            title: "Description (paragraph 2)",
-            name: "description2",
-            type: "text"
+            title: "Description",
+            name: "description",
+            type: "array",
+            of: [
+                {
+                    type: "block",
+                    styles: [
+                        {title: "Normal", value: 'normal'}
+                    ],
+                    marks: {
+                        decorators: [
+                            {title: "Strong", value: "strong"},
+                            {title: "Emphasis", value: "em"},
+                            {title: "Underline", value: "underline"}
+                        ],
+                        annotations: []
+                    }
+                }
+            ]
         },
         {
             title: "Full Treatment",
