@@ -7,6 +7,7 @@ import portfolioSection from './portfolioSectionSchema'
 import portfolioCard from './portfolioCardSchema'
 import shortFilm from './creativeShortFilmSchema'
 import featureFilm from './creativeFeatureFilmSchema'
+import fiction from './creativeFictionSchema'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -19,6 +20,7 @@ export default createSchema({
     portfolioSection,
     portfolioCard,
     shortFilm,
-    featureFilm
+    featureFilm,
+    fiction,
   ]),
 })
