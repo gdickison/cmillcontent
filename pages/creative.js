@@ -105,6 +105,7 @@ function CreativePage() {
                             </div>
                             {shortFilmData.map((data) => {
                                 const youTubeId = getYouTubeId(data.link);
+
                                 return (
                                     <Fragment key={data._id}>
                                         <div className="creative-videoContainer">
@@ -133,10 +134,10 @@ function CreativePage() {
                             </div>
                             <div className="creative-featureFilmContentContainer">
                                 {featureFilmData.map((data) => {
-                                    console.log(data)
                                     const serializers = {
                                         p: ({children}) => <p className="creative-featureFilmDescription">{children}</p>
                                     }
+
                                     return (
                                         <Fragment key={data._id}>
                                                 <div className="creative-featureFilmContentCard"> {/* repeat the featureFilmContentCard for each new feature film */}
@@ -220,7 +221,6 @@ function CreativePage() {
                         <Loader />
                         :
                         <div className="creative-creativeContentSection">
-                        {console.log(stageplayData)}
                             <div className="creative-creativeContentHeader">
                                 <span className="creative-creativeContentHeaderIcon">
                                     <Image src="/images/icon_stage_plays.png" alt="film" width={70} height={74} />
@@ -229,12 +229,12 @@ function CreativePage() {
                             </div>
                             <div className="creative-stagePlaysContentContainer">
                                 {stageplayData.map((data) => {
-                                    console.log(data)
                                     const serializers = {
                                         marks: {
                                             link: ({ children, mark }) => <a href={mark.href} target="_blank" rel="noreferrer">{children}</a>
                                         }
                                     }
+
                                     return (
                                         <Fragment key={data._id}>
                                             <StagePlaysContentCard
