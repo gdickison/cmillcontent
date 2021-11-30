@@ -34,8 +34,7 @@ function CreativePage() {
             "filmImageUrl": filmImage.asset->url,
             title,
             genre,
-            description1,
-            description2,
+            description,
             "fullTreatmentUrl": fullTreatment.asset->url,
             "sampleSceneUrl": sampleScene.asset->url
         }`)
@@ -134,6 +133,10 @@ function CreativePage() {
                             </div>
                             <div className="creative-featureFilmContentContainer">
                                 {featureFilmData.map((data) => {
+                                    console.log(data)
+                                    const serializers = {
+                                        p: ({children}) => <p className="creative-featureFilmDescription">{children}</p>
+                                    }
                                     return (
                                         <Fragment key={data._id}>
                                                 <div className="creative-featureFilmContentCard"> {/* repeat the featureFilmContentCard for each new feature film */}
@@ -141,8 +144,14 @@ function CreativePage() {
                                                     <div className="creative-featureFilmCaption">
                                                         <p className="creative-featureFilmTitle">{data.title}</p>
                                                         <p className="creative-featureFilmGenre">{data.genre}</p>
-                                                        <p className="creative-featureFilmDescription">{data.description1}</p>
-                                                        {data.description2 && <p className="creative-featureFilmDescription">{data.description2}</p>}
+                                                        {/* <p className="creative-featureFilmDescription"> */}
+                                                        {/* { */}
+                                                            <PortableText
+                                                                blocks={data.description}
+                                                                // serializers={serializers}
+                                                            />
+                                                        {/* } */}
+                                                        {/* </p> */}
                                                         <div className="creative-inline-link-container">
                                                             {data.fullTreatmentUrl && <p>
                                                                 <a className="inline-link" href={`${data.fullTreatmentUrl}?dl=`} alt="B to A Film Treatment 2021" target="_blank" rel="noopener noreferrer">Full Treatment</a>
