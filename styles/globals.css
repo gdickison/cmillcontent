@@ -683,6 +683,10 @@ a {
     color: var(--color-medium);
 }
 
+.creative-stagePlaysDescription {
+    padding-right: 2px;
+}
+
 .creative-stagePlaysDescription a {
     text-decoration: none;
     color: var(--color-red);
