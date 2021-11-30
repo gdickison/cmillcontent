@@ -8,6 +8,7 @@ import portfolioCard from './portfolioCardSchema'
 import shortFilm from './creativeShortFilmSchema'
 import featureFilm from './creativeFeatureFilmSchema'
 import fiction from './creativeFictionSchema'
+import stageplays from './creativeStageplaysSchema'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -22,5 +23,6 @@ export default createSchema({
     shortFilm,
     featureFilm,
     fiction,
+    stageplays
   ]),
 })

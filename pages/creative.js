@@ -55,6 +55,20 @@ function CreativePage() {
         .then((data) => setFictionData(data));
     }, []);
 
+    const [stageplayData, setStageplayData] = useState(null);
+
+    useEffect(() => {
+        sanityClient.fetch(`*[_type == "stageplays"] | order(_createdAt) {
+            _id,
+            title,
+            genre,
+            description,
+            performanceInfo,
+            "sampleURL" : sample.asset->url
+        }`)
+        .then((data) => setStageplayData(data));
+    }, []);
+
     return(
         <div className="page-container">
             <Head>
@@ -192,63 +206,51 @@ function CreativePage() {
                             </div>
                         </div>
                     }
-                    <div className="creative-creativeContentSection">
-                        <div className="creative-creativeContentHeader">
-                            <span className="creative-creativeContentHeaderIcon">
-                                <Image src="/images/icon_stage_plays.png" alt="film" width={70} height={74} />
-                            </span>
-                            <h2 className="creative-creativeContentHeaderText">Stage Plays</h2>
+                    {!stageplayData
+                        ?
+                        <Loader />
+                        :
+                        <div className="creative-creativeContentSection">
+                        {console.log(stageplayData)}
+                            <div className="creative-creativeContentHeader">
+                                <span className="creative-creativeContentHeaderIcon">
+                                    <Image src="/images/icon_stage_plays.png" alt="film" width={70} height={74} />
+                                </span>
+                                <h2 className="creative-creativeContentHeaderText">Stage Plays</h2>
+                            </div>
+                            <div className="creative-stagePlaysContentContainer">
+                                {stageplayData.map((data) => {
+                                    console.log(data)
+                                    const serializers = {
+                                        marks: {
+                                            link: ({ children, mark }) => <a href={mark.href} target="_blank" rel="noreferrer">{children}</a>
+                                        }
+                                    }
+                                    return (
+                                        <Fragment key={data._id}>
+                                            <StagePlaysContentCard
+                                                title={data.title}
+                                                genre={data.genre}
+                                                // eslint-disable-next-line react/jsx-key
+                                                description={
+                                                    <PortableText
+                                                        blocks={data.description}
+                                                        serializers={serializers}
+                                                    />
+                                                }
+                                                performance={data.performanceInfo}
+                                                link={data.sampleURL ? `${data.sampleURL}?dl=sample.pdf` : null}
+                                            />
+                                        </Fragment>
+                                    )
+                                })}
+                            </div>
+                            <div className="creative-stagePlaysLinkContainer">
+                                <p className="creative-stagePlaysLinkText">Need a play?</p>
+                                <p className="creative-stagePlaysLinkText">For permissions, sample scenes, and more,  <a href='mailto:curtis@cmillcontent.com'>give me a shout</a></p>
+                            </div>
                         </div>
-                        <div className="creative-stagePlaysContentContainer">
-                            <StagePlaysContentCard
-                                title="Packed, Prepared"
-                                genre="one act lockdown comedy"
-                                // eslint-disable-next-line react/jsx-key
-                                description={["Semi-finalist, Kennedy Center American College Theater Festival, ", <a href="https://www.kcactf7.org/" target="_blank" rel="noreferrer">Region VII</a>, ", 2021"]}
-                                performance="Staged reading at New Saint Andrews College"
-                                link="/files/All_Packed_10_Page_Sample.pdf"
-                                target="_blank"
-                            />
-                            <StagePlaysContentCard
-                                title="Antigone"
-                                genre="a one act adaptation"
-                                performance="Performed on the patio at Restoration Life Church, 2017"
-                            />
-                            <StagePlaysContentCard
-                                title="Six From the Strand"
-                                genre="full-length drama"
-                                performance="Performed at the Second Story Theater, 2011"
-                            />
-                            <StagePlaysContentCard
-                                title="Ten-Minute Plays"
-                                // eslint-disable-next-line react/jsx-key
-                                description={[<ul>
-                                <li>
-                                    The French Reality
-                                </li>
-                                <li>
-                                    Fate, Necessity, and Patrick&apos;s Soul
-                                </li>
-                                <li>
-                                    Pasadena
-                                </li>
-                                <li>
-                                    The Tide Law
-                                </li>
-                                </ul>]}
-                                performance="Performed by the Golden Mean Players, at the Second Story Theater, and in workshops at the University of London, Royal Holloway, 2007-2010."
-                            />
-                            <StagePlaysContentCard
-                                title="Bombing Hills"
-                                genre="full-length drama"
-                                performance="Honors thesis; staged reading at U.C. Riverside, 2009"
-                            />
-                        </div>
-                        <div className="creative-stagePlaysLinkContainer">
-                            <p className="creative-stagePlaysLinkText">Need a play?</p>
-                            <p className="creative-stagePlaysLinkText">For permissions, sample scenes, and more,  <a href='mailto:curtis@cmillcontent.com'>give me a shout</a></p>
-                        </div>
-                    </div>
+                    }
                 </div>
             </div>
             <Footer />
