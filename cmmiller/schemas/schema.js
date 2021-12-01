@@ -11,6 +11,7 @@ import fiction from './creativeFictionSchema'
 import stageplays from './creativeStageplaysSchema'
 import headlineText from '../schemas/indexSchema'
 import homeCardsSchema from './homeCardsSchema'
+import crocodiles from './crocodilesSchema'
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -26,6 +27,7 @@ export default createSchema({
     shortFilm,
     featureFilm,
     fiction,
-    stageplays
+    stageplays,
+    crocodiles
   ]),
 })

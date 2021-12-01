@@ -2,8 +2,22 @@ import Head from "next/head"
 import Image from "next/image"
 import NavBar from "../components/Navbar"
 import Footer from "../components/Footer"
+import Loader from "../components/Loader"
+import { useState, useEffect, Fragment } from 'react'
+import sanityClient from '../src/client'
+import PortableText from '@sanity/block-content-to-react'
 
 function CrocodilesPage() {
+    const [crocodilesData, setCrocodilesData] = useState(null);
+
+    useEffect(() => {
+        sanityClient.fetch(`*[_type == "crocodiles"] {
+            _id,
+            crocodiles_text
+        }`)
+        .then((data) => setCrocodilesData(data));
+    }, []);
+
     return(
         <div className="page-container">
             <Head>
@@ -24,20 +38,27 @@ function CrocodilesPage() {
                         <Image src="/images/icon_crocodiles.png" alt="shelf of crocodiles" width={265} height={265}/>
                     </div>
                     <div className="crocodiles-crocTextContainer">
-                        <div className="crocodiles-crocText">
-                            <p>
-                                <strong>LOVE READING?</strong>
-                            </p>
-                            <p>
-                                So do I.
-                            </p>
-                            <p>
-                                Fist bump.
-                            </p>
-                            <p>
-                                For a tasty essay on books and ideas, check out <a className="inline-link" href="https://crocodileshelf.substack.com/" target="_blank" rel="noreferrer">Shelf of Crocodiles</a>, my monthly newsletter on <a className="inline-link" href="https://substack.com/" target="_blank" rel="noreferrer">Substack</a>.
-                            </p>
-                        </div>
+                        {!crocodilesData
+                            ?
+                            <Loader />
+                            :
+                            crocodilesData.map((data) => {
+                                const serializers = {
+                                    marks: {
+                                        link: ({ children, mark }) => <a className="inline-link" href={mark.href} target="_blank" rel="noreferrer">{children}</a>
+                                    }
+                                }
+
+                                return (
+                                    <div key={data._id} className="crocodiles-crocText">
+                                        <PortableText
+                                            blocks={data.crocodiles_text}
+                                            serializers={serializers}
+                                        />
+                                    </div>
+                                )
+                            })
+                        }
                     </div>
                 </div>
             </div>
