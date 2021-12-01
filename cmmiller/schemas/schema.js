@@ -10,6 +10,7 @@ import featureFilm from './creativeFeatureFilmSchema'
 import fiction from './creativeFictionSchema'
 import stageplays from './creativeStageplaysSchema'
 import headlineText from '../schemas/indexSchema'
+import homeCardsSchema from './homeCardsSchema'
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -19,6 +20,7 @@ export default createSchema({
   types: schemaTypes.concat([
     /* Your types here! */
     headlineText,
+    homeCardsSchema,
     portfolioSection,
     portfolioCard,
     shortFilm,

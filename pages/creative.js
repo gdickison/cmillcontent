@@ -134,25 +134,18 @@ function CreativePage() {
                             </div>
                             <div className="creative-featureFilmContentContainer">
                                 {featureFilmData.map((data) => {
-                                    const serializers = {
-                                        p: ({children}) => <p className="creative-featureFilmDescription">{children}</p>
-                                    }
 
                                     return (
                                         <Fragment key={data._id}>
-                                                <div className="creative-featureFilmContentCard"> {/* repeat the featureFilmContentCard for each new feature film */}
+                                                <div className="creative-featureFilmContentCard">
                                                     <Image className="creative-featureFilmImage" src={data.filmImageUrl} alt="b to a" width={360} height={202} layout="responsive" />
                                                     <div className="creative-featureFilmCaption">
                                                         <p className="creative-featureFilmTitle">{data.title}</p>
                                                         <p className="creative-featureFilmGenre">{data.genre}</p>
-                                                        {/* <p className="creative-featureFilmDescription"> */}
-                                                        {/* { */}
                                                             <PortableText
                                                                 blocks={data.description}
-                                                                // serializers={serializers}
+                                                                className="creative-featureFilmDescription"
                                                             />
-                                                        {/* } */}
-                                                        {/* </p> */}
                                                         <div className="creative-inline-link-container">
                                                             {data.fullTreatmentUrl && <p>
                                                                 <a className="inline-link" href={`${data.fullTreatmentUrl}?dl=`} alt="B to A Film Treatment 2021" target="_blank" rel="noopener noreferrer">Full Treatment</a>
