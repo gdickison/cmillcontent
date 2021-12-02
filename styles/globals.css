@@ -281,9 +281,26 @@ a {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     align-items: center;
+}
+
+.creative-headerWrapper:after {
+    content: '';
     background-image: url('../public/images/bkgd_image_inkwell.png');
     background-position: left;
     background-repeat: no-repeat;
+    background-color: transparent;
+    width: 100vw;
+    height: 420px;
+    position: absolute;
+    top: 72;
+    left: 0;
+    z-index: -1;
+}
+
+@media (max-width: 1000px) {
+    .creative-headerWrapper:after {
+        opacity: 0.4;
+    }
 }
 
 .creative-headerTextContainer {
