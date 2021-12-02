@@ -29,7 +29,6 @@ const HomeCards = () => {
             homecardData.map((data) => {
                 return (
                     <Fragment key={data._id}>
-                    {console.log(data)}
                         <div className="homeCards-card">
                             <div className="homeCards-cardIcon">
                                 <Image src={data.iconURL} alt="icon" width={80} height={80} />
