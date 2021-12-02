@@ -255,7 +255,7 @@ function CreativePage() {
                     }
                 </div>
             </div>
-            <Footer />
+            <Footer id="creative-footer" />
         </div>
     );
 }

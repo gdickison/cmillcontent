@@ -83,7 +83,7 @@ function PortfolioPage(){
                     </>
                 }
             </div>
-            <Footer />
+            <Footer id="portfolio-footer"/>
         </div>
     );
 }

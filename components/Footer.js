@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-const Footer = () => {
+const Footer = ({id}) => {
 	return (
-		<footer className="footer-footer" id="creative-footer">
+		<footer className="footer-footer" id={id}>
 			<div>
 				<Image src="/images/logo_light.png" alt="Curtis Miller Logo" width={50} height={50} />
 			</div>

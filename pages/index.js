@@ -59,7 +59,7 @@ export default function Home() {
 
             </div>
 
-            <Footer />
+            <Footer id="home-footer" />
         </div>
     )
 }

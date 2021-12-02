@@ -29,7 +29,7 @@ body {
     padding: 0 0.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: stretch;
     align-items: center;
 }
 
@@ -735,10 +735,6 @@ a {
     text-decoration: none;
 }
 
-#creative-footer {
-    position: relative;
-}
-
 /* Crocodiles page styles */
 
 .crocodiles-headerWrapper {
@@ -843,8 +839,6 @@ a {
 /* Footer styles */
 
 .footer-footer {
-    position: absolute;
-    bottom: 0;
     width: 100vw;
     height: 222px;
     background-color: var(--color-dark);
@@ -859,6 +853,14 @@ a {
     font-style: normal;
     text-transform: uppercase;
     padding: 30px 0;
+  }
+
+  #portfolio-footer,
+  #home-footer,
+  #crocodiles-footer,
+  #bio-footer {
+      position: absolute;
+      bottom: 0;
   }
 
   .footer-footerName {

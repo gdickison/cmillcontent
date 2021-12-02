@@ -69,7 +69,7 @@ function BioPage() {
                         <span className="backToHomeButton">Back To Home</span>
                     </Link>
                 </div>
-            <Footer />
+            <Footer id="bio-footer" />
         </div>
     );
 }

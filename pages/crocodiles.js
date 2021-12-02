@@ -62,7 +62,7 @@ function CrocodilesPage() {
                     </div>
                 </div>
             </div>
-            <Footer />
+            <Footer id="crocodiles-footer"/>
         </div>
     );
 }
