@@ -7,7 +7,7 @@ const StagePlaysContentCard = ({title, genre, description, performance, link}) =
                     <p className="creative-stagePlaysGenre">{genre}</p>
                 </div>
                 <div className="creative-stagePlaysContentCardContents">
-                    <p className="creative-stagePlaysDescription">{description}</p>
+                    <div className="creative-stagePlaysDescription">{description}</div>
                 </div>
                 <div className="creative-stagePlaysContentCardContents">
                     <p className="creative-stagePlaysPerformance">{performance}</p>

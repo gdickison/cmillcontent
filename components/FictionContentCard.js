@@ -7,7 +7,7 @@ const FictionContentCard = ({title, genre, description, link}) => {
                     <p className="creative-fictionGenre">{genre}</p>
                 </div>
                 <div className="creative-fictionContentCardContents" id="fl-description">
-                    <p className="creative-fictionDescription">{description}</p>
+                    <div className="creative-fictionDescription">{description}</div>
                 </div>
             </div>
         </div>
