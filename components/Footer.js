@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Footer = () => {
 	return (
-		<footer className="footer-footer">
+		<footer className="footer-footer" id="creative-footer">
 			<div>
 				<Image src="/images/logo_light.png" alt="Curtis Miller Logo" width={50} height={50} />
 			</div>
