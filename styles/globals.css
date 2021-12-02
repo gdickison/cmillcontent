@@ -275,15 +275,31 @@ a {
 
 /* Creative page styles */
 
+.creative-headerWrapper {
+    height: 420px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    align-items: center;
+    background-image: url('../public/images/bkgd_image_inkwell.png');
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.creative-headerTextContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .creative-title {
-    margin: 0;
     line-height: 98px;
     font-size: 80px;
     font-family: 'ivypresto-display', serif;
     font-weight: 600;
     font-style: normal;
     text-transform: capitalize;
-    text-align: center;
     margin-bottom: 20px;
     color: var(--color-darkest);
 }
@@ -291,13 +307,9 @@ a {
 .creative-subtitle {
     line-height: 1.5;
     font-size: 19px;
-    width: 490px;
+    max-width: 490px;
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
-    margin: 0;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
     color: var(--color-dark);
 }
 
@@ -305,40 +317,9 @@ a {
     text-align: center;
 }
 
-.creative-headerWrapper {
-    width: 100vw;
-    height: 420px;
-    position: relative;
-    margin-bottom: 50px;
-}
-
-.creative-headerWrapper:after {
-    content: '';
-    background-image: url('../public/images/bkgd_image_inkwell.png');
-    background-position: left;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    width: 100vw;
-    height: 420px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
-@media (max-width: 1000px) {
-    .creative-headerWrapper:after {
-        opacity: 0.5;
-    }
-}
-
-.creative-headerTextContainer {
-    padding: 7rem 0;
-    position: relative;
-}
-
-.creative-creativeContent {
-    margin: 0 16%;
+.creative-creativeShortFilmSection,
+.creative-creativeFeatureFilmSection {
+    margin: 0 16% 130px 16%;
 }
 
 .creative-creativeContentSection {
@@ -357,6 +338,14 @@ a {
     display: flex;
     align-items: center;
     padding-bottom: 32px;
+}
+
+.creative-creativeContentFictionHeader,
+.creative-creativeContentPlaysHeader {
+    display: flex;
+    align-items: center;
+    padding-bottom: 32px;
+    margin-left: 16%;
 }
 
 .creative-creativeContentHeaderText {
@@ -418,7 +407,7 @@ a {
     font-family: 'Poppins', sans-serif;
 }
 
-@media (min-width: 587px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 1200px) {
     .creative-featureFilmContentContainer {
         justify-content: center;
     }
@@ -426,8 +415,20 @@ a {
 
 .creative-featureFilmContentCard {
     width: 49%;
-    min-width: 400px;
+    /* min-width: 400px; */
     margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+    .creative-featureFilmContentCard {
+        width: 100vw;
+    }
+
+    .creative-featureFilmContentContainer,
+    .creative-creativeShortFilmSection,
+    .creative-creativeFeatureFilmSection {
+        margin: 0 5px 65px 5px;
+    }
 }
 
 .creative-featureFilmCaption {
@@ -506,7 +507,7 @@ a {
     background-color: var(--color-lightest);
     margin-top: 35px;
     margin-bottom: 50px;
-    margin-left: -23.5%
+    /* margin-left: -23.5% */
 }
 
 /* row/card */
@@ -614,7 +615,6 @@ a {
     justify-content: center;
     background-color: var(--color-darker);
     margin-top: 35px;
-    margin-left: -23.5%
 }
 
 /* row/card */
@@ -696,7 +696,6 @@ a {
     width: 100vw;
     height: auto;
     background-color: var(--color-darker);
-    margin-left: -23.5%;
     color: var(--color-extra-light);
     padding: 20px 0 80px 0;
 }
@@ -737,6 +736,10 @@ a {
 
 .creative-externalLink {
     text-decoration: none;
+}
+
+#creative-footer {
+    position: relative;
 }
 
 /* Crocodiles page styles */
@@ -871,7 +874,7 @@ a {
     font-size: 15px;
     text-transform: none;
     text-align: center;
-    width: 360px;
+    max-width: 360px;
 }
 
 /* Home page styles */
@@ -910,7 +913,7 @@ a {
 }
 
 @media (max-width: 600px) {
- home- .grid {
+ .home-grid {
     width: 100%;
     flex-direction: column;
   }

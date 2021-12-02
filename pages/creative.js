@@ -69,13 +69,13 @@ function CreativePage() {
     }, []);
 
     return(
-        <div className="page-container">
+        <div>
             <Head>
                 <title>C.M. Miller - Content Writer</title>
                 <link rel="icon" href="/images/curtis_miller_logo.png" />
             </Head>
             <NavBar />
-            <div className="content-wrapper">
+            <div>
                 <div className="creative-headerWrapper">
                     <div className="creative-headerTextContainer">
                         <h1 className="creative-title">
@@ -96,7 +96,7 @@ function CreativePage() {
                         ?
                         <Loader />
                         :
-                        <div className="creative-creativeContentSection">
+                        <div className="creative-creativeShortFilmSection">
                             <div className="creative-creativeContentHeader">
                                 <span className="creative-creativeContentHeaderIcon">
                                     <Image src="/images/icon_film.png" alt="film" width={74} height={61} />
@@ -125,7 +125,7 @@ function CreativePage() {
                         ?
                         <Loader />
                         :
-                        <div className="creative-creativeContentSection">
+                        <div className="creative-creativeFeatureFilmSection">
                             <div className="creative-creativeContentHeader">
                                 <span className="creative-creativeContentHeaderIcon">
                                     <Image src="/images/icon_feature_film.png" alt="film" width={59} height={70} />
@@ -175,7 +175,7 @@ function CreativePage() {
                         <Loader />
                         :
                         <div className="creative-creativeContentSection">
-                            <div className="creative-creativeContentHeader">
+                            <div className="creative-creativeContentFictionHeader">
                                 <span className="creative-creativeContentHeaderIcon">
                                     <Image src="/images/icon_fiction.png" alt="film" width={63} height={63} />
                                 </span>
@@ -214,7 +214,7 @@ function CreativePage() {
                         <Loader />
                         :
                         <div className="creative-creativeContentSection">
-                            <div className="creative-creativeContentHeader">
+                            <div className="creative-creativeContentPlaysHeader">
                                 <span className="creative-creativeContentHeaderIcon">
                                     <Image src="/images/icon_stage_plays.png" alt="film" width={70} height={74} />
                                 </span>
