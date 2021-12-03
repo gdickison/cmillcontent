@@ -15,6 +15,10 @@
     --color-extra-light: #FFFFFF;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 html,
 body {
   padding: 0;
@@ -40,20 +44,6 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.categoryHeader {
-    font-family: 'ivypresto-display', serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 2.2rem;
-    line-height: 1.24;
-    padding: 0 3rem;
-    margin: 0;
 }
 
 .container {
@@ -100,10 +90,6 @@ a {
 
 .navbar.navbar-expand-sm.navbar-light {
     padding-bottom: 0;
-}
-
-.d-flex {
-    height: 100vh;
 }
 
 .loader-container {
@@ -264,7 +250,6 @@ a {
     height: 56px;
     border: 2px solid var(--color-red);
     border-radius: 3px;
-    /* margin-bottom: 82px; */
     transition: transform 0.2s;
 }
 
@@ -525,6 +510,7 @@ a {
 }
 
 /* row/card */
+
 .creative-fictionContentCard {
     min-height: 72px;
     margin: 5px 16%;
@@ -534,6 +520,7 @@ a {
 }
 
 /* offset top row/card */
+
 .creative-fictionContentCard:first-of-type {
     margin-top: -36px;
 }
@@ -543,6 +530,7 @@ a {
 }
 
 /* inner row/card structure */
+
 @media (max-width: 1060px) {
     .creative-fictionContentCard {
         height: auto;
@@ -585,6 +573,7 @@ a {
 }
 
 /* text in row/card */
+
 .creative-fictionTitle {
     font-weight: 600;
     font-size: 20px;
@@ -632,6 +621,7 @@ a {
 }
 
 /* row/card */
+
 .creative-stagePlaysContentCard {
     min-height: 72px;
     margin: 5px 16%;
@@ -641,6 +631,7 @@ a {
 }
 
 /* offset top row/card */
+
 .creative-stagePlaysContentCard:first-of-type {
     margin-top: -36px;
 }
@@ -650,6 +641,7 @@ a {
 }
 
 /* inner row/card structure */
+
 @media (max-width: 1324px) {
     .creative-stagePlaysContentGrid {
         display: grid;
@@ -849,10 +841,6 @@ a {
     color: var(--color-red);
 }
 
-.crocodiles-externalLink {
-    text-decoration: none;
-}
-
 /* Footer styles */
 
 .footer-footer {
@@ -920,21 +908,6 @@ a {
   margin: 0;
 }
 
-.home-grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 800px;
-  margin-top: 3rem;
-}
-
-@media (max-width: 600px) {
- .home-grid {
-    width: 100%;
-    flex-direction: column;
-  }
-}
-
 .home-headerWrapper {
     width: 100vw;
     background-image: url('../public/images/la_skyline_header_image.png');
@@ -945,36 +918,6 @@ a {
 
 .home-headerTextContainer {
     padding: 10rem 0;
-}
-
-.home-subHeaderTextSection {
-    height: 275px;
-    width: 100vw;
-}
-
-.home-subHeaderTextContainer {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 200;
-    font-size: 19px;
-    width: 550px;
-    position: relative;
-    top: 20%;
-    left: 18%;
-    padding-left: 5px;
-    border-left: 2px solid var(--color-red);
-}
-
-.home-subHeaderTextWithDropCap,
-.home-subHeaderText {
-    margin: 8px 0;
-}
-
-.home-subHeaderTextWithDropCap:first-letter {
-    float: left;
-    font-size: 4rem;
-    font-weight: 100;
-    line-height: 0.65;
-    margin-top: 0.15em;
 }
 
 .homeSubheader-subheaderSection {
@@ -1130,15 +1073,6 @@ a {
     font-weight: 600;
     font-size: 80px;
     line-height: 98.4px;
-}
-
-.portfolio-heroSubtitle {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 123%;
-    text-transform: uppercase;
-    letter-spacing: 0.25em;
 }
 
 .portfolio-videoContainer {
@@ -1316,11 +1250,6 @@ a {
     color: var(--color-red);
     text-transform: capitalize;
 }
-
-/* .writingLinkCard-link {
-    text-decoration: none;
-    color: inherit;
-} */
 
 .writingLinkCard-cardTitleContainer {
     height: 53%;

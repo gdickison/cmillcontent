@@ -39,7 +39,7 @@ function BioPage() {
                             bioData.map((data) => {
                                 const serializers = {
                                         marks: {
-                                            link: ({ children, mark }) => <a href={mark.href} target="_blank" rel="noreferrer">{children}</a>,
+                                            link: ({ children, mark }) => <a className="inline-link" href={mark.href} target="_blank" rel="noreferrer">{children}</a>,
                                             mailLink: ({ children, mark }) => <a className="inline-link" href={mark.href}>{children}</a>
                                         }
                                     }
