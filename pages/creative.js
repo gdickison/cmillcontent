@@ -140,7 +140,9 @@ function CreativePage() {
                                             <div className="creative-featureFilmContentCard">
                                                 <Image className="creative-featureFilmImage" src={data.filmImageUrl} alt="b to a" width={360} height={202} layout="responsive" />
                                                 <div className="creative-featureFilmCaption">
-                                                    <p className="creative-featureFilmTitle">{data.title}</p>
+                                                    <p className="creative-featureFilmTitle">
+                                                        <a className="inline-link" href={`${data.fullTreatmentUrl}?dl=`} alt="B to A Film Treatment 2021" target="_blank" rel="noopener noreferrer">{data.title}</a>
+                                                    </p>
                                                     <p className="creative-featureFilmGenre">{data.genre}</p>
                                                         <PortableText
                                                             blocks={data.description}
