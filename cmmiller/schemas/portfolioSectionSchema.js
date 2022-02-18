@@ -13,8 +13,30 @@ export default {
         {
             title: "Subtitle",
             name: "subtitle",
-            type: "string",
-            validation: Rule => Rule.required()
+            // type: "string",
+            // validation: Rule => Rule.required()
+            type: "array",
+            of: [
+                {
+                    type: "block",
+                    marks: {
+                        annotations: [
+                            {
+                                name: "link",
+                                type: "object",
+                                title: "External Link",
+                                fields: [
+                                    {
+                                        name: "href",
+                                        type: "url",
+                                        title: "URL"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         {
             title: "Background Color",

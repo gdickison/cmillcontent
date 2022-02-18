@@ -8,6 +8,7 @@ import Link from "next/dist/client/link"
 import { useState, useEffect, Fragment } from 'react'
 import sanityClient from "../src/client"
 import Loader from "../components/Loader"
+import PortableText from '@sanity/block-content-to-react'
 
 function PortfolioPage(){
     const [portfolioData, setPortfolioData] = useState(null);
@@ -47,12 +48,24 @@ function PortfolioPage(){
                             <h1 className="portfolio-heroTitle">Portfolio</h1>
                         </div>
                         {portfolioData.map((data) => {
+                            const serializers = {
+                                marks: {
+                                    link: ({ children, mark }) => <a className="inline-link" href={mark.href} target="_blank" rel="noreferrer">
+                                        {children}
+                                    </a>
+                                }
+                            }
                             return (
                                 <Fragment key={data._id}>
-                                    <PortfolioSectionTitle
-                                        title={data.title}
-                                        subtitle={data.subtitle}
-                                    />
+                                    <div className="portfolio-section-contentTitleContainer">
+                                        <p className="portfolio-section-contentTitle">{data.title}</p>
+                                        <p className="portfolio-section-contentSubtitle">
+                                            <PortableText
+                                                blocks={data.subtitle}
+                                                serializers={serializers}
+                                            />
+                                        </p>
+                                    </div>
                                     <WritingLinkSection color={'var(--color-' + data.color + ')'} cardData={data.cards} />
                                     {data.testimonialText
                                         ? <Testimonial

@@ -1,8 +1,8 @@
-const PortfolioSectionTitle = ({title, subtitle}) => {
+const PortfolioSectionTitle = ({title}) => {
     return (
         <div className="portfolio-section-contentTitleContainer">
             <p className="portfolio-section-contentTitle">{title}</p>
-            <p className="portfolio-section-contentSubtitle">{subtitle}</p>
+            {/* <p className="portfolio-section-contentSubtitle">{subtitle}</p> */}
         </div>
     );
 }
