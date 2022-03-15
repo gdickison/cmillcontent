@@ -16,7 +16,17 @@ const Footer = ({id}) => {
         </span>
         <span className="footer-socialLink">
           <a href="https://twitter.com/CrocodileReads" target="_blank" rel="noreferrer">
-            <Image src="/images/icon_twitter.svg" alt="LinkedIn" width={30} height={30} />
+            <Image src="/images/icon_twitter.svg" alt="Twitter" width={30} height={30} />
+          </a>
+        </span>
+        <span className="footer-socialLink">
+          <a href="https://www.instagram.com/crocodilereads/" target="_blank" rel="noreferrer">
+            <Image src="/images/icon_instagram.svg" alt="Instagram" width={30} height={30} />
+          </a>
+        </span>
+        <span className="footer-socialLink">
+          <a href="https://www.facebook.com/CrocodileReads" target="_blank" rel="noreferrer">
+            <Image src="/images/icon_facebook.svg" alt="Facebook" width={30} height={30} />
           </a>
         </span>
       </div>
