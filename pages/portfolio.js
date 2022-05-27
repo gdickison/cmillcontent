@@ -89,7 +89,7 @@ function PortfolioPage(){
                             </div>
                         </div>
                         <div className="putMeToWorkContainer">
-                            <Link href="mailto:curtis.miller@biola.edu" passHref>
+                            <Link href="mailto:cmillcontent@gmail.com" passHref>
                                 <span className="putMeToWorkButton">Put Me To Work</span>
                             </Link>
                         </div>

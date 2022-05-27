@@ -165,7 +165,7 @@ function CreativePage() {
                             <div>
                                 <div className="creative-cardLinkContainer">
                                     <p className="creative-cardLinkTitle">Want to see more?</p>
-                                    <Link href="mailto:curtis@cmillcontent.com" passHref>
+                                    <Link href="mailto:cmillcontent@gmail.com" passHref>
                                         <span className="creative-cardLink">contact me</span>
                                     </Link>
                                 </div>
@@ -251,7 +251,7 @@ function CreativePage() {
                             </div>
                             <div className="creative-stagePlaysLinkContainer">
                                 <p className="creative-stagePlaysLinkText">Need a play?</p>
-                                <p className="creative-stagePlaysLinkText">For permissions, sample scenes, and more,  <a href='mailto:curtis@cmillcontent.com'>give me a shout</a></p>
+                                <p className="creative-stagePlaysLinkText">For permissions, sample scenes, and more,  <a href='mailto:cmillcontent@gmail.com'>give me a shout</a></p>
                             </div>
                         </div>
                     }
