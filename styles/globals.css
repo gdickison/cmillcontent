@@ -39,6 +39,7 @@ body {
 
 .content-wrapper {
     padding-bottom: 222px;
+    overflow: hidden;
 }
 
 a {
