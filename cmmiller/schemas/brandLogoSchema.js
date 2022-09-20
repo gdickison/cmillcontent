@@ -5,6 +5,19 @@ export default {
   type: "document",
   fields: [
       {
+        title: "Client Type",
+        name: "clientType",
+        type: "string",
+        options: {
+          list: [
+            {title: "Agency", value: 'agency'},
+            {title: "Brand", value: 'brand'}
+          ],
+          layout: 'radio'
+        },
+        validation: Rule => Rule.required()
+      },
+      {
           title: "Title",
           name: "title",
           type: "string",
@@ -13,8 +26,7 @@ export default {
       {
           title: "Link",
           name: "link",
-          type: "url",
-          validation: Rule => Rule.required()
+          type: "url"
       },
       {
           title: "Image",

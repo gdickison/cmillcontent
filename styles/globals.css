@@ -1335,14 +1335,29 @@ a {
 .brandLogo-logos {
   max-width: 80vw;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   flex-wrap: wrap;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 2rem auto;
+}
+
+.brandLogo-lineup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .logo {
-  margin: 0 2rem;
+  margin: 1rem 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  max-height: 75px;
+  max-width: 250px;
+  height: auto;
 }
 
 .brandLogo-header {
@@ -1352,5 +1367,20 @@ a {
   line-height: 1.24;
   padding: 0 3rem;
   margin: 2rem 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.brandLogo-sectionHeader {
+  color: var(--color-red);
+  font-size: 0.9rem;
+  letter-spacing: 0.175rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: -2rem 0 2rem 0;
+  text-align: center;
+}
+
+.brandLogo-caption {
   text-align: center;
 }
