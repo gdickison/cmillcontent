@@ -1329,6 +1329,7 @@ a {
   flex-direction: column;
   row-gap: 20px;
   column-gap: 2%;
+  padding: 2rem 0;
   margin: 0 auto 6rem auto;
 }
 
@@ -1338,7 +1339,7 @@ a {
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  margin: 0 auto 2rem auto;
+  margin: 0 auto 0 auto;
 }
 
 .brandLogo-lineup {
@@ -1366,7 +1367,6 @@ a {
   font-size: 1.5rem;
   line-height: 1.24;
   padding: 0 3rem;
-  margin: 2rem 0;
   text-align: center;
   text-transform: uppercase;
 }
@@ -1377,11 +1377,11 @@ a {
   letter-spacing: 0.175rem;
   font-weight: 600;
   text-transform: uppercase;
-  margin: -2rem 0 2rem 0;
   text-align: center;
 }
 
 .brandLogo-caption {
   text-align: center;
   font-size: 0.75rem;
+  margin: 0;
 }
