@@ -932,7 +932,7 @@ a {
     width: 100vw;
     height: auto;
     min-height: 275px;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
     display: flex;
     column-gap: 40px;
     justify-content: center;
@@ -1317,4 +1317,40 @@ a {
     color: var(--color-medium-light);
     text-align: center;
     margin: 0;
+}
+
+.brandLogo-wrap {
+  width: 100vw;
+  background: var(--color-lightest);
+  position: relative;
+  height: auto;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  column-gap: 2%;
+  margin: 0 auto 6rem auto;
+}
+
+.brandLogo-logos {
+  max-width: 80vw;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo {
+  margin: 0 2rem;
+}
+
+.brandLogo-header {
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.5rem;
+  line-height: 1.24;
+  padding: 0 3rem;
+  margin: 2rem 0;
+  text-align: center;
 }

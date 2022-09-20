@@ -3,6 +3,7 @@ import Link from 'next/link'
 import NavBar from '../components/Navbar'
 import Footer from '../components/Footer'
 import HomeSubheader from '../components/HomeSubheader'
+import BrandLogos from '../components/BrandLogos'
 import HomeCards from '../components/HomeCards'
 import Loader from "../components/Loader"
 import { useState, useEffect } from 'react'
@@ -50,6 +51,7 @@ export default function Home() {
                         )
                     })
                 }
+                <BrandLogos />
                 <HomeCards />
                 <div className="putMeToWorkContainer">
                     <Link href="mailto:cmillcontent@gmail.com" passHref>
