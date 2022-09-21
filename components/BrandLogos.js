@@ -8,12 +8,13 @@ const BrandLogos = () => {
   const [brandLogos, setBrandLogos] = useState([])
 
   useEffect(() => {
-    sanityClient.fetch(`*[_type == "brandlogos"] | order(title) {
+    sanityClient.fetch(`*[_type == "brandlogos"] | order(order) {
       _id,
       clientType,
       title,
       link,
-      "imageUrl": image.asset->url
+      "imageUrl": image.asset->url,
+      order
     }`)
     .then(data => setBrandLogos(data))
   }, []);
