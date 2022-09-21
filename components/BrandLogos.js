@@ -8,7 +8,7 @@ const BrandLogos = () => {
   const [brandLogos, setBrandLogos] = useState([])
 
   useEffect(() => {
-    sanityClient.fetch(`*[_type == "brandlogos"] {
+    sanityClient.fetch(`*[_type == "brandlogos"] | order(title) {
       _id,
       clientType,
       title,
@@ -20,6 +20,7 @@ const BrandLogos = () => {
 
   return (
     <>
+  {console.log('data', brandLogos)}
       {brandLogos.length > 0 &&
         <div className="brandLogo-wrap">
           <div>
