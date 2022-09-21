@@ -18,26 +18,27 @@ export default {
         validation: Rule => Rule.required()
       },
       {
-          title: "Title",
-          name: "title",
-          type: "string",
-          validation: Rule => Rule.required()
+        title: "Title",
+        name: "title",
+        type: "string",
+        validation: Rule => Rule.required()
       },
       {
-          title: "Link",
-          name: "link",
-          type: "url"
+        title: "Link",
+        name: "link",
+        type: "url"
       },
       {
-          title: "Image",
-          name: "image",
-          type: "image",
-          validation: Rule => Rule.required()
+        title: "Image",
+        name: "image",
+        type: "image",
+        validation: Rule => Rule.required()
       },
       {
         title: "Order",
         name: "order",
-        type: "string"
+        type: "number",
+        initialValue: 1
       }
   ]
 }

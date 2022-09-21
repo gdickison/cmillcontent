@@ -21,7 +21,6 @@ const BrandLogos = () => {
 
   return (
     <>
-  {console.log('data', brandLogos)}
       {brandLogos.length > 0 &&
         <div className="brandLogo-wrap">
           <div>
