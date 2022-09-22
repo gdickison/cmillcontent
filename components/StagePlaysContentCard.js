@@ -16,7 +16,7 @@ const StagePlaysContentCard = ({title, genre, description, performance, link}) =
                     <div className="creative-stagePlaysContentCardContents">
                         <div className="creative-cardLinkContainer">
                             <a className="creative-externalLink" href={link} target="_blank" rel="noreferrer">
-                                <span className="creative-cardLink">Read Sample</span>
+                                <span className="creative-cardLink" style={{width: "175px"}}>Read Sample</span>
                             </a>
                         </div>
                     </div>
