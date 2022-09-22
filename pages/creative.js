@@ -14,59 +14,57 @@ import PortableText from '@sanity/block-content-to-react'
 
 function CreativePage() {
     const [shortFilmData, setShortFilmData] = useState(null);
-
-    useEffect(() => {
-        sanityClient.fetch(`*[_type == "shortFilm"] | order(_createdAt) {
-            _id,
-            link,
-            title,
-            roles,
-            year
-        }`)
-        .then((data) => setShortFilmData(data));
-    }, []);
-
     const [featureFilmData, setFeatureFilmData] = useState(null);
-
-    useEffect(() => {
-        sanityClient.fetch(`*[_type == "featureFilm"] | order(_createdAt) {
-            _id,
-            "filmImageUrl": filmImage.asset->url,
-            title,
-            genre,
-            description,
-            "fullTreatmentUrl": fullTreatment.asset->url,
-            "sampleSceneUrl": sampleScene.asset->url,
-            "availableScreenplaysUrl": availableScreenplays.asset->url
-        }`)
-        .then((data) => setFeatureFilmData(data));
-    }, []);
-
     const [fictionData, setFictionData] = useState(null);
-
-    useEffect(() => {
-        sanityClient.fetch(`*[_type == "fiction"] | order(_createdAt) {
-            _id,
-            title,
-            link,
-            genre,
-            description
-        }`)
-        .then((data) => setFictionData(data));
-    }, []);
-
     const [stageplayData, setStageplayData] = useState(null);
+    const [stagePlaysPdf, setStagePlaysPdf] = useState(null)
 
     useEffect(() => {
-        sanityClient.fetch(`*[_type == "stageplays"] | order(_createdAt) {
-            _id,
-            title,
-            genre,
-            description,
-            performanceInfo,
-            "sampleURL" : sample.asset->url
-        }`)
-        .then((data) => setStageplayData(data));
+      sanityClient.fetch(`*[_type == "shortFilm"] | order(_createdAt) {
+        _id,
+        link,
+        title,
+        roles,
+        year
+      }`)
+      .then((data) => setShortFilmData(data));
+
+      sanityClient.fetch(`*[_type == "featureFilm"] | order(_createdAt) {
+        _id,
+        "filmImageUrl": filmImage.asset->url,
+        title,
+        genre,
+        description,
+        "fullTreatmentUrl": fullTreatment.asset->url,
+        "sampleSceneUrl": sampleScene.asset->url,
+        "availableScreenplaysUrl": availableScreenplays.asset->url
+      }`)
+      .then((data) => setFeatureFilmData(data));
+
+      sanityClient.fetch(`*[_type == "fiction"] | order(_createdAt) {
+        _id,
+        title,
+        link,
+        genre,
+        description
+      }`)
+      .then((data) => setFictionData(data));
+
+      sanityClient.fetch(`*[_type == "stageplays"] | order(_createdAt) {
+        _id,
+        title,
+        genre,
+        description,
+        performanceInfo,
+        "sampleURL" : sample.asset->url
+      }`)
+      .then((data) => setStageplayData(data));
+
+      sanityClient.fetch(`*[_type == "pdfDownloads"] {
+        _id,
+        "availableStagePlaysUrl": availableStagePlays.asset->url
+      }`)
+      .then(data => setStagePlaysPdf(data));
     }, []);
 
     return(
@@ -212,17 +210,27 @@ function CreativePage() {
                             </div>
                         </div>
                     }
-                    {!stageplayData
+                    {!stageplayData || !stagePlaysPdf
                         ?
                         <Loader />
                         :
                         <div className="creative-creativeContentSection">
+                          <div className="creative-creativeContentSectionHeader">
                             <div className="creative-creativeContentPlaysHeader">
                                 <span className="creative-creativeContentHeaderIcon">
                                     <Image src="/images/icon_stage_plays.png" alt="film" width={70} height={74} />
                                 </span>
                                 <h2 className="creative-creativeContentHeaderText">Stage Plays</h2>
                             </div>
+                            <div className="creative-creativeContentLinkHeader">
+                                <div className="creative-cardLinkContainer">
+                                    {/* <p className="creative-cardLinkTitle">Want to see more?</p> */}
+                                    <Link href={`${stagePlaysPdf[0].availableStagePlaysUrl}?dl=`} passHref>
+                                        <span className="creative-cardLink">Available Stage Plays</span>
+                                    </Link>
+                                </div>
+                            </div>
+                          </div>
                             <div className="creative-stagePlaysContentContainer">
                                 {stageplayData.map((data) => {
                                     const serializers = {

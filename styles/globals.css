@@ -337,6 +337,17 @@ a {
     margin-bottom: 0;
 }
 
+.creative-creativeContentSectionHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.creative-creativeContentLinkHeader {
+  margin-right: 16%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .creative-creativeContentHeader {
     display: flex;
     align-items: center;

@@ -14,6 +14,7 @@ import homecards from './homeCardsSchema'
 import crocodiles from './crocodilesSchema'
 import bio from './bioSchema'
 import brandlogos from './brandLogoSchema'
+import pdfDownloadsSchema from './pdfDownloadsSchema'
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -32,6 +33,7 @@ export default createSchema({
     stageplays,
     crocodiles,
     bio,
-    brandlogos
+    brandlogos,
+    pdfDownloadsSchema
   ]),
 })
