@@ -63,6 +63,11 @@ export default {
             name: "sample",
             type: "file",
             description: "Upload a pdf (optional)"
+        },
+        {
+          title: "Available Stage Plays",
+          name: "availableStagePlays",
+          type: "file"
         }
     ]
 }

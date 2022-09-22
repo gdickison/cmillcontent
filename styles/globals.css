@@ -480,7 +480,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 170px;
+    width: 200px;
     height: 40px;
     background-color: var(--color-red);
     color: var(--color-extra-light);

@@ -36,7 +36,8 @@ function CreativePage() {
             genre,
             description,
             "fullTreatmentUrl": fullTreatment.asset->url,
-            "sampleSceneUrl": sampleScene.asset->url
+            "sampleSceneUrl": sampleScene.asset->url,
+            "availableScreenplaysUrl": availableScreenplays.asset->url
         }`)
         .then((data) => setFeatureFilmData(data));
     }, []);
@@ -83,10 +84,10 @@ function CreativePage() {
                         </h1>
                         <div className="creative-subtitle">
                             <p>
-                                For a decent stretch, I’ve been writing plays, sketches, screenplays, essays, and short fiction.
+                                For a decent stretch, I&apos;ve been writing plays, sketches, screenplays, essays, and short fiction.
                             </p>
                             <p>
-                                Here’s what’s landed—and what’s in the pipeline.
+                                Here&apos;s what&apos;s landed—and what&apos;s in the pipeline.
                             </p>
                         </div>
                     </div>
@@ -165,8 +166,8 @@ function CreativePage() {
                             <div>
                                 <div className="creative-cardLinkContainer">
                                     <p className="creative-cardLinkTitle">Want to see more?</p>
-                                    <Link href="mailto:cmillcontent@gmail.com" passHref>
-                                        <span className="creative-cardLink">contact me</span>
+                                    <Link href={`${featureFilmData[0].availableScreenplaysUrl}?dl=`} passHref>
+                                        <span className="creative-cardLink">Available Screenplays</span>
                                     </Link>
                                 </div>
                             </div>

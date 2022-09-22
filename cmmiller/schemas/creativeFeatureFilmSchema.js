@@ -52,6 +52,11 @@ export default {
             title: "Sample Scene",
             name: "sampleScene",
             type: "file"
+        },
+        {
+          title: "Available Screenplays",
+          name: "availableScreenplays",
+          type: "file"
         }
     ]
 }
