@@ -1,7 +1,5 @@
 import Head from "next/head"
 import Image from "next/image"
-import NavBar from "../components/Navbar"
-import Footer from "../components/Footer"
 import Loader from "../components/Loader"
 import sanityClient from '../src/client'
 import PortableText from '@sanity/block-content-to-react'
@@ -14,7 +12,6 @@ function CrocodilesPage({crocodilesData}) {
         <title>C.M. Miller - Content Writer</title>
         <link rel="icon" href="/images/curtis_miller_logo.png" />
       </Head>
-      <NavBar />
       <div className="content-wrapper">
         <div className="crocodiles-headerWrapper">
           <div className="crocodiles-headerTextContainer">
@@ -52,7 +49,6 @@ function CrocodilesPage({crocodilesData}) {
           </div>
         </div>
       </div>
-      <Footer id="crocodiles-footer"/>
     </div>
   );
 }

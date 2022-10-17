@@ -1,8 +1,6 @@
 import Head from "next/head"
 import Link from "next/link"
 import Image from "next/dist/client/image"
-import NavBar from "../components/Navbar"
-import Footer from '../components/Footer'
 import Loader from "../components/Loader"
 import { Fragment } from 'react'
 import sanityClient from '../src/client'
@@ -22,7 +20,6 @@ function BioPage({bio}) {
         <title>C.M. Miller - Content Writer</title>
         <link rel="icon" href="/images/curtis_miller_logo.png" />
       </Head>
-      <NavBar />
       <div className="bio-content-wrapper">
         <div className="bioPageContainer">
           <div className="bioHero"/>
@@ -65,7 +62,6 @@ function BioPage({bio}) {
           <span className="backToHomeButton">Back To Home</span>
         </Link>
       </div>
-      <Footer id="bio-footer" />
     </div>
   );
 }

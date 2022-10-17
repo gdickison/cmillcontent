@@ -1,7 +1,5 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import NavBar from '../components/Navbar'
-import Footer from '../components/Footer'
 import HomeSubheader from '../components/HomeSubheader'
 import BrandLogos from '../components/BrandLogos'
 import HomeCards from '../components/HomeCards'
@@ -18,7 +16,6 @@ export default function Home({headlineText, brandLogos, homeCardData}) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/curtis_miller_logo.png" />
       </Head>
-      <NavBar />
       <div className="content-wrapper">
         <div className="home-headerWrapper">
           <div className="home-headerTextContainer">
@@ -52,7 +49,6 @@ export default function Home({headlineText, brandLogos, homeCardData}) {
           </Link>
         </div>
       </div>
-      <Footer id="home-footer" />
     </div>
   )
 }

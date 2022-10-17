@@ -1,6 +1,4 @@
 import Head from "next/dist/shared/lib/head"
-import NavBar from "../components/Navbar"
-import Footer from "../components/Footer"
 import PortfolioSectionTitle from "../components/PortfolioSectionTitle"
 import Testimonial from "../components/Testimonial"
 import WritingLinkSection from "../components/WritingLink"
@@ -18,7 +16,6 @@ function PortfolioPage({portfolioData}){
         <title>C.M. Miller - Content Writer</title>
         <link rel="icon" href="/images/curtis_miller_logo.png" />
       </Head>
-      <NavBar />
       <div className="content-wrapper">
         {!portfolioData
           ?
@@ -77,7 +74,6 @@ function PortfolioPage({portfolioData}){
           </>
         }
       </div>
-      <Footer id="portfolio-footer"/>
     </div>
   );
 }

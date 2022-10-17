@@ -2,8 +2,6 @@
 import Head from "next/head"
 import Image from "next/image"
 import Link from "next/dist/client/link"
-import NavBar from "../components/Navbar"
-import Footer from "../components/Footer"
 import FictionContentCard from "../components/FictionContentCard"
 import StagePlaysContentCard from "../components/StagePlaysContentCard"
 import Loader from "../components/Loader"
@@ -20,7 +18,6 @@ function CreativePage({shortFilmData, featureFilmData, fictionData, stagePlayDat
         <title>C.M. Miller - Content Writer</title>
         <link rel="icon" href="/images/curtis_miller_logo.png" />
       </Head>
-      <NavBar />
       <div>
         <div className="creative-headerWrapper">
           <div className="creative-headerTextContainer">
@@ -207,7 +204,6 @@ function CreativePage({shortFilmData, featureFilmData, fictionData, stagePlayDat
           }
         </div>
       </div>
-      <Footer id="creative-footer" />
     </div>
   );
 }
