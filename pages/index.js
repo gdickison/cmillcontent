@@ -8,7 +8,7 @@ import HomeCards from '../components/HomeCards'
 import Loader from "../components/Loader"
 import sanityClient from '../src/client'
 
-export default function Home({headlineText, brandLogos}) {
+export default function Home({headlineText, brandLogos, homeCardData}) {
 
   return (
     <div className="page-container">
@@ -43,7 +43,9 @@ export default function Home({headlineText, brandLogos}) {
         <BrandLogos
           brandLogos={brandLogos}
         />
-        <HomeCards />
+        <HomeCards
+          homeCardData={homeCardData}
+        />
         <div className="putMeToWorkContainer">
           <Link href="mailto:cmillcontent@gmail.com" passHref>
             <span className="putMeToWorkButton">Put Me To Work</span>
@@ -71,10 +73,20 @@ export const getStaticProps = async () => {
     order
   }`)
 
+  const homeCardData = await sanityClient.fetch(`*[_type == "homecards"] | order(_createdAt) {
+    _id,
+    "iconURL": hc_icon.asset->url,
+    hc_header,
+    hc_content,
+    hc_button_text,
+    hc_button_link
+  }`)
+
   return {
     props: {
       headlineText,
-      brandLogos
+      brandLogos,
+      homeCardData
     }
   }
 }

@@ -1,32 +1,18 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Loader from "../components/Loader"
-import { useState, useEffect, Fragment } from 'react'
-import sanityClient from '../src/client'
+import { Fragment } from 'react'
 import PortableText from '@sanity/block-content-to-react'
 
-const HomeCards = () => {
-  const [homecardData, setHomecardData] = useState(null);
-
-  useEffect(() => {
-    sanityClient.fetch(`*[_type == "homecards"] | order(_createdAt) {
-      _id,
-      "iconURL": hc_icon.asset->url,
-      hc_header,
-      hc_content,
-      hc_button_text,
-      hc_button_link
-    }`)
-    .then((data) => setHomecardData(data));
-  }, []);
+const HomeCards = ({homeCardData}) => {
 
   return (
     <div className="homeCards-cardContainer">
-    {!homecardData
+    {!homeCardData
       ?
       <Loader />
       :
-      homecardData.map((data) => {
+      homeCardData.map((data) => {
         return (
           <Fragment key={data._id}>
             <div className="homeCards-card">
