@@ -1,23 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import { useEffect, useState } from 'react'
-import sanityClient from '../src/client'
-import Image from 'next/image'
 import Link from 'next/link'
 
-const BrandLogos = () => {
-  const [brandLogos, setBrandLogos] = useState([])
-
-  useEffect(() => {
-    sanityClient.fetch(`*[_type == "brandlogos"] | order(order) {
-      _id,
-      clientType,
-      title,
-      link,
-      "imageUrl": image.asset->url,
-      order
-    }`)
-    .then(data => setBrandLogos(data))
-  }, []);
+const BrandLogos = ({brandLogos}) => {
 
   return (
     <>

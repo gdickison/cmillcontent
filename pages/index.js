@@ -6,19 +6,9 @@ import HomeSubheader from '../components/HomeSubheader'
 import BrandLogos from '../components/BrandLogos'
 import HomeCards from '../components/HomeCards'
 import Loader from "../components/Loader"
-import { useState, useEffect } from 'react'
 import sanityClient from '../src/client'
 
-export default function Home() {
-  const [headlineData, setHeadlineData] = useState(null);
-
-  useEffect(() => {
-    sanityClient.fetch(`*[_type == "headlineText"] {
-      _id,
-      headline
-    }`)
-    .then((data) => setHeadlineData(data));
-  }, []);
+export default function Home({headlineText, brandLogos}) {
 
   return (
     <div className="page-container">
@@ -40,17 +30,19 @@ export default function Home() {
             </p>
           </div>
         </div>
-        {!headlineData
+        {!headlineText
           ?
           <Loader />
           :
-          headlineData.map((data) => {
+          headlineText.map((data) => {
             return (
               <HomeSubheader key={data._id} subheaderText={data.headline} />
             )
           })
         }
-        <BrandLogos />
+        <BrandLogos
+          brandLogos={brandLogos}
+        />
         <HomeCards />
         <div className="putMeToWorkContainer">
           <Link href="mailto:cmillcontent@gmail.com" passHref>
@@ -61,4 +53,28 @@ export default function Home() {
       <Footer id="home-footer" />
     </div>
   )
+}
+
+export const getStaticProps = async () => {
+
+  const headlineText = await sanityClient.fetch(`*[_type == "headlineText"] {
+    _id,
+    headline
+  }`)
+
+   const brandLogos = await sanityClient.fetch(`*[_type == "brandlogos"] | order(order) {
+    _id,
+    clientType,
+    title,
+    link,
+    "imageUrl": image.asset->url,
+    order
+  }`)
+
+  return {
+    props: {
+      headlineText,
+      brandLogos
+    }
+  }
 }
