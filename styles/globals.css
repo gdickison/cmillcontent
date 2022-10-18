@@ -201,7 +201,7 @@ a {
 
 .bioSection {
     width: 40rem;
-    height: 45rem;
+    min-height: 45rem;
     background-color: var(--color-extra-light);
     box-shadow: 2px 4px 10px 6px rgba(30, 52, 65, 0.07);
     display: flex;
@@ -235,7 +235,6 @@ a {
     align-items: center;
     justify-content: center;
     height: 250px;
-    margin-bottom: 222px;
 }
 
 .backToHomeButton {
