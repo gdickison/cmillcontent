@@ -66,7 +66,7 @@ function BioPage({bio}) {
   );
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const bio = await sanityClient.fetch(`*[_type == "bio"] {
     _id,
     "bioImageUrl": bio_image.asset->url,

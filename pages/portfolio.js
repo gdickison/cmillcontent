@@ -78,7 +78,7 @@ function PortfolioPage({portfolioData}){
   );
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
 
   const portfolioData = await sanityClient.fetch(`*[_type == "portfolioSection"] | order(_createdAt) {
     _id,

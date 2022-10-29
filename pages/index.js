@@ -53,7 +53,7 @@ export default function Home({headlineText, brandLogos, homeCardData}) {
   )
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
 
   const headlineText = await sanityClient.fetch(`*[_type == "headlineText"] {
     _id,
