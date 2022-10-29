@@ -208,7 +208,7 @@ function CreativePage({shortFilmData, featureFilmData, fictionData, stagePlayDat
   );
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const shortFilmData = await sanityClient.fetch(`*[_type == "shortFilm"] | order(_createdAt) {
     _id,
     link,

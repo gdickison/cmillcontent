@@ -53,7 +53,7 @@ function CrocodilesPage({crocodilesData}) {
   );
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const crocodilesData = await sanityClient.fetch(`*[_type == "crocodiles"] {
     _id,
     crocodiles_text
