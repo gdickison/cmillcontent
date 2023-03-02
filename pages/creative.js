@@ -30,35 +30,6 @@ function CreativePage({shortFilmData, featureFilmData, fictionData, stagePlayDat
           </div>
         </div>
         <div className="creative-creativeContent">
-          {!shortFilmData
-            ?
-            <Loader />
-            :
-            <div className="creative-creativeShortFilmSection">
-              <div className="creative-creativeContentHeader">
-                <span className="creative-creativeContentHeaderIcon">
-                  <Image src="/images/icon_film.png" alt="film" width={74} height={61} />
-                </span>
-                <h2 className="creative-creativeContentHeaderText">Short Film</h2>
-              </div>
-              {shortFilmData.map((data) => {
-                const youTubeId = getYouTubeId(data.link);
-
-                return (
-                  <Fragment key={data._id}>
-                    <div className="creative-videoContainer">
-                      <iframe className="creative-video" controls width={720} height={576} src={`https://youtube.com/embed/${youTubeId}`} />
-                    </div>
-                    <div className="creative-videoCaption">
-                      <p className="creative-videoTitle">{data.title}</p>
-                      <p className="creative-videoCredits">{data.roles}</p>
-                      <p className="creative-videoYear">{data.year}</p>
-                    </div>
-                  </Fragment>
-                )
-              })}
-            </div>
-          }
           {!featureFilmData
             ?
             <Loader />
@@ -68,7 +39,7 @@ function CreativePage({shortFilmData, featureFilmData, fictionData, stagePlayDat
                 <span className="creative-creativeContentHeaderIcon">
                   <Image src="/images/icon_feature_film.png" alt="film" width={59} height={70} />
                 </span>
-                <h2 className="creative-creativeContentHeaderText">Feature Film Treatments</h2>
+                <h2 className="creative-creativeContentHeaderText">Featured Projects</h2>
               </div>
               <div id={`only-${featureFilmData.length}`} className="creative-featureFilmContentContainer">
                 {featureFilmData.map((data) => {
@@ -78,7 +49,10 @@ function CreativePage({shortFilmData, featureFilmData, fictionData, stagePlayDat
                         <Image className="creative-featureFilmImage" src={data.filmImageUrl} alt="b to a" width={360} height={202} layout="responsive" />
                         <div className="creative-featureFilmCaption">
                           <p className="creative-featureFilmTitle">
-                            <a className="inline-link" href={`${data.fullTreatmentUrl}?dl=`} alt="B to A Film Treatment 2021" target="_blank" rel="noopener noreferrer">{data.title}</a>
+                            {data.fullTreatmentUrl
+                              ? <a className="inline-link" href={`${data.fullTreatmentUrl}?dl=`} alt="B to A Film Treatment 2021" target="_blank" rel="noopener noreferrer">{data.title}</a>
+                              : <span className="inline-link">{data.title}</span>
+                            }
                           </p>
                           <p className="creative-featureFilmGenre">{data.genre}</p>
                             <PortableText
@@ -103,10 +77,39 @@ function CreativePage({shortFilmData, featureFilmData, fictionData, stagePlayDat
                 <div className="creative-cardLinkContainer">
                   <p className="creative-cardLinkTitle">Want to see more?</p>
                   <Link href={`${featureFilmData[0].availableScreenplaysUrl}?dl=`} passHref>
-                    <span className="creative-cardLink">Available Screenplays</span>
+                    <span className="creative-cardLink">Read More</span>
                   </Link>
                 </div>
               </div>
+            </div>
+          }
+          {!shortFilmData
+            ?
+            <Loader />
+            :
+            <div className="creative-creativeShortFilmSection">
+              <div className="creative-creativeContentHeader">
+                <span className="creative-creativeContentHeaderIcon">
+                  <Image src="/images/icon_film.png" alt="film" width={74} height={61} />
+                </span>
+                <h2 className="creative-creativeContentHeaderText">Short Film</h2>
+              </div>
+              {shortFilmData.map(data => {
+                const youTubeId = getYouTubeId(data.link);
+
+                return (
+                  <Fragment key={data._id}>
+                    <div className="creative-videoContainer">
+                      <iframe className="creative-video" controls width={720} height={576} src={`https://youtube.com/embed/${youTubeId}`} />
+                    </div>
+                    <div className="creative-videoCaption">
+                      <p className="creative-videoTitle">{data.title}</p>
+                      <p className="creative-videoCredits">{data.roles}</p>
+                      <p className="creative-videoYear">{data.year}</p>
+                    </div>
+                  </Fragment>
+                )
+              })}
             </div>
           }
           {!fictionData
@@ -205,7 +208,7 @@ function CreativePage({shortFilmData, featureFilmData, fictionData, stagePlayDat
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export const getServerSideProps = async () => {
