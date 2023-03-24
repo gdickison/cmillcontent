@@ -74,10 +74,10 @@ function CreativePage({shortFilmData, featureFilmData, fictionData, stagePlayDat
                 })}
               </div>
               <div>
-                <div className="creative-cardLinkContainer">
+                <div className="creative-cardLinkContainer-projects">
                   <p className="creative-cardLinkTitle">Want to see more?</p>
                   <Link href={`${featureFilmData[0].availableScreenplaysUrl}?dl=`} passHref>
-                    <span className="creative-cardLink">Read More</span>
+                    <span className="creative-cardLink">Available Projects</span>
                   </Link>
                 </div>
               </div>
