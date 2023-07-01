@@ -7,9 +7,10 @@ import { Fragment } from 'react'
 import sanityClient from "../src/client"
 import Loader from "../components/Loader"
 import PortableText from '@sanity/block-content-to-react'
+import PragerSection from "../components/PragerSection"
 
 function PortfolioPage({portfolioData}){
-
+console.log('portfolioData', portfolioData)
   return (
     <div className="page-container">
       <Head>
@@ -25,6 +26,8 @@ function PortfolioPage({portfolioData}){
             <div className="portfolio-heroBackground"></div><div className="portfolio-heroTitleContainer">
               <h1 className="portfolio-heroTitle">Portfolio</h1>
             </div>
+            {/* Prager U Section */}
+            <PragerSection/>
             {portfolioData.map((data) => {
               const serializers = {
                 marks: {
@@ -37,12 +40,12 @@ function PortfolioPage({portfolioData}){
                 <Fragment key={data._id}>
                   <div className="portfolio-section-contentTitleContainer">
                     <p className="portfolio-section-contentTitle">{data.title}</p>
-                    <p className="portfolio-section-contentSubtitle">
+                    <div className="portfolio-section-contentSubtitle">
                       <PortableText
                         blocks={data.subtitle}
                         serializers={serializers}
                       />
-                    </p>
+                    </div>
                   </div>
                   <WritingLinkSection color={'var(--color-' + data.color + ')'} cardData={data.cards} />
                   {data.testimonialText
