@@ -16,6 +16,7 @@ import bio from './bioSchema'
 import brandlogos from './brandLogoSchema'
 import pdfDownloadsSchema from './pdfDownloadsSchema'
 import creativeSubheadSchema from './creativeSubheadSchema'
+import pragerSchema from './pragerSchema'
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -36,6 +37,7 @@ export default createSchema({
     bio,
     brandlogos,
     pdfDownloadsSchema,
-    creativeSubheadSchema
+    creativeSubheadSchema,
+    pragerSchema
   ]),
 })

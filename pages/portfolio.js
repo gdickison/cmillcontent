@@ -9,8 +9,8 @@ import Loader from "../components/Loader"
 import PortableText from '@sanity/block-content-to-react'
 import PragerSection from "../components/PragerSection"
 
-function PortfolioPage({portfolioData}){
-console.log('portfolioData', portfolioData)
+function PortfolioPage({portfolioData, pragerData}){
+// console.log('portfolioData', portfolioData)
   return (
     <div className="page-container">
       <Head>
@@ -27,7 +27,14 @@ console.log('portfolioData', portfolioData)
               <h1 className="portfolio-heroTitle">Portfolio</h1>
             </div>
             {/* Prager U Section */}
-            <PragerSection/>
+            {!pragerData
+              ?
+              <Loader />
+              :
+              <PragerSection
+                data={pragerData}
+              />
+            }
             {portfolioData.map((data) => {
               const serializers = {
                 marks: {
@@ -83,23 +90,34 @@ console.log('portfolioData', portfolioData)
 
 export const getServerSideProps = async () => {
 
-  const portfolioData = await sanityClient.fetch(`*[_type == "portfolioSection"] | order(_createdAt) {
-    _id,
-    title,
-    subtitle,
-    color,
-    testimonialText,
-    testimonialSource,
-    "cards": *[ _type == "portfolioCard" && _id in ^.cards[]._ref ] | order(_createdAt) {
-        date,
-        title,
-        link,
-        "imageUrl": image.asset->url
-    }
-}`)
+  const [portfolioData, pragerData] = await Promise.all([
+    sanityClient.fetch(`*[_type == "portfolioSection"] | order(_createdAt) {
+      _id,
+      title,
+      subtitle,
+      color,
+      testimonialText,
+      testimonialSource,
+      "cards": *[ _type == "portfolioCard" && _id in ^.cards[]._ref ] | order(_createdAt) {
+          date,
+          title,
+          link,
+          "imageUrl": image.asset->url
+      }
+    }`),
+    sanityClient.fetch(`*[_type == "pragerSection"] | order(_createdAt) {
+      _id,
+      title,
+      subtitle,
+      "imageUrl": mag_cover_image.asset->url,
+      video_link,
+      prager_link,
+      "pdfLink": pdf_link.asset->url
+    }`)
+  ])
 
   return {
-    props: {portfolioData}
+    props: {portfolioData, pragerData}
   }
 }
 

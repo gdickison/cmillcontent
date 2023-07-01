@@ -1147,7 +1147,7 @@ a {
     font-style: normal;
     font-size: 19px;
     color: var(--color-medium-dark);
-    width: 65%;
+    width: 80%;
 }
 
 @media (max-width: 1110px) {
