@@ -24,8 +24,9 @@ export default function PragerSection ({data}) {
                 {item.video_link &&
                   <div className="prager-vid">
                     <div style={{margin: '0%'}}>
-                      <div className="portfolio-videoContainer">
-                        <iframe className="portfolio-video" controls width={360} height={576} src={`https://www.youtube.com/embed/${item.video_link.substring(item.video_link.indexOf('=') + 1, item.video_link.indexOf('&'))}`}/>
+                      <div className="prager-videoContainer">
+                        <iframe className="prager-video" controls width={360} height={576} src={`https://www.youtube.com/embed/${item.video_link.substring(item.video_link.indexOf('=') + 1, item.video_link.indexOf('&'))}`}
+                        />
                       </div>
                     </div>
                   </div>
