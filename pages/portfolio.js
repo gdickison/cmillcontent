@@ -2,15 +2,16 @@ import Head from "next/dist/shared/lib/head"
 import PortfolioSectionTitle from "../components/PortfolioSectionTitle"
 import Testimonial from "../components/Testimonial"
 import WritingLinkSection from "../components/WritingLink"
-import Link from "next/dist/client/link"
 import { Fragment } from 'react'
 import sanityClient from "../src/client"
 import Loader from "../components/Loader"
 import PortableText from '@sanity/block-content-to-react'
 import PragerSection from "../components/PragerSection"
+import ContactModal from "../components/ContactModal"
+import { handleContactClick } from "../public/utils"
 
 function PortfolioPage({portfolioData, pragerData}){
-// console.log('portfolioData', portfolioData)
+
   return (
     <div className="page-container">
       <Head>
@@ -77,13 +78,12 @@ function PortfolioPage({portfolioData, pragerData}){
               </div>
             </div>
             <div className="putMeToWorkContainer">
-              <Link href="mailto:cmillcontent@gmail.com" passHref>
-                <span className="putMeToWorkButton">Put Me To Work</span>
-              </Link>
+              <span className="putMeToWorkButton" onClick={handleContactClick}>Put Me To Work</span>
             </div>
           </>
         }
       </div>
+      <ContactModal/>
     </div>
   );
 }

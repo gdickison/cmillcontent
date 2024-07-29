@@ -9,6 +9,8 @@ import { Fragment } from 'react'
 import sanityClient from '../src/client'
 import getYouTubeId from 'get-youtube-id'
 import PortableText from '@sanity/block-content-to-react'
+import ContactModal from "../components/ContactModal"
+import { handleContactClick } from "../public/utils"
 
 function CreativePage({shortFilmData, featureFilmData, fictionData, stagePlayData, stagePlaysPdf, subheadText}) {
 
@@ -200,9 +202,10 @@ function CreativePage({shortFilmData, featureFilmData, fictionData, stagePlayDat
                 </div>
                 <div className="creative-stagePlaysLinkContainer">
                   <p className="creative-stagePlaysLinkText">Need a play?</p>
-                  <p className="creative-stagePlaysLinkText">For permissions, sample scenes, and more,  <a href='mailto:cmillcontent@gmail.com'>give me a shout</a>
+                  <p className="creative-stagePlaysLinkText">For permissions, sample scenes, and more,  <span onClick={handleContactClick}>give me a shout</span>
                   </p>
                 </div>
+              <ContactModal/>
             </div>
           }
         </div>

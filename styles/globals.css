@@ -744,9 +744,13 @@ a {
     text-transform: uppercase;
 }
 
-.creative-stagePlaysLinkText:last-of-type a {
+.creative-stagePlaysLinkText:last-of-type span {
     color: var(--color-red);
     text-decoration: none;
+}
+
+.creative-stagePlaysLinkText:last-of-type span:hover {
+  cursor: pointer;
 }
 
 .creative-inline-link-container {
@@ -1466,3 +1470,94 @@ a {
   top: 0;
   left: 0;
 }
+
+.contact-dialog {
+  border-radius: 20px;
+  border: 1px solid lightgray;
+  width: 48rem;
+}
+
+.contact-dialog-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  height: 1.75rem;
+  width: 1.75rem;
+  transition: transform 0.25s ease;
+}
+
+.contact-dialog-close:hover {
+  cursor: pointer;
+  transform: rotate(135deg);
+}
+
+.form-container {
+  position: relative;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-form > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  outline: none;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: .25rem .75rem;
+}
+
+.contact-form h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form span {
+  border: none;
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: var(--color-red);
+}
+
+.contact-form button:hover {
+  background-color: #B7B7B7;
+}
+
+.success-message,
+.error-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24rem;
+  height: 24rem;
+  border: 2px solid lightgray;
+  border-radius: 1rem;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-message button,
+.error-message button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: green;
+  border: 2px solid green;
+  background-color: #FFFFFF;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+

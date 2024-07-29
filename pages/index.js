@@ -1,10 +1,11 @@
 import Head from 'next/head'
-import Link from 'next/link'
 import HomeSubheader from '../components/HomeSubheader'
 import BrandLogos from '../components/BrandLogos'
 import HomeCards from '../components/HomeCards'
 import Loader from "../components/Loader"
 import sanityClient from '../src/client'
+import ContactModal from '../components/ContactModal'
+import { handleContactClick } from '../public/utils'
 
 export default function Home({headlineText, brandLogos, homeCardData}) {
 
@@ -44,11 +45,10 @@ export default function Home({headlineText, brandLogos, homeCardData}) {
           homeCardData={homeCardData}
         />
         <div className="putMeToWorkContainer">
-          <Link href="mailto:cmillcontent@gmail.com" passHref>
-            <span className="putMeToWorkButton">Put Me To Work</span>
-          </Link>
+          <span className="putMeToWorkButton" onClick={handleContactClick}>Put Me To Work</span>
         </div>
       </div>
+      <ContactModal/>
     </div>
   )
 }
