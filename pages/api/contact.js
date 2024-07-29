@@ -14,7 +14,7 @@ export default async function contact (req, res) {
   try {
     const mailData = {
       from: '"Website Contact Request" <contact-form@bluecanoemailer.dev>',
-      to: 'gregory@dickison.net',
+      to: 'cmillcontent@gmail.com',
       replyTo: `${req.body.formData.email}`,
       subject: `${req.body.formData.subject}`,
       text: `${req.body.formData.message}`,
