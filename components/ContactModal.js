@@ -35,6 +35,7 @@ const ContactModal = () => {
     setEmail('')
     setSubject('')
     setMessage('')
+    setIsLoading(false)
     document.getElementById('contact_dialog').close()
   }
 
@@ -44,6 +45,7 @@ const ContactModal = () => {
     setEmail('')
     setSubject('')
     setMessage('')
+    setIsLoading(false)
     document.getElementById('contact_dialog').close()
   }
 
