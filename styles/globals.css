@@ -1473,6 +1473,20 @@ a {
   width: 48rem;
 }
 
+.contact-dialog-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  height: 1.75rem;
+  width: 1.75rem;
+  transition: transform 0.25s ease;
+}
+
+.contact-dialog-close:hover {
+  cursor: pointer;
+  transform: rotate(135deg);
+}
+
 .form-container {
   position: relative;
 }
@@ -1508,6 +1522,10 @@ a {
   font-size: 20px;
   text-transform: uppercase;
   color: var(--color-red);
+}
+
+.contact-form button:hover {
+  background-color: #B7B7B7;
 }
 
 .success-message,

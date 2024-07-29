@@ -8,13 +8,9 @@ import Loader from "../components/Loader"
 import PortableText from '@sanity/block-content-to-react'
 import PragerSection from "../components/PragerSection"
 import ContactModal from "../components/ContactModal"
+import { handleContactClick } from "../public/utils"
 
 function PortfolioPage({portfolioData, pragerData}){
-
-  function handleClick (e) {
-    e.preventDefault()
-    document.getElementById('contact_dialog').showModal()
-  }
 
   return (
     <div className="page-container">
@@ -82,14 +78,12 @@ function PortfolioPage({portfolioData, pragerData}){
               </div>
             </div>
             <div className="putMeToWorkContainer">
-              <span className="putMeToWorkButton" onClick={handleClick}>Put Me To Work</span>
+              <span className="putMeToWorkButton" onClick={handleContactClick}>Put Me To Work</span>
             </div>
           </>
         }
       </div>
-      <dialog className="contact-dialog" id="contact_dialog">
-        <ContactModal/>
-      </dialog>
+      <ContactModal/>
     </div>
   );
 }
