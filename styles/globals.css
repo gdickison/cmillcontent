@@ -744,9 +744,13 @@ a {
     text-transform: uppercase;
 }
 
-.creative-stagePlaysLinkText:last-of-type a {
+.creative-stagePlaysLinkText:last-of-type span {
     color: var(--color-red);
     text-decoration: none;
+}
+
+.creative-stagePlaysLinkText:last-of-type span:hover {
+  cursor: pointer;
 }
 
 .creative-inline-link-container {
