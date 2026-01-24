@@ -24,7 +24,7 @@ export default function Home({headlineText, brandLogos, homeCardData}) {
               C. M. Miller
             </h1>
             <p className="home-subtitle">
-              Content Writer
+              Award-Winning Writer
             </p>
           </div>
         </div>
