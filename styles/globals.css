@@ -933,7 +933,10 @@ a {
   font-weight: 700;
   letter-spacing: .8rem;
   text-transform: uppercase;
-  margin: 0;
+  margin-inline: auto;
+  padding-left: 1rem;
+  background-color: white;
+  width: fit-content;
 }
 
 .home-headerWrapper {
